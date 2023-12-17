@@ -12,7 +12,7 @@ keywords:
 
 # 版权许可
 
-本文编辑于 2023 年 12 月 17 日。
+本文编辑于 2023 年 12 月 18 日。
 
 ## 内容部分
 
@@ -50,7 +50,7 @@ KnowSex 不对您使用这些代码的一切后果负责。
 
 **NOTICE: Translated with www.DeepL.com/Translator , translation is machine translation, for reference only, the original Simplified Chinese text shall prevail.**
 
-This article was edited on December 17, 2023.
+This article was edited on December 18, 2023.
 
 ## Content
 
@@ -65,7 +65,7 @@ If there is any possible violation of the above terms, please contact KnowSex [b
 
 For images, please refer to the "Source" column in the "Image Sources" section at the end of the article, and use them in accordance with the copyright requirements of the original author. 
 
-You may not use the content written on KnowSex.net to create virtually identical, functionally similar communications.
+You may not use the content written on this Site to create virtually identical, functionally similar communications, except for mirror sites created in compliance with the [*KnowSex Mirror Deployment License*](https://github.com/knowsex/knowsex.github.io/blob/main/mirror-license.md).
 
 KnowSex.net does not endorse the consequences of your actions.
 
@@ -77,5 +77,3 @@ With respect to the design of the Site, including but not limited to the HTML, C
 2. not violate the laws of the People's Republic of China and the laws of the country or region in which you are using it.
 
 KnowSex.net is not responsible for any consequences of your use of such code.
-
-
