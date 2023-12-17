@@ -1,0 +1,535 @@
+---
+layout: /src/layouts/Main.astro
+
+title: 避孕
+enTitle: Contraceptive
+desc: "关于避孕的介绍。涵盖多种避孕方法的介绍和避孕方法的比较说明。"
+bgPath: "/source/img/contraceptive.jpg"
+keywords: 
+ - 避孕
+---
+
+import Cite from '/src/components/CiteSup.astro';
+import ReferList from '/src/components/CiteReference.astro';
+import Btn from '/src/components/OutlineBtn.astro';
+import Key from '/src/components/KeySentence.astro';
+import End from '/src/components/ArticleEnd.astro';
+
+export const citeList = [
+    {
+            "name": "WCU2020",
+            "caption": "United Nations, Department of Economic and Social Affairs, Population Division (2020). World Contraceptive Use 2020[DS/OL]. https://www.un.org/en/development/desa/population/publications/dataset/contraception/wcu2020.asp"
+        },
+        {
+            "name": "健康的性",
+            "caption": "姚锦仙,程红 编.健康的性[M].北京:高等教育出版社,2015.3:129,130 - ISBN 978-7-04-041738-8",
+        },
+        {
+            "name": "依托孕烯皮下埋植剂使用现状调查研究",
+            "caption": "覃太洲,谢利,乔林,熊英,徐克惠.依托孕烯皮下埋植剂使用现状调查研究[J].实用妇产科杂志,2015,31(3):217-220",
+        },
+        {
+            "name": "复方口服避孕药临床应用中国专家共识",
+            "caption": "复方口服避孕药临床应用中国专家共识专家组.复方口服避孕药临床应用中国专家共识[J].中华妇产科杂志,2015,(2):81-91",
+        },
+        {
+            "name": "避孕药",
+            "caption": "维基百科编者. 避孕药[G/OL]. 维基百科, 2021(20210308)[2021-03-08]. https://zh.wikipedia.org/w/index.php?title=%E9%81%BF%E5%AD%95%E8%8D%AF&oldid=64677150",
+        },
+        {
+            "name": "复合口服避孕药",
+            "caption": "维基百科编者. 复合口服避孕药[G/OL]. 维基百科, 2022(20220601)[2022-06-01]. https://zh.wikipedia.org/w/index.php?title=%E5%A4%8D%E5%90%88%E5%8F%A3%E6%9C%8D%E9%81%BF%E5%AD%95%E8%8D%AF&oldid=71946964",
+        },
+        {
+            "name": "生育控制",
+            "caption": "维基百科编者. 生育控制[G/OL]. 维基百科, 2022(20220317)[2022-03-17]. https://zh.wikipedia.org/w/index.php?title=%E7%94%9F%E8%82%B2%E6%8E%A7%E5%88%B6&oldid=70676487",
+        },
+        {
+            "name": "计划生育/避孕",
+            "caption": "世界卫生组织. 计划生育/避孕[EB/OL]. 世界卫生组织, 2020(20200622)[2022-06-14]. https://www.who.int/zh/news-room/fact-sheets/detail/family-planning-contraception",
+        },
+        {
+            "name": "警惕性传播疾病",
+            "caption": "北京市卫生和计划生育委员会. 警惕性传播疾病[EB/OL]. 北京市人民政府门户网站, 2017(20170408)[2022-06-14]. http://www.beijing.gov.cn/fuwu/bmfw/jhsyfwzdzx/jkbj/lx/nv/201704/t20170408_1840207.html",
+        },
+        {
+            "name": "宫内节育器",
+            "caption": "The Manual's Editorial Staff. 小知识: 宫内节育器[G/OL].  默沙东诊疗手册大众版, c2022[2022-06-14]. https://www.msdmanuals.cn/home/quick-facts-women-s-health-issues/family-planning/intrauterine-devices"
+        },
+        {
+            "name": "紧急避孕",
+            "caption": "The Manual's Editorial Staff. 小知识: 紧急避孕[G/OL].  默沙东诊疗手册大众版, c2022[2022-06-14]. https://www.msdmanuals.cn/home/quick-facts-women-s-health-issues/family-planning/emergency-contraception"
+        },
+        {
+            "name": "性传播疾病概述",
+            "caption": "小知识: 性传播疾病概述 - 《默克诊疗手册家庭版》. https://www.msdmanuals.cn/home/quick-facts-infections/sexually-transmitted-diseases-stds/overview-of-sexually-transmitted-diseases"
+        },
+        {
+            "name": "性学观止",
+            "caption": "贺兰特·凯查杜里安.性学观止[M].北京:科学技术文献出版社,2019.3:165,209-12 - ISBN 978-7-5189-5126-0"
+        },
+        {
+            "name": "FCWCD",
+            "caption": "拜耳医药保健有限公司.女用避孕套 | WCD China[G/OL].WCD China,[2022-06-13]. https://www.china-wcd.com/your-questions/female-condoms"
+        }
+]
+
+<p><span class="darkmode-ignore">⭐</span>感谢<a href="https://www.zhihu.com/people/woden-5">戟空悦</a>对本文提供的指导和建议。</p>
+<br/>  
+
+> 确保所有人都能用上自己喜欢的避孕方法，促进若干种人权，包括生命和自由、见解和表达自由、工作和教育权，并带来重大健康和其他利益。
+> 
+> <footer>世界卫生组织</footer>
+
+**避孕**是指阻止怀孕的技术。怀孕可以计划和预防，对于不希望怀孕的人群，可采取避孕措施。
+
+在中国，应用最广的避孕措施是**宫内节育器**和**避孕套**。<Cite citeName='WCU2020' citeList={citeList} />使用避孕套是唯一的既可以避孕又可以预防性传播疾病的措施。<Cite citeName='生育控制' citeList={citeList} />
+
+文中提到的避孕用品可在药店、超市或是便利店买到，也可以选择网购。
+
+购买避孕用品不是不光彩的事情，不必担心店员的眼光和说辞，大可以大大方方地购买，而不必躲躲藏藏。购买避孕用品是对另一方负责，也是对自己负责。
+
+药品可能有副作用，请在使用前多加小心，如激素类避孕措施可能带来血栓等影响。虽然所有的避孕措施皆有一些潜在的副作用，但这些风险比怀孕带来的风险要低。<Cite citeName='生育控制' citeList={citeList} />这些副作用会在药品说明书中注明。
+
+<Key>无论您决定采用何种避孕措施，希望您多多了解该方法可能带来的负面影响，以更好更安全地避孕。</Key>
+
+在文末，会提供一份避孕措施表格以供参考。
+
+<div class="tip">
+    <p><strong style="color:brown">医学声明：</strong></p>
+    <p style="font-weight:300">KnowSex 提供的内容不能被解读为试图给予或提供特定医疗意见，或属于医疗临床实务的一部分，不能取代医护专业人士的建议和药品说明书。</p>
+    <p style="font-weight:300">因体质因人而异，请在用药前仔细阅读药品说明书。若您需医疗服务或可靠意见，请咨询药店药剂师、医师或专业人士。相关药品推荐应在说明书和医师指导下使用。</p>
+</div>
+
+怀孕的原理
+-----
+
+要了解如何避孕，应知道如何怀孕。
+
+怀孕需要一个**精子**与一个**卵细胞**结合成为**受精卵**，而后植入子宫内膜，称之为**着床**。
+
+一般情况下，精子与卵细胞相遇，需要途经阴道 — 子宫颈 — 子宫 — 输卵管，如下图所示。
+
+如果能够阻止精子与卵细胞相遇、结合，或是干扰着床过程，就可能达到避孕的目的。
+
+<div class="row show">
+    <div class="col-md-6">
+    <img loading="lazy" src="/source/img/精子行进方向.jpg" class="img-thumbnail thumb" alt="图 1,精子途经阴道、子宫颈、子宫、输卵管。"/><br/>
+    <small>图 1 精子行进方向，途经阴道 — 子宫颈 — 子宫 — 输卵管</small>
+    </div>
+    <div class="col-md-6">
+    <img loading="lazy" src="/source/img/uterus-15-edited.png" class="img-thumbnail thumb" alt="图 2,精子与卵细胞在输卵管相遇结合，并在子宫内着床"/><br/>
+    <small>图 2 输卵管特写，卵细胞与精子（图中示意为蓝色）结合并在子宫内着床</small><br/>
+    </div>
+</div><br/>
+
+  
+
+激素避孕
+----
+
+激素避孕主要使用**雌激素**和**孕激素**进行避孕，主要运用以下方法：<Cite citeName='健康的性' citeList={citeList} /><Cite citeName='复方口服避孕药临床应用中国专家共识' citeList={citeList} />
+
+*   增加**宫颈液**的粘稠度来阻止**精子**穿越**宫颈**到达**子宫**和**输卵管**，这样就无法和**卵子**结合形成**受精卵**导致怀孕；
+*   改变激素水平，向大脑发出身体已怀孕的信号，抑制排卵；
+*   改变子宫内膜形态和功能，**干扰受精卵着床**；
+*   改变输卵管的功能，使受精卵过早着床或使卵子运动过缓。
+
+有多种方法可以使用激素避孕，比如服用含有激素的药物（口服避孕药）、植入含有激素的植入物（皮下埋植剂）等。
+
+### 口服避孕药
+
+<div class="tip">注意：本节介绍的并非是紧急避孕药（如毓婷），紧急避孕药不可以当作常规避孕手段。</div>
+<div class="tip">注意：当使用者存在吸烟、肥胖、高血压、脂代谢异常、有血栓疾病史等高危因素时，会增加心血管疾病发生的风险。请在使用前仔细阅读药物说明书。</div>
+
+囿于男性和女性的生理差异，男性避孕药的研究和推广较为滞后，尚未商业化使用，不过一些药物正在开发中。因此，以下介绍的为女性使用的避孕药物。
+
+**复方口服避孕药**含有低剂量的雌激素和孕激素，通过上述多环节共同作用达到避孕效果。
+
+口服避孕药包括**复方短效口服避孕药**（每天一次）和**复方长效口服避孕药**（每月一次）。目前，**长效口服避孕药**几乎由于激素含量较高，已趋于淘汰。本文将只介绍**短效口服避孕药**。
+
+<img loading="lazy" src="/source/img/1.jpg" class="img-thumbnail thumb" alt="图 3,短效口服避孕药"/><br/>
+<small>图 3 短效口服避孕药</small><br/>
+
+短效口服避孕药是目前最常见的避孕药。若女性正确地根据药物说明，每日规律服用这种药，避孕率接近 100%。<Cite citeName='健康的性' citeList={citeList} /><Cite citeName='复方口服避孕药临床应用中国专家共识' citeList={citeList} />
+
+目前中国常见的药物多为每板 21 片装，一般从月经周期的第一天开始服用，连服 21 天后停服 7 天，接着继续服用（以药品说明书为准）。也有28片装，其中7片是安慰剂或其他补铁剂等药物。
+
+一般地，药品包装上会标注有箭头和星期几或服药第几天，以提醒服药顺序。若漏服，需要根据说明书或医生指导进行相应补救。
+
+### 缓释避孕药
+
+常用的缓释避孕药有：<Cite citeName='健康的性' citeList={citeList} />
+
+*   皮下埋植剂；
+*   阴道避孕环；
+*   避孕贴片；
+*   宫内节育器（详见下文 工具避孕 - 宫内节育器）。
+
+<div class="row show">
+    <div class="col-md-6">
+    <img loading="lazy" src="/source/img/2.jpg" class="img-thumbnail thumb" alt="图 4， 一种皮下埋植剂"/>
+    <br/><small>图 4 一种皮下埋植剂</small>
+    </div>
+    <div class="col-md-6">
+    <img loading="lazy" src="/source/img/3.jpg" class="img-thumbnail thumb" alt="图 5 ，植入皮下埋植剂（视频截图）"/>
+    <br/><small>图 5 植入皮下埋植剂（视频截图）</small>
+    </div>
+</div>
+
+**皮下埋植剂**通过进行手术埋植于皮下，缓慢释放激素以达到避孕目的，有效期在 3 年左右。到期后需要手术取出。<Cite citeName='健康的性' citeList={citeList} /><Cite citeName='依托孕烯皮下埋植剂使用现状调查研究' citeList={citeList} />
+
+<div class="row show">
+    <div class="col-md-6">
+    <img loading="lazy" src="/source/img/4.jpg" class="img-thumbnail thumb" alt="图 6， 避孕贴片"/>
+    <br/><small>图 6 避孕贴片</small>
+    </div>
+    <div class="col-md-6">
+    <img loading="lazy" src="/source/img/5.jpg" class="img-thumbnail thumb" alt="图 7， 阴道避孕环"/>
+    <br/><small>图 7 阴道避孕环</small>
+    </div>
+</div>
+
+**避孕贴片**是一种含有避孕药的特殊贴片，贴在皮肤上，每天释放一定剂量通过皮肤吸收以达到避孕目的。
+
+**阴道避孕环**以硅胶为载体，含有孕激素，置于阴道内持续给药。阴道环很容易置入阴道中，也很容易取出。
+
+工具避孕
+----
+
+### 避孕套
+
+<img loading="lazy" src="/source/img/6.jpg" class="img-thumbnail thumb" alt="图 8，女用、男用避孕套"/><br/>
+<small>图 8 女用、男用避孕套</small><br/>
+<img loading="lazy" src="/source/img/7.jpg" class="img-thumbnail thumb" alt="图 9,展开的男用避孕套"/><br/>
+<small>图 9 展开的男用避孕套</small><br/>
+<img loading="lazy" src="/source/img/8.jpg" class="img-thumbnail thumb" alt="图 10,展开的女用避孕套"/><br/>
+<small>图 10 展开的女用避孕套</small><br/>
+
+**避孕套**，亦作**安全套**、**保险套**、**卫生套**等，是一种护套形的屏障器具，主要应用于性交过程中，用以降低感染性传播疾病和女性怀孕的风险。避孕套均为一次使用器具，在使用后应当丢弃。
+
+市面上常见的避孕套多为用于套在阴茎上使用的阴茎套，也可以在一些购物平台上买到用于置入阴道内的女用避孕套（也作“**阴道套**”）。在进行性行为时，男用避孕套和女用避孕套选其一即可，两者同时使用可能会因摩擦而增大避孕套破裂的风险。<Cite citeName='FCWCD' citeList={citeList} />
+
+不同尺寸的男用避孕套一般在于圆口宽度、阔度的不同，而非长度。
+
+使用避孕套是唯一的可以在避孕同时**预防性传播疾病**的办法。<Cite citeName='生育控制' citeList={citeList} />
+
+避孕套的正确使用十分关键，你可以通过下方按钮学习如何使用避孕套。建议在正式进行性行为前练习使用避孕套，这可以使你更加熟练。
+
+<p><a class="btn btn-outline-secondary" role="button" href="https://zh.wikihow.com/%E4%BD%BF%E7%94%A8%E9%81%BF%E5%AD%95%E5%A5%97">如何使用避孕套 - wikiHow</a> （阴茎套）</p>
+<p><a class="btn btn-outline-secondary" role="button" href="https://zh.wikihow.com/%E4%BD%BF%E7%94%A8%E5%A5%B3%E7%94%A8%E9%81%BF%E5%AD%95%E5%A5%97">如何使用女用避孕套 - wikiHow</a></p>
+
+男用避孕套较为常见，可在超市、便利店、药店等地方买到，在部分地区的街边和公共洗手间、高校的校医院等地也可以领取免费的避孕套。女用的避孕套可能在网上更容易买到。
+
+<img loading="lazy" src="/source/img/9.jpg" class="img-thumbnail thumb" alt="图 11 带有“国家免费提供”字样的避孕套外包装"/><br/>
+<small>图 11 带有“国家免费提供”字样的避孕套外包装</small><br/>
+
+### 宫内节育器
+
+<img loading="lazy" src="/source/img/10.jpg" class="img-thumbnail thumb" alt="图 12， 一种宫内节育器"/><br/>
+<small>图 12 一种宫内节育器</small><br/>
+
+宫内节育器（IUD）是中国已婚女性主要的避孕措施，其中以**含铜宫内节育器**应用最为广泛，含较强抗生育能力的铜离子。此外，还有含有激素或药物的**含药宫内节育器**。宫内节育器需要去医院进行安放，一般可放置数年。
+
+### 绝育
+
+绝育是一种永久性的避孕措施，分为**男性绝育**和**女性绝育**。绝育不影响性激素的分泌。
+
+男性绝育大多数采用**输精管结扎术**，女性绝育大多数采用**输卵管结扎术**。
+
+输精管结扎术通过将精子由睾丸到阴茎的通道阻断来达到避孕目的。该手术不会影响勃起和射精，射出的精液中不含精子。精子仍可继续产出，只是无法排出，被身体吸收。
+
+输卵管结扎术阻断精子和卵子的相遇来达到避孕目的。该手术不会影响月经周期。
+
+绝育手术适合没有生育要求的夫妇进行。<Key>绝育手术为永久性的手段，复通不易，应当慎重考虑。应与医生进行充分沟通，知晓可能出现的并发症和缺点。</Key>
+
+### 其他避孕方法
+
+除上述介绍方法以外，还有性交中断法（体外射精法）、安全期避孕等方法进行避孕，有较高的怀孕风险<Cite citeName='计划生育/避孕' citeList={citeList} />，不宜推广，不建议使用。
+
+#### 性交中断法
+
+性交中断法指在男性高潮射精前将阴茎抽出阴道，以使精液不留在女方体内进行避孕。但是，男性在性兴奋时流出的分泌物（如尿道球腺液）等亦可能含有少量精子，可能会使女方受孕。<Cite citeName='性学观止' citeList={citeList} />
+
+#### 安全期避孕
+
+安全期避孕是指根据女性月经周期（日历法）、体温（基础体温法）、宫颈粘液粘稠度（比林斯法）来推算排卵日期，避开易受孕期进行性行为来避孕。此方法受到女性个人身体因素多种因素影响，并不十分可靠。<Cite citeName='性学观止' citeList={citeList} />
+
+紧急避孕
+----
+
+紧急避孕方法之所以被称为“紧急”，是因为本应用其他方法进行避孕，绝不可以依赖于事后的紧急避孕。
+
+常见的紧急避孕方法有
+
+*   在 5 天内放置**含铜宫内节育器**；
+*   在 72 小时内口服**紧急避孕药**（如毓婷等）。
+
+**含铜宫内节育器**最为有效，且可以继续留在体内持续避孕。
+
+进行措施越早，效果越好。
+
+怀孕检测
+----
+
+尽管现代避孕的成功率已大大提升，但仍有几率发生非意愿怀孕。
+
+在性行为后，若女方月经延迟一周没有来，则要高度怀疑意外怀孕的可能性。在正常情况下，女性月经周期推后约两周就可以进行检测是否怀孕（验孕）。但无论是否怀孕，无故月经推迟较久时间也是应到医院就诊的情况。
+
+正常情况下，可从怀孕的女性体内检出**人绒毛膜促性腺激素（hCG）**，且 hCG 仅于怀孕的女性体内发现。因此 **hCG 试验**是可靠的验孕方式。常用的一个方法是用尿样检测其 hCG 含量，于 7 ~ 12 天内可检出。可以在药店买到相关的验孕器具。<Cite citeName='性学观止' citeList={citeList} />
+
+<img loading="lazy" src="/source/img/Zwangerschapstesten.jpg" class="img-thumbnail thumb" alt="图 13， 验孕棒，一种检测怀孕的器具，形状像一根笔，外观扁平，有一观察区域显示测试结果。"/><br/>
+<small>图 13 hCG 试验器具——验孕棒</small><br/>
+  
+
+考虑到受到各种因素影响，使用试验的方法可能会产生假阳性或假阴性结果。最终确定怀孕要依靠以下三种手段之一：<Cite citeName='性学观止' citeList={citeList} />
+
+*   确认胎儿心跳存在；
+*   胎儿骨骼影像显示（例如使用超声波检查）；
+*   测出胎动。
+
+相比试验方法，这些手段检出怀孕的时间要晚一些。
+
+确认怀孕且暂无抚养计划后，要尽快到医院采取相关措施。
+
+<div class="notice bg-light">
+    <p>
+    <svg width="24" height="24" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="48" height="48" fill="white" fill-opacity="0.01"/><path d="M21 44L20 36" stroke="#333" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><path d="M44 44V12H25L26 20L27 28L28 36L21 44H44Z" fill="none" stroke="#333" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><path d="M27 28H35" stroke="#333" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><path d="M26 20H35" stroke="#333" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><path d="M4 4H24L25 12L26 20L27 28L28 36H20H4V4Z" fill="none" stroke="#333" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><path d="M10 12H17" stroke="#333" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><path d="M10 20H18" stroke="#333" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><path d="M10 28H19" stroke="#333" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></svg>            
+    <b>相关阅读</b>            
+    </p>
+    <ul>
+    <li><a href="https://www.msdmanuals.cn/home/quick-facts-women-s-health-issues/family-planning/abortion">小知识: 人工流产 - 《默沙东诊疗手册大众版》</a></li>
+    <li><a href="https://www.msdmanuals.cn/home/women-s-health-issues/family-planning/abortion">人工流产 - 《默沙东诊疗手册大众版》</a></li>
+    </ul>
+    <p><small>这些页面不属于 KnowSex。如果您无法访问这些页面，可<a href="/general/communicate">联系我们</a>索取副本。</small></p>
+</div>
+
+## 避孕方法比较表格
+
+本表格避孕有效率由世界卫生组织（WHO）等提供，参考价格由中国数家医院和政府招标资料提供，单位为人民币，仅供参考，实际价格以医院和零售商为准。所提到的地区免费政策针对中国大陆地区描述。
+
+避孕套一般成盒售卖。
+
+“正确使用”是指按照说明书等预期的使用方法进行使用。
+
+颜色例：<span class="darkmode-ignore" style="color:#548235">█</span>&nbsp;非常有效；<span class="darkmode-ignore" style="color:#c6e0b4">█</span>&nbsp;有效；<span class="darkmode-ignore" style="color:#fff2cc">█</span>&nbsp;一般；<span class="darkmode-ignore" style="color:#f4b084">█</span>&nbsp;基本无效。
+
+<p style="color: #A4A2A2">⇆ 表格若未完全显示，可左右滑动。</p>
+<div style="overflow: auto;"> 
+    <table class="table table-hover">
+    <tr>
+        <th style="min-width: 120px;">方法</th>
+        <th style="min-width: 120px;">作用机制</th>
+        <th style="min-width: 120px;">有效性：每年每百名妇女<strong>坚持正确使用</strong>的怀孕次数</th>
+        <th style="min-width: 120px;">有效性：每年每百名妇女<strong>一般使用</strong>的怀孕次数</th>
+        <th style="min-width: 90px;">参考药品费用（元）</th>
+        <th style="min-width: 90px;">参考手术费用（元）</th>
+        <th style="min-width: 90px;">备注</th>
+        </tr>
+        <tr>
+        <td>皮下埋植剂</td>
+        <td>增厚宫颈粘液，阻止精子和卵子相遇，阻止排卵</td>
+        <td class="xef">0.1</td>
+        <td class="xef">0.1</td>
+        <td>60~800</td>
+        <td>90</td>
+        <td>部分药品在部分地区免费，手术费自费。</td>
+        </tr>
+        <tr>
+        <td>口服避孕药</td>
+        <td>阻止卵子从卵巢中释放（排卵）</td>
+        <td class="xef">0.3</td>
+        <td class="ef">7</td>
+        <td>15~108（每盒）</td>
+        <td>不适用</td>
+        <td>部分药品在部分地区免费。</td>
+        </tr>
+        <tr>
+        <td>复方避孕贴剂和复方阴道避孕环</td>
+        <td>阻止卵子从卵巢中释放（排卵）</td>
+        <td class="xef">0.3</td>
+        <td class="ef">7</td>
+        <td>无数据</td>
+        <td>不适用</td>
+        <td></td>
+        </tr>
+        <tr>
+        <td>宫内装置：左炔诺孕酮</td>
+        <td>增厚宫颈粘液，阻止精子和卵子相遇</td>
+        <td class="xef">0.5</td>
+        <td class="xef">0.7</td>
+        <td>1153</td>
+        <td>30</td>
+        <td></td>
+        </tr>
+        <tr>
+        <td>宫内装置：含铜</td>
+        <td>铜元素会损害精子并阻止精子与卵子结合</td>
+        <td class="xef">0.6</td>
+        <td class="xef">0.8</td>
+        <td>17~30</td>
+        <td>30</td>
+        <td>部分地区免费。</td>
+        </tr>
+        <tr>
+        <td>紧急避孕药（醋酸乌利司他30毫克或左炔诺孕酮1.5毫克）</td>
+        <td>阻止或延迟卵子从卵巢中释放。在无保护性行为后72小时内服用，以防止怀孕。</td>
+        <td class="xef">0.99</td>
+        <td>不适用</td>
+        <td>8.5</td>
+        <td>不适用</td>
+        <td>部分地区免费，不可当作常规避孕手段。</td>
+        </tr>
+        <tr>
+        <td>男用避孕套</td>
+        <td>形成屏障，防止精子和卵子相遇</td>
+        <td class="ef">2</td>
+        <td class="wa">13</td>
+        <td>3（每只）</td>
+        <td>不适用</td>
+        <td>部分地区免费。</td>
+        </tr>
+        <tr>
+        <td>日历法或节奏法</td>
+        <td>在估计排卵期第一天和最后一天避免无保护的阴道性交，即不性交或使用避孕套。</td>
+        <td class="ef">4</td>
+        <td class="wa">15</td>
+        <td>不适用</td>
+        <td>不适用</td>
+        <td></td>
+        </tr>
+        <tr>
+        <td>性交中断法</td>
+        <td>在射精前，从女性阴道中拔出男性生殖器</td>
+        <td class="ef">4</td>
+        <td class="wa">20</td>
+        <td>不适用</td>
+        <td>不适用</td>
+        <td></td>
+        </tr>
+        <tr>
+        <td>女用避孕套</td>
+        <td>形成屏障，防止精子和卵子相遇</td>
+        <td class="ef">5</td>
+        <td class="wa">21</td>
+        <td>5（每只）</td>
+        <td>不适用</td>
+        <td></td>
+        </tr>
+        <tr>
+        <td>无措施</td>
+        <td>不采取任何避孕措施</td>
+        <td class="da">85</td>
+        <td class="da">85</td>
+        <td>不适用</td>
+        <td>不适用</td>
+        <td></td>
+        </tr>
+    </table>
+</div>
+
+<End />
+
+<ReferList citeList={citeList} />
+
+### 避孕方法比较表格 - 价格信息来源
+
+<ol class="reference-list">
+    <li>齐齐哈尔市政府：附属三院收费价格表</li>
+    <li>成都市人民政府：成都市天府新区人民医院医疗服务收费项目价格执行情况表</li>
+    <li>岳阳市卫生健康委员会：<a href="http://www.yueyang.gov.cn/wsj/11168/11179/37909/content_1155508.html">岳阳市妇幼保健院药品价格公示</a></li>
+    <li>南京市卫生健康委员会：<a href="http://wjw.nanjing.gov.cn/njswshjhsywyh/201901/t20190131_1396901.html">南京市妇幼保健院常用药品信息</a></li>
+    <li>湖北省卫生健康委员会：<a href="http://wjw.hubei.gov.cn/zfxxgk/fdzdgknr/zfcg/cgml/202010/t20201026_2976424.shtml">湖北省卫生健康委员会左炔诺孕酮硅胶棒采购项目中标(成交)结果公告</a></li>
+    <li>吉林省公共资源交易中心：<a href="http://www.ggzyzx.jl.gov.cn/jygg/zcjz/zbjggg/202010/t20201029_7683552.html">吉林省卫生健康委员会药具管理中心2020年免费基本避孕药具采购项目第3包左炔诺孕酮硅胶棒（配药针）</a></li>
+    <li>凭祥市人民政府：<a href="http://www.pxszf.gov.cn/ggfw_1719/syfw/yjfw/t1921784.shtml">凭祥市妇幼保健院避孕药具内容公示</a></li>
+    <li>湖北省卫生健康委员：<a href="http://wjw.hubei.gov.cn/zfxxgk/fdzdgknr/zfcg/cgml/202010/t20201026_2976420.shtml">湖北省卫生健康委员会圆形含铜含吲哚美辛宫内节育器采购项目中标(成交)结果公告</a></li>
+    <li>中国政府采购网：<a href="http://www.ccgp.gov.cn/cggg/dfgg/cjgg/202007/t20200724_14716985.htm">2020年免费提供基本避孕药具（避孕药和宫内节育器）采购项目（重招）成交公告</a></li>
+</ol>
+
+## 版权
+
+### 正文内容
+
+详见[版权许可](/general/copyright)。
+
+### 图片来源
+
+本页图片来自互联网，且均在版权合规要求下使用。
+
+沈逸林亦以[知识共享 署名-相同方式共享 4.0协议](https://creativecommons.org/licenses/by-sa/4.0/deed.zh)发布其提供的图片。
+
+<table class="table table-bordered" style="overflow:auto">
+    <tbody>
+    <tr><th>图片编号</th><th>作者</th><th>来源</th></tr>
+    <tr>
+        <td>封面</td>
+        <td><a href="https://www.rhsupplies.org/">生殖健康用品联盟</a></td>
+        <td><a href="https://unsplash.com/photos/lYR44OXwMA4">Unsplash</a></td>
+    </tr>
+    <tr>
+        <td>图 1</td>
+        <td><a href="https://linktr.ee/sato_chito_">佐藤 @sato_chito_</a></td>
+        <td><a href="https://seikyouiku-illust.com/%e5%ad%90%e5%ae%ae%e3%81%ae%e6%96%ad%e9%9d%a2%e5%9b%b3/">性教育いらすと – 無料イラスト素材集</a>（有修改）</td>
+    </tr>
+    <tr>
+        <td>图 2</td>
+        <td><a href="https://linktr.ee/sato_chito_">佐藤 @sato_chito_</a></td>
+        <td><a href="https://seikyouiku-illust.com/%e5%8f%97%e7%b2%be%e3%81%8b%e3%82%89%e7%9d%80%e5%ba%8a/">性教育いらすと – 無料イラスト素材集</a>（有修改）</td>
+    </tr>
+    <tr>
+    <td>图 3</td>
+    <td><a href="https://www.rhsupplies.org/">生殖健康用品联盟</a></td>
+    <td><a href="https://unsplash.com/photos/fgqLiOKNjU8">Unsplash</a></td>
+    </tr>
+    <tr>
+    <td>图 4</td>
+    <td><a href="https://www.rhsupplies.org/">生殖健康用品联盟</a></td>
+    <td><a href="https://unsplash.com/photos/APYNdxlT3Nk">Unsplash</a></td>
+    </tr>
+    <tr>
+    <td>图 5</td>
+    <td><a href="https://commons.wikimedia.org/wiki/User:1Veertje" title="User:1Veertje">Vera de Kok</a></td>
+    <td><a href="https://commons.wikimedia.org/wiki/File:Implanon_implantation.webm">Wikimedia    Commons</a></td>
+    </tr>
+    <tr>
+    <td>图 6</td>
+    <td><a href="https://www.rhsupplies.org/">生殖健康用品联盟</a></td>
+    <td><a href="https://unsplash.com/photos/lR1eWq2nl-Y">Unsplash</a></td>
+    </tr>
+    <tr>
+    <td>图 7</td>
+    <td><a href="https://www.rhsupplies.org/">生殖健康用品联盟</a></td>
+    <td><a href="https://unsplash.com/photos/utxGYPso0ZM">Unsplash</a></td>
+    </tr>
+    <tr>
+    <td>图 8</td>
+    <td><a href="https://www.rhsupplies.org/">生殖健康用品联盟</a></td>
+    <td><a href="https://unsplash.com/photos/WMLE8Pc_VwM">Unsplash</a></td>
+    </tr>
+    <tr>
+    <td>图 9</td>
+    <td>沈逸林</td>
+    <td>拍摄者授权提供</td>
+    </tr>
+    <tr>
+    <td>图 10</td>
+    <td><a href="https://commons.wikimedia.org/wiki/User:Ceridwen~commonswiki" title="User:Ceridwen~commonswiki">Ceridwen</a></td>
+    <td><a href="https://commons.wikimedia.org/wiki/File:Pr%C3%A9servatif_f%C3%A9minin.jpg">Wikimedia Commons</a></td>
+    </tr>
+    <tr>
+    <td>图 11</td>
+    <td>沈逸林</td>
+    <td>拍摄者授权提供</td>
+    </tr>
+    <tr>
+    <td>图 12</td>
+    <td><a href="https://www.rhsupplies.org/">生殖健康用品联盟</a></td>
+    <td><a href="https://unsplash.com/photos/cHrcHdg2H9E">Unsplash</a></td>
+    </tr>
+    <tr>
+    <td>图 13</td>
+    <td>Zwager</td>
+    <td><a href="https://commons.wikimedia.org/wiki/File:Zwangerschapstesten.jpg">Wikimedia Commons</a></td>
+    </tr>
+    </tbody>
+</table>

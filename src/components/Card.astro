@@ -1,0 +1,14 @@
+---
+const { href, bgID, title, enTitle } = Astro.props;
+---
+<div class="header-thumb">
+	<a href={href}>
+	  <div class="header-img" id={bgID}></div>
+	  <div class="header-cover">
+		<div class="header-title">
+		  <h2>{ title }</h2>
+		  <p aria-hidden="true">{ enTitle }</p>
+		</div>
+	  </div>
+	</a>
+</div>

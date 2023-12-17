@@ -1,0 +1,155 @@
+---
+layout: /src/layouts/Main.astro
+
+title: 性取向
+enTitle: Sexual Orientation
+desc: 有关性取向的简要列举说明。
+bgPath: "/source/img/3-bg.jpg"
+keywords: 
+ - 性取向
+ - 同性恋
+
+---
+import Cite from '/src/components/CiteSup.astro';
+import ReferList from '/src/components/CiteReference.astro';
+import Btn from '/src/components/OutlineBtn.astro';
+import Key from '/src/components/KeySentence.astro';
+import End from '/src/components/ArticleEnd.astro';
+export const citeList = [
+    {
+        name: "青春期发育",
+        caption: "Evan G. Graber,青春期发育[G/OL]. 默沙东诊疗手册大众版, 2021(202104)[2022-06-14]. https://www.msdmanuals.cn/home/children-s-health-issues/growth-and-development/adolescent-development"
+    },
+    {
+        name: "性概述",
+        caption: "George R. Brown,性概述[G/OL]. 默沙东诊疗手册大众版, 2021(202104)[2022-06-14]. https://www.msdmanuals.cn/home/special-subjects/sexuality/overview-of-sexuality"
+    },
+     {
+        "name": "深入理解性傾向和同性戀",
+        "caption": "美国心理学会.解答你的問題：深入理解性傾向和同性戀[Z/OL] . (2008)[2014]. http://www.apa.org/topics/lgbt/chinese-orientation.pdf"
+    },
+    {
+        "name": "无性恋",
+        "caption": "维基百科编者. 無性戀[G/OL]. 维基百科, 2022(20220606)[2022-06-06]. https://zh.wikipedia.org/w/index.php?title=%E7%84%A1%E6%80%A7%E6%88%80&oldid=72032771"
+    },
+    {
+        "name": "双性恋",
+        "caption": "维基百科编者. 双性恋[G/OL]. 维基百科, 2022(20220606)[2022-06-06]. https://zh.wikipedia.org/w/index.php?title=%E5%8F%8C%E6%80%A7%E6%81%8B&oldid=72032799"
+    },
+    {
+        "name": "同性恋",
+        "caption": "维基百科编者. 同性戀[G/OL]. 维基百科, 2022(20220530)[2022-05-30]. https://zh.wikipedia.org/w/index.php?title=%E5%90%8C%E6%80%A7%E6%88%80&oldid=71914359"
+    },
+    {
+        "name": "异性恋",
+        "caption": "维基百科编者. 异性恋[G/OL]. 维基百科, 2022(20220524)[2022-05-24]. https://zh.wikipedia.org/w/index.php?title=%E5%BC%82%E6%80%A7%E6%81%8B&oldid=71792586"
+    },
+    {
+        "name": "泛性恋",
+        "caption": "维基百科编者. 泛性戀[G/OL]. 维基百科, 2022(20220322)[2022-03-22]. https://zh.wikipedia.org/w/index.php?title=%E6%B3%9B%E6%80%A7%E6%88%80&oldid=70752309"
+    },
+    {
+        "name": "情况介绍",
+        "caption": "联合国自由与平等运动. 国际人权法与性取向和性别认同. 联合国, [2023-11-16]. https://www.ohchr.org/sites/default/files/Documents/Issues/Discrimination/LGBT/FactSheets/unfe-11-UN_Fact_Sheets_GenderIdentity_Chinese.pdf"
+    },
+    {
+        "name": "生而自由一律平等",
+        "caption": "人权高专办. 生而自由、一律平等：国际人权法中的性取向和性别认同. 联合国, 2013[2023-11-16]. https://www.ohchr.org/zh/publications/special-issue-publications/born-free-and-equal-sexual-orientation-and-gender-identity"
+    }
+];
+
+
+性取向是指一个人对某性别产生的持久情感、喜爱、爱情或性吸引的现象。<Cite citeName="深入理解性傾向和同性戀" citeList={citeList}/>通常，性取向可归纳为**异性恋**、**同性恋**和**双性恋**，而**无性恋**有时被视作性取向的第四类别、有时认为其是“没有性取向”的现象。 这里的“异性”等中的“性”指的是自身的**性别认同**中的性别。
+
+<Key>同性恋及双性恋、无性恋倾向均不是疾病或性功能障碍。<Cite citeName="青春期发育" citeList={citeList} /><Cite citeName="深入理解性傾向和同性戀" citeList={citeList}/>性取向是平等且自由的。</Key>
+
+性取向并非一成不变，例如一些尝试过同性恋关系的人或许会不再对同性恋产生兴趣。<Cite citeName="青春期发育" citeList={citeList} />
+
+性取向可由一些问卷做参考。
+
+<p><Btn href="https://www.idrlabs.com/cn/sexual-orientation/test.php">性取向测试</Btn></p>
+
+<small>测试结果仅供个人参考。受网络环境影响，您有可能无法直接打开该链接。该链接不属于 KnowSex 。</small>
+
+异性恋简述
+-----
+
+异性恋一般指对异性（包括自身**生理性别**及**性别认同**为当事人的异性）能产生爱慕感、建立浪漫关系，或认为异性拥有性吸引力的一种现象。
+
+不论社会文化背景如何，当中大多数人都是异性恋者，而异性性行为是迄今为止最常见的[性行为](/main/sexual-activity)类型。<Cite citeName="异性恋" citeList={citeList}/>
+
+同性恋简述
+-----
+
+同性恋是以同样的性别或**社会性别**为对象建立起浪漫吸引、性吸引或[性行为](/main/sexual-activity)的亲密关系，或以此性倾向做主要自我认同的现象。
+
+男同性恋者在英文中通常以“Gay”称，女同性恋者通常以“Lesbian”称（有时根据其单词发音会以“蕾丝”“蕾丝边”“拉拉”等词汇代指）。
+
+双性恋简述
+-----
+
+双性恋，一般指能对男性和女性皆产生爱慕感、建立浪漫关系，或认为两者皆有性吸引力的一种现象。
+
+研究证实双性恋也可作为一种过渡性的性倾向认同。<Cite citeName="双性恋" citeList={citeList}/>
+
+泛性恋简述
+-----
+
+泛性恋是指对任何生理性别、社会性别皆产生爱慕感、建立浪漫关系的现象。
+
+和双性恋有所不同，泛性恋不对性别做区分，这超出二元性别之外。
+
+无性恋简述
+-----
+
+无性恋是指认为他人缺乏性吸引力，或是缺乏或有着低度性欲的状态。
+
+不同于性欲机能减退障碍，无性恋者一般不会因为性方面的事情感到显著的痛苦、感到具有社交困难，或是缺少性刺激。无性恋被认为是持久的无法感受到性吸引。
+
+LGBT
+----
+
+LGBT是**女同性恋者**（**L**esbian）、**男同性恋者**（**G**ay）、**双性恋者**（**B**isexual）与**跨性别者**（**T**ransgender）的英文首字母缩略字。
+
+LGBT通常会使用**LGBT骄傲旗帜**（彩虹旗）作为标志。
+
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 777 480">
+    <rect fill="#750787" width="777" height="480"/>
+    <rect fill="#004dff" width="777" height="400"/>
+    <rect fill="#008026" width="777" height="320"/>
+    <rect fill="#ffed00" width="777" height="240"/>
+    <rect fill="#ff8c00" width="777" height="160"/>
+    <rect fill="#e40303" width="777" height="80"/>
+</svg>
+<small>图 1 LGBT 骄傲旗帜</small>
+
+性取向偏见
+-----
+
+由于历史、社会环境、文化等因素，对性取向的偏见在不同程度上存在于各个社会中，是指对某性取向的人群持有仇恨、歧视的现象。
+
+性取向自由是人权的一部分，人人享有性取向的自由。各司法管辖区应有禁止基于性取向歧视的法律法规，充分保障公民的基本人权。<Cite citeName="情况介绍" citeList={citeList}/><Cite citeName="生而自由一律平等" citeList={citeList}/>
+
+<End />
+
+<ReferList citeList={citeList}/>
+<h2>版权</h2>
+<h3>正文内容</h3>
+<p>详见<a href="/general/copyright">版权许可</a>。</p>
+<h3>图片来源</h3>
+<p>本页图片来自互联网，且均在版权合规要求下使用。</p>
+<table class="table table-bordered" style="overflow:auto">
+	<tbody>
+		<tr><th>图片编号</th><th>作者</th><th>来源</th></tr>
+		<tr>
+			<td>封面</td>
+			<td><a href="https://unsplash.com/@aridley88">Andrew Ridley</a></td>
+			<td><a href="https://unsplash.com/photos/jR4Zf-riEjI">Unsplash</a></td>
+		</tr>
+		<tr>
+			<td>图 1</td>
+			<td>Gilbert Baker</td>
+			<td>公有领域</td>
+		</tr>
+  </tbody>
+</table>

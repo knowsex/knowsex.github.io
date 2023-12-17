@@ -1,0 +1,103 @@
+---
+import Layout from '../layouts/Index.astro';
+import Card from "../components/Card.astro";
+const title = '首页';
+const keywords = [''];
+const desc = "KnowSex 是一个性教育网站，内容涵盖生殖系统、避孕、媒介素养等多方面内容，并提供问答服务。";
+
+// YYYY-MM-DD
+const date = new Date().toLocaleString('zh-CN', { timeZone: 'Hongkong', dateStyle: 'short' });
+
+---
+<Layout title={title} desc={desc} keywords={keywords} isRoot=1>
+<style slot="exCSS" is:inline>
+#talk-bg {
+    background-image: url('/source/img/talk-bg.jpg');
+}
+#std-bg {
+    background-image: url('/source/img/dominoes.jpg');
+}
+#pa-bg {
+    background-image: url('/source/img/pa-cover.jpg');
+}
+#si-bg {
+    background-image: url('/source/img/si-bg.jpg');
+}
+#no1 {
+    background-image: url('/source/img/1-bg.jpg')
+}
+
+#no2 {
+    background-image: url('/source/img/2-bg.jpg')
+}
+
+#no3 {
+    background-image: url('/source/img/3-bg.jpg')
+}
+
+#ex-rd {
+    background-image: url('/source/img/exrd-bg.jpg')
+}
+
+#contraceptive {
+    background-image: url('/source/img/contraceptive.jpg')
+}
+
+#communicate {
+    background-image: url('/source/img/talk-bg.jpg')
+}
+
+#donate-bg {
+    background-image: url('../general/encourage/donateCover.jpg')
+}
+
+#about-bg {
+    background-image: url('../general/about/aboutCover.jpg')
+}
+
+#license-bg {
+    background-image: url('../general/copyright/license-cover.jpg')
+}
+
+</style>
+
+{/*
+<!-- <p class="bg-light tip-bar" aria-hidden="true">⭐ 你的 <a href="/sub/Encourage.html" style="text-decoration:underline">支持</a> 可以鼓励 KnowSex 的维护与运营。</p> -->
+<p class="bg-light tip-bar">🖋️ 网站上次修缮日期 {% now 'local' %}</p>
+*/}
+{/*
+<p class="bg-light tip-bar"><span class="darkmode-ignore">ℹ️</span> 2023 年 11 月 23 日（UTC+8）起，我们将实施更新后的<a href="/general/privacy-policy">隐私政策</a>，请知悉。</p>
+*/}
+{/*
+<!-- <p class="bg-light tip-bar"><span class="darkmode-ignore">😥</span> 因商标纠纷，网站即日起撤去纠纷标识，暂时使用“KnowSex”作为网站名称。</p> -->
+*/}
+{/*
+<p class="bg-light tip-bar"><span class="darkmode-ignore">✨</span> 请考虑<a href="/general/encourage" style="text-decoration:underline">支持</a>网站的维护与运营。</p>
+*/}
+    <p class="bg-light tip-bar" style="text-align: left;">
+        <span class="darkmode-ignore">🔖</span> 请收藏我们的网址 <code>knowsex.net</code> 以备不时之需。<a href="https://post.knowsex.net/archives/how-to-visit-again">了解如何再度访问...</a>
+    </p>
+    <div id="domain-notice"></div>
+    <div class="browser_tip"></div>
+    <br>
+    <div style="color:grey; font-size:.8em;">当前版本修缮日期 {date}</div>
+    <Card href="main/human-reproductive-system" bgID="no1" title="人类生殖系统" enTitle="Human Reproductive System"/>
+    <Card href="main/puberty-and-adolescence" bgID="pa-bg" title="青春期" enTitle="Puberty and Adolescence"/>
+    <Card href="main/sexual-activity" bgID="no2" title="性行为" enTitle="Sexual Activity"/>
+    <Card href="main/sexual-orientation" bgID="no3" title="性取向" enTitle="Sexual Orientation"/>
+    <Card href="main/contraception" bgID="contraceptive" title="避孕" enTitle="Contraceptive"/>
+    <Card href="main/std" bgID="std-bg" title="性传播疾病" enTitle="Sexually Transmitted Diseases"/>
+    <Card href="main/sex-and-information" bgID="si-bg" title="性与信息" enTitle="Sex and Information"/>
+    <Card href="general/communicate" bgID="talk-bg" title="来信沟通" enTitle="Communicate"/>
+
+    
+<blockquote>
+	<p>在向青少年传授性卫生知识时，男女同学要一道听，不要分开……</p>
+	<p>不要试图回避，更不要搞得神秘化。</p>
+	<footer>周恩来</footer>
+</blockquote>
+<blockquote>
+	<p>近几十年来，中国青少年性发育成熟年龄不断提前，性观念越来越趋于开放，对婚前性行为持接纳态度的比例较高，但同时他们普遍缺乏性与生殖健康知识和安全性行为意识。在此背景下，青少年发生性传播感染、意外妊娠、人工流产以及遭受性和性别暴力的风险不断增加，因此性教育至关重要。</p>
+	<footer>联合国教科文组织&emsp;联合国人口基金</footer>
+</blockquote>
+</Layout>

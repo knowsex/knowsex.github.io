@@ -1,0 +1,112 @@
+---
+layout: /src/layouts/Main.astro
+
+title: 淋病
+enTitle: Genital Wart
+desc: 有关性传播疾病淋病的简要科普。
+bgPath: /source/img/Neisseria_gonorrhoeae.jpg
+keywords: 
+ - 淋病
+---
+
+import Cite from '/src/components/CiteSup.astro';
+import ReferList from '/src/components/CiteReference.astro';
+import Btn from '/src/components/OutlineBtn.astro';
+import Key from '/src/components/KeySentence.astro';
+import End from '/src/components/ArticleEnd.astro';
+
+export const citeList = [
+    {
+        "name": "性学观止",
+        "caption": "贺兰特·凯查杜里安.性学观止[M].北京:科学技术文献出版社,2019.3 - ISBN 978-7-5189-5126-0"
+    },
+    {
+        "name": "健康的性",
+        "caption": "姚锦仙,程红. 健康的性[M]. 北京:高等教育出版社,2015.3 - ISBN 978-7-04-041738-8",
+    },
+    {
+        "name": "皮肤性病学",
+        "caption": "张学军,郑捷 主编. 皮肤性病学[M]. 北京:人民卫生出版社,2018 - ISBN 978-7-117-26670-3",
+    },
+    {
+        "name": "CDC",
+        "caption": "Division of STD Prevention, National Center for HIV, Viral Hepatitis, STD, and TB Prevention, Centers for Disease Control and Prevention. Gonorrhea – CDC Basic Fact Sheet[G/OL]. Centers for Disease Control and Prevention, 2022(20220412)[2022-08-25]. https://www.cdc.gov/std/gonorrhea/stdfact-gonorrhea.htm"
+    }
+];
+
+淋病是由淋球菌引起的传染病。其主要导致泌尿生殖系统的化脓性感染，有时也引发眼、咽、直肠等部位出现症状。<Cite citeName='性学观止' citeList={citeList}/><Cite citeName='皮肤性病学' citeList={citeList}/>
+
+传播
+--
+
+与受感染的生殖器、咽喉或直肠黏膜紧密接触就有可能感染。<Cite citeName='性学观止' citeList={citeList}/>少数情况下，接触含淋球菌的分泌物或是被污染的用具（如毛巾、座便器）也会导致感染。<Cite citeName='健康的性' citeList={citeList}/><Cite citeName='皮肤性病学' citeList={citeList}/>
+
+淋球菌离开人体后不易存活，其只传染人体。<Cite citeName='性学观止' citeList={citeList}/>在高温或干燥条件下，淋球菌会较快死亡。不过，在不完全干燥或在脓液之环境中，淋球菌可能会保持 10 余小时甚至数天的传染性。<Cite citeName='皮肤性病学' citeList={citeList}/>
+
+症状
+--
+
+5% ~ 20% 的男性患者和 50% ~ 80% 的女性患者症状轻微，但仍具有传染性。
+
+男性的主要症状表现在尿道有淡黄脓状分泌物，小便时可伴有烧灼感和瘙痒。<Cite citeName='性学观止' citeList={citeList}/>不治疗的情况下，在 2 ~ 3 周内症状会消退。<Cite citeName='健康的性' citeList={citeList}/>但此时仍有传染性，并可引发其它炎症。少数情况下将影响到肾脏，也会传染到关节处。<Cite citeName='性学观止' citeList={citeList}/>
+
+女性的症状大部分在早期轻微或无症状，这使得女性更多地会出现并发症。感染最初通常在宫颈，阴道有淡黄色排泄物，但通常不容易被注意。不予以治疗，则可能引起盆腔炎。盆腔炎的症状也较少，可能有下腹部子宫和骨盆区域疼痛、敏感、打寒颤、发烧、小便灼热等症状。<Cite citeName='性学观止' citeList={citeList}/><Cite citeName='健康的性' citeList={citeList}/><Cite citeName='CDC' citeList={citeList}/>
+
+<div class="row show">
+<div class="col-md-6 img-box">
+    <div class="click-to-show">
+    <p class="text-hover-img">可能含有令人不适的内容<br/>点击或轻触去除模糊</p>
+    <img loading="lazy" src="/source/img/SOA-gonorroe-male.jpg" class="img-thumbnail thumb show-after-click" alt="图 1，淋病导致的男性尿道出现脓状分泌物，这些排泄物从尿道口排出。"/>
+    <br/><small>图 1 淋病导致的男性尿道出现脓状排泄物</small>
+    </div>
+</div>
+<div class="col-md-6 img-box">
+    <div class="click-to-show">
+    <p class="text-hover-img">可能含有令人不适的内容<br/>点击或轻触去除模糊</p>
+    <img loading="lazy" src="/source/img/SOA-gonorroe-female.jpg" class="img-thumbnail thumb show-after-click" alt="图 2，淋病导致的女性阴部出现排泄物，在该图片里，这些排泄物分布在外生殖器上。"/>
+    <br/><small>图 2 淋病导致的女性阴部排泄物</small>
+    </div>
+</div>
+</div>
+
+口交和接吻可引发咽淋病，主要症状是嗓子疼痛，也有发烧或淋巴肿大。<Cite citeName='性学观止' citeList={citeList}/>有时患者无症状，但仍有传染性。
+
+直肠淋病一般是通过肛交引发的直肠感染。也有由阴道排泄物进入直肠引发的感染。其症状包括肛门瘙痒，伴有直肠排泄物等。有时患者无症状，但仍有传染性。<Cite citeName='性学观止' citeList={citeList}/><Cite citeName='CDC' citeList={citeList}/>
+
+预后
+--
+
+正确的治疗可治愈淋病。但疾病带来的一些永久性损害可能无法被阻止感染的药物清除。<Cite citeName='CDC' citeList={citeList}/>
+
+<End />
+<ReferList citeList={citeList}/>
+<h2>版权</h2>
+<h3 class="mt-4 mb-3">正文内容</h3>
+<p>详见<a href="/general/copyright">版权许可</a>。</p>
+<h3 class="mt-4 mb-3">图片来源</h3>
+<p>本页图片来自互联网，且均在版权合规要求下使用。</p>
+<table class="table table-bordered" style="overflow:auto">
+  <tbody>
+    <tr>
+      <th>图片编号</th>
+      <th>作者</th>
+      <th>来源</th>
+    </tr>
+    <tr>
+      <td>封面</td>
+      <td>CDC / Antibiotic Resistance Coordination and Strategy Unit</td>
+      <td><a href="https://phil.cdc.gov/Details.aspx?pid=23244">Public Health Image Library (PHIL)</a></td>
+    </tr>
+    <tr>
+      <td>图 1</td>
+      <td><a href="http://www.aidsfonds.nl/">SOA-AIDS Amsterdam</a></td>
+      <td><a href="https://commons.wikimedia.org/wiki/File:SOA-gonorroe-male.jpg">Wikimedia Commons</a></td>
+    </tr>
+    <tr>
+      <td>图 2</td>
+      <td><a href="http://www.aidsfonds.nl/">SOA-AIDS Amsterdam</a></td>
+      <td><a href="https://commons.wikimedia.org/wiki/File:SOA-gonorroe-female.jpg">Wikimedia Commons</a></td>
+    </tr>
+  </tbody>
+</table>
+<script src="/script/cw.js"></script>

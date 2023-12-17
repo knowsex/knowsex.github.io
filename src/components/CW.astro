@@ -1,0 +1,24 @@
+---
+const {type="nudity"}=Astro.props;
+let chinese = ""
+let english = ""
+switch (type) {
+    case "nudity":
+        chinese = "本页面含有裸露的性器官图片，或不适宜在公众场合展示。向下滑动以继续浏览。"
+        english = "Contains nudity. Scroll down to continue."
+        break;
+
+    case "unhealth":
+        chinese = "本页面含有可能令人不适内容。向下滑动以继续浏览。"
+        english = "Contains content that may be disturbing. Scroll down to continue."
+        break;
+    default:
+        break;
+}
+---
+
+<div class="tip" aria-hidden="true">
+    <p><strong style="color:brown">敬请注意 / NOTICE</strong></p>
+    <p style="font-weight:300">{chinese}</p>
+    <p style="font-weight:300" lang="en">{english}</p>
+</div>

@@ -1,0 +1,22 @@
+---
+const { filename, name, desc, exposure, camera_orbit } = Astro.props;
+const filePath = `/source/models/${filename}.glb`;
+const poster=`/source/models/${filename}_poster.png`;
+---
+<span class="model-title">
+    <svg width="24" height="24" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4 44V14L14 4H44V34L34 44H4Z" stroke="#4a4a4a" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><path d="M34 14V44" stroke="#4a4a4a" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><path d="M14 4L14 34" stroke="#4a4a4a" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><path d="M4 14L34 14" stroke="#4a4a4a" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><path d="M44 4L34 14" stroke="#4a4a4a" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><path d="M4 44L14 34" stroke="#4a4a4a" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><path d="M14 34L44 34" stroke="#4a4a4a" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    模型展示：{ name }&nbsp;<span class="badge bg-secondary">测试功能</span>
+</span>
+<span class="model-text">您可操控其旋转、缩放或使用 AR 在现实中查看（如设备支持）。<b>若要向下滑动查看文章，请在模型框线以外区域向下滑动以翻动页面。</b></span>
+<model-viewer loading="lazy" src={filePath} ar ar-modes="webxr scene-viewer quick-look" camera-controls poster={poster} shadow-intensity="1" environment-image="legacy" exposure={exposure} camera-orbit={camera_orbit}>
+    <div class="progress-bar hide" slot="progress-bar">
+        <div class="update-bar"></div>
+    </div>
+    <button slot="ar-button" id="ar-button">
+        在现实中查看
+    </button>
+    <div id="ar-prompt">
+        <img loading="lazy" src="models/ar_hand_prompt.png">
+    </div>
+</model-viewer>  
+<small set:html={desc}/>

@@ -1,0 +1,158 @@
+---
+layout: /src/layouts/Main.astro
+
+title: 尖锐湿疣
+enTitle: Genital Wart
+desc: 有关性传播疾病尖锐湿疣的简要科普。
+bgPath: /source/img/Condyloma_acuminatum-low_mag.jpg
+keywords: 
+ - 生殖器疣
+ - 尖锐湿疣
+ - 性器疣
+---
+
+import Cite from '/src/components/CiteSup.astro';
+import ReferList from '/src/components/CiteReference.astro';
+import Btn from '/src/components/OutlineBtn.astro';
+import Key from '/src/components/KeySentence.astro';
+import End from '/src/components/ArticleEnd.astro';
+
+export const citeList = [
+    {
+        "name": "尖锐湿疣诊断",
+        "caption": "中华人民共和国国家卫生和计划生育委员会. WS/T 235-2016 尖锐湿疣诊断[S/OL]. 未知出版地:未知出版者,2016. http://www.nhc.gov.cn/wjw/s9491/201804/9aef5c170b67438a963dc8341047a128.shtml"
+    },
+    {
+        "name":"非性接触",
+        "caption": "桑明,颜廷凯,揭丽云.非性接触致幼女尖锐湿疣1例[J].皮肤病与性病,2018,40(04):524-525."
+    },
+    {
+        "name": "中国医药",
+        "caption": "中国医药信息查询平台. 尖锐湿疣[G/OL]. 中国医药信息查询平台, [2023-02-20]. https://www.dayi.org.cn/disease/1020029"
+    },
+    {
+        "name": "默沙东",
+        "caption": "Sheldon R. Morris. 人乳头状瘤病毒(HPV)感染[G/OL]. 默沙东诊疗手册大众版, c2023[2023-02-20]. https://www.msdmanuals.cn/home/infections/sexually-transmitted-infections-stis/human-papillomavirus-hpv-infection"
+    },
+    {
+        "name": "Mayo",
+        "caption": "妙佑医疗国际员工. 生殖器疣[G/OL]. 妙佑医疗国际, 2022(20220124)[2023-02-20]. https://www.mayoclinic.org/zh-hans/diseases-conditions/genital-warts/symptoms-causes/syc-20355234"
+    }
+];
+
+<p><span class="darkmode-ignore">⭐</span>本文作者为<b>神奇的红毛丹</b>。</p>
+
+尖锐湿疣是由**人乳头状病毒**（简称 **HPV** ）感染所引起的一种性传播疾病。<Cite citeName='尖锐湿疣诊断' citeList={citeList} />感染后可长出性器疣。
+
+传播
+--
+
+性接触为主要传播方式，男女皆可感染。也有无不洁性交史的人因间接接触发病。<Cite citeName='非性接触' citeList={citeList} />HPV 病毒也可由母亲传染给新生儿。注射 HPV 疫苗可有效防止感染。<Cite citeName='中国医药' citeList={citeList} /><Cite citeName='默沙东' citeList={citeList} />
+
+避孕套不能起到很充分的保护作用，因为避孕套无法遮住所有受感染的部位。更推荐的预防办法是减少与性行为经历不明者发生性行为、尽量避免自身的皮肤与受感染的组织直接接触。<Cite citeName='默沙东' citeList={citeList} />
+
+症状
+--
+
+受到生殖器 HPV 病毒株感染后，一般 2 周至 8 个月内即长出性器疣。疣的外观可能较小而平，也有可能较大成簇。<Cite citeName='Mayo' citeList={citeList} />
+
+口交可能使口腔及喉咙生疣。肛交也可能使肛门和直肠内发生感染。<Cite citeName='默沙东' citeList={citeList} /><Cite citeName='Mayo' citeList={citeList} />
+
+男性患者最常见的病征，包括阴茎、阴囊或肛门长出一些痒或不痛的肉色小粒。女性患者白带可能增多，伴随外阴瘙痒或灼痛。在外阴、阴道、宫颈、尿道口及肛门周围生出菜花状或鸡冠样的赘生物。如疣生长在女性的子宫颈，则可能会引致轻微出血。<Cite citeName='中国医药' citeList={citeList} />
+
+性器疣的患者一般不会引致严重的并发症。但宫颈癌与生殖器 HPV 病毒感染有密切联系。<Cite citeName='Mayo' citeList={citeList} />
+
+<div class="row show">
+  <div class="col-md-6 img-box">
+    <div class="click-to-show">
+      <p class="text-hover-img">可能含有令人不适的内容<br/>点击或轻触去除模糊</p>
+      <img loading="lazy" src="/source/img/Penile_warts.jpg" class="img-thumbnail thumb show-after-click" alt="图 1，阴茎包皮出现的尖锐湿疣，在该图片里，在阴茎包皮分布着菜花样的疣。"/>
+      <br/><small>图 1 阴茎包皮上出现的尖锐湿疣</small>
+    </div>
+  </div>
+  <div class="col-md-6 img-box">
+    <div class="click-to-show">
+      <p class="text-hover-img">可能含有令人不适的内容<br/>点击或轻触去除模糊</p>
+      <img loading="lazy" src="/source/img/SOA-Condylomata-acuminata-female.jpg" class="img-thumbnail thumb show-after-click" alt="图 2，女阴部位出现的尖锐湿疣，在该图片里，在女性阴部分布着菜花样的疣。"/>
+      <br/><small>图 2 女阴部位出现的尖锐湿疣</small>
+    </div>
+  </div>
+</div>
+
+就诊
+--
+
+如感觉生殖器部位有出现肿块或疣，请及时前往医院。
+
+尖锐湿疣常与无害的阴茎珍珠疹、假性湿疣混淆。醋酸白试验能够鉴别是否是尖锐湿疣。<Cite citeName='尖锐湿疣诊断' citeList={citeList} />
+
+<div class="row show">
+    <div class="click-to-show">
+      <p class="text-hover-img">可能含有令人不适的内容<br/>点击或轻触去除模糊</p>
+      <img loading="lazy" src="/source/img/Papulas_perladas_glande_2.jpg" class="img-thumbnail thumb show-after-click" alt="图 3，阴茎珍珠疹，在阴茎的冠状沟处分布。"/>
+      <br/><small>图 3 阴茎珍珠疹（无害）</small>
+    </div>  
+</div>
+
+<div class="row show">
+  <div class="click-to-show">
+    <p class="text-hover-img">可能含有令人不适的内容<br/>点击或轻触去除模糊</p>
+    <img loading="lazy" src="/source/img/假性濕疣.jpg" class="img-thumbnail thumb show-after-click" alt="图 4，无害的假性湿疣与尖锐湿疣对比。假性湿疣对称排列小阴唇内侧或前庭处，大小较一致，头部较圆，触感柔软。尖锐湿疣以区块群居分布，颜色偏深或白色，头部尖而偏硬。"/>
+    <br/><small>图 4 假性湿疣（无害）与尖锐湿疣（图中称“菜花”）对比（<a href="https://www.pskin.tw/machine-info.asp?id=2038">彭贤礼皮肤科诊所</a>供图）</small>
+  </div>
+</div>
+
+预后
+--
+
+尖锐湿疣预后一般较好，大多数患者治疗后皮损可以改善或消退。部分情况下症状可能自行消退，但大多数病例不会自愈。治疗可能减少HPV感染，但无法根除感染。治疗后复发率较高，但最终易达到临床治愈。<Cite citeName='中国医药' citeList={citeList} />
+
+<End />
+<ReferList citeList={citeList} />
+<h2>版权</h2>
+<h3 class="mt-4 mb-3">正文内容</h3>
+<p>详见<a href="/general/copyright">版权许可</a>。</p>
+<h3 class="mt-4 mb-3">图片来源</h3>
+<p>本页图片来自互联网，且均在版权合规要求下使用。</p>
+<table class="table table-bordered" style="overflow:auto">
+  <tbody>
+    <tr>
+      <th>图片编号</th>
+      <th>作者</th>
+      <th>来源</th>
+    </tr>
+    <tr>
+      <td>封面</td>
+      <td><a href="https://commons.wikimedia.org/wiki/User:Nephron">Michael Bonert</a></td>
+      <td><a href="https://commons.wikimedia.org/wiki/File:Condyloma_acuminatum_-_low_mag.jpg">Wikimedia Commons</a></td>
+    </tr>
+    <tr>
+      <td>图 1</td>
+      <td><a href="https://commons.wikimedia.org/wiki/User:Jmarchn">Jmarchn</a></td>
+      <td><a href="https://commons.wikimedia.org/wiki/File:Penile_warts.jpg">Wikimedia Commons</a></td>
+    </tr>
+    <tr>
+      <td>图 2</td>
+      <td><a href="http://www.aidsfonds.nl/">SOA-AIDS Amsterdam</a></td>
+      <td><a href="https://commons.wikimedia.org/wiki/File:SOA-Condylomata-acuminata-female.jpg">Wikimedia Commons</a></td>
+    </tr>
+    <tr>
+      <td>图 3</td>
+      <td>Wikipicturesxd</td>
+      <td><a href="https://commons.wikimedia.org/wiki/File:Papulas_perladas_glande_2.jpg">Wikimedia Commons</a>（有修改）</td>
+    </tr>
+    <tr>
+      <td>图 4</td>
+      <td><a href="https://www.pskin.tw/">彭贤礼皮肤科诊所</a></td>
+      <td><a href="https://www.pskin.tw/machine-info.asp?id=2038">彭贤礼皮肤科诊所</a></td>
+    </tr>
+  </tbody>
+</table>
+<p>有关封面图片的附加版权信息：</p>
+<blockquote>
+<i>Copyright © 2011 <a class="external text" href="https://commons.wikimedia.org/wiki/User:Nephron">Michael Bonert</a>.</i><br/> 
+<i>You are free to share and adapt this image as per the <a rel="nofollow" class="external text" href="https://creativecommons.org/licenses/by-sa/3.0/legalcode">CC BY-SA 3.0</a>.</i>
+</blockquote>
+<p>有关图 4 的说明：</p>
+<p>此图片来自<a href="https://www.pskin.tw/">彭贤礼皮肤科诊所</a>文章<a href="https://www.pskin.tw/machine-info.asp?id=2038">《【假性濕疣】女生別誤會是菜花!》</a>，得到许可使用。</p>
+<script src="/script/cw.js"></script>

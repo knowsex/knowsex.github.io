@@ -1,0 +1,80 @@
+---
+import Layout from '/src/layouts/AstroPage.astro';
+import End from '/src/components/ArticleEnd.astro';
+const title = '站点地图';
+const enTitle = 'Sitemap';
+const keywords = [''];
+const desc = "此页面罗列 KnowSex 的页面链接。";
+const bgPath = "/source/img/map_zhengzhou_metro.jpg";
+---
+<Layout title={title} desc={desc} keywords={keywords} enTitle={enTitle} bgPath={bgPath}>
+<p>您可通过此页快速导航至您欲访问的页面。</p>
+<h2 class="mt-4 mb-4" id="正文">正文</h2>
+<div class="container">
+    <div class="row row-cols-2 row-cols-sm-3 row-cols-md-4">
+      <div class="col py-2">
+        <a href="/main/human-reproductive-system">人类生殖系统</a>
+      </div>
+      <div class="col py-2">
+        <a href="/main/puberty-and-adolescence">青春期</a>
+      </div>
+      <div class="col py-2">
+        <a href="/main/sexual-activity">性行为</a>
+      </div>
+      <div class="col py-2">
+        <a href="/main/sexual-orientation">性取向</a>
+      </div>
+      <div class="col py-2">
+        <a href="/main/contraception">避孕</a>
+      </div>
+      <div class="col py-2">
+        <a href="/main/sex-and-information">性与信息</a>
+      </div>
+    </div>
+
+    <div class="col-12 py-2 mt-3">
+      <a class="key" href="/main/std">性传播疾病</a>
+    </div>
+    <div class="row row-cols-2 row-cols-sm-3 row-cols-md-4 ms-3">
+      <div class="col py-2">
+        <a href="/main/std/syphilis">梅毒</a>
+      </div>
+      <div class="col py-2">
+        <a href="/main/std/gonorrhea">淋病</a>
+      </div>
+      <div class="col py-2">
+        <a href="/main/std/genital-wart">尖锐湿疣</a>
+      </div>
+      <div class="col py-2">
+        <a href="/main/std/aids">艾滋病</a>
+      </div>
+    </div>
+
+    <div class="col-12 py-2 mt-3">
+      <a href="/main/other-media" class="key">其他媒介版本</a>
+    </div>    
+</div>
+
+<h2 class="mt-4 mb-4" id="站务">站务</h2>
+<div class="container">
+    <div class="row row-cols-2 row-cols-sm-3 row-cols-md-4">
+        <div class="col py-2">
+          <a href="/general/about">关于</a>
+        </div>
+        <div class="col py-2">
+          <a href="/general/copyright">版权许可</a>
+        </div>
+        <div class="col py-2">
+          <a href="/general/encourage">支持</a>
+        </div>
+        <div class="col py-2">
+          <a href="/general/fund">资金详单</a>
+        </div>
+        <div class="col py-2">
+          <a href="/general/communicate">来信沟通</a>
+        </div>
+    </div>
+</div>
+<End/>
+<p style="color: #bbb">本页封面图片作者是 <a href="https://commons.wikimedia.org/wiki/User:Windmemories">Windmemories</a> ，来自 <a href="https://commons.wikimedia.org/wiki/File:System_Map_of_Zhengzhou_Metro_(with_realistic_scale).png">Wikimedia Commons</a> 。该作品以 <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh">CC BY-SA 4.0</a> 发表，在选作背景图时略作修改。</p>
+</Layout>

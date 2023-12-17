@@ -1,0 +1,119 @@
+---
+import Layout from '/src/layouts/AstroPage.astro';
+import End from '/src/components/ArticleEnd.astro';
+const title = '来信沟通';
+const enTitle = 'Communicate';
+const keywords = [''];
+const desc = "与 KnowSex 取得联系。";
+const bgPath = "/source/img/talk-bg.jpg";
+---
+<Layout title={title} desc={desc} keywords={keywords} enTitle={enTitle} bgPath={bgPath}>
+    {/* 
+        <div class="notice bg-light" id="pauseReceive">
+            <p>
+                <svg width="24" height="24" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="48" height="48" fill="white" fill-opacity="0.01"/><path d="M16.8657 7.46922C16.3036 9.21179 16 11.0704 16 13C16 22.9411 24.0589 31 34 31C36.5346 31 38.9468 30.4761 41.1343 29.5308C38.8006 36.766 32.0116 42 24 42C14.0589 42 6 33.9411 6 24C6 16.5935 10.4734 10.2317 16.8657 7.46922Z" fill="none" stroke="#333" stroke-width="4" stroke-linejoin="round"/><path d="M31.6605 10H41L31 18H41" stroke="#333" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                <b>暂停来信</b>            
+            </p>
+            <p>由于近日来信数量较多，为保证回信质量和成员状态，<span class="key">KnowSex 决定即日起暂停来信功能</span>，进行休假。在本横幅悬挂前的来信我们将继续回复。恢复时间择日通知。</p>
+            <p>若因版权通知等需紧急联系 KnowSex，请致信 <a href="mailto:knowsex@outlook.com">knowsex@outlook.com</a> 。</p>
+            <p><span class="key">当恢复来信时，本横幅将撤下。</span>您也可以关注我们的即刻账号 <a href="https://okjk.co/IJ8Ur">@KnowSex</a> 或 Twitter 账号 <a href="https://twitter.com/KnowSex_net">@KnowSex_net</a> 了解更多情况。</p>
+        </div>
+    */}
+        
+    {/*
+        <div class="notice bg-light p-4" id="pauseReceive">
+            <p>
+               <strong class="text-dark">致来信者</strong>            
+            </p>
+            <p>因 COVID-19 大流行、年末事务繁多，我们的回信速度可能会变慢。我们正在确保尽快回复您的来信。</p>
+            <p>感谢您的理解与支持。</p>
+            <p class="text-end">2022 年 12 月 17 日</p>
+        </div>
+     */}
+     <div class="mailMain">
+        <!-- style="opacity: .5;pointer-events: none;" -->
+        <div class="tip">
+            <p><strong style="color:brown">如果您遇到紧急情况，请直接致电当地紧急服务电话。我们无法为您提供紧急情况的即时咨询。</strong></p>
+            <p><strong style="color:brown">医学声明：</strong></p>
+            <p style="font-weight:300">囿于团队成员知识所限，KnowSex 提供的内容不能被解读为试图给予或提供特定医疗意见，或属于医疗临床实务的一部分，不能取代医护专业人士的建议和药品说明书。</p>
+        </div>
+        <p>如果你有自己的疑惑、焦虑希望得到我们的帮助，或者希望和我们合作，欢迎通过下面的方式来联系我们。</p>
+        <p>您可以选择公开提问的内容，以帮助其他有疑虑的人。我们将对可能与您产生联系的信息抹去。</p>
+        <p>请注意，回信者的观点并不代表 KnowSex 官方的观点。</p>
+        <div class="tip">
+            <p><strong style="color: inherit;">联系我们之前，请阅读 KnowSex 的<a href="/general/privacy-policy">隐私政策</a>和<a href="/general/terms-of-use">使用条款</a>，并确保你同意这些内容。</strong></p>    
+        </div>
+        <h2>电子邮件</h2>
+            <p>
+                <a href="mailto:knowsex@outlook.com" style="text-decoration: underline; font-weight: 700; font-size: 1.2em; color:#5dbd90;">
+                    knowsex@outlook.com
+                </a>
+            </p>
+            <p>如果太久没有收到回信，记得检查你的垃圾箱——我们的邮件可能会被误认为是垃圾邮件。</p>
+        
+        <h2>不记名留言系统（试行）</h2>
+        <p>通过下方按钮进入 KnowSex 不记名留言系统，无需提供联系方式。</p>
+        <p><a class="btn btn-outline-secondary" href="https://ask.knowsex.org/"  target="_self" role="button">不记名留言系统</a></p>
+    
+        <h2>在线表单</h2>
+        <p>您也可以填写在线表单进行提问，可通过下方按钮进行填写。此服务由金山表单提供。</p>
+        <p>如果太久没有收到回信，请回访本页面，查看下方<a href="#exception" target="_self">回信状态异常列表</a>。</p>
+        <p><a class="btn btn-outline-secondary" href="https://f.kdocs.cn/w/SYut9a03/"  target="_self" role="button">填写表单</a></p>
+        <!-- <div class="img-box">
+            <img loading="lazy" src="img/kdocs.svg" alt="表单二维码" class="img-thumbnail" style="width:100%;max-width:200px;margin:auto">
+        </div>    	 -->
+        <h2 id="exception">回信状态异常列表</h2>
+        <p>下面是近期一些 KnowSex 复信组无法与来信者取得联系的情况之列表。如果您的来信位于列表中，且需要继续联系 KnowSex ，请根据情况与复信组取得联系，也可重新发送邮件或提交表单。</p>
+        <p>该列表不定期擦除，更新稍有延迟。</p>
+        <p style="color: #A4A2A2">⇆ 表格若未完全显示，可左右滑动。</p>
+    
+        <div style="overflow: auto;" id="exception-table"><p>（读取列表失败）</p></div>
+    </div>
+    <script is:inline>
+        //获取本文件夹 Exception.json 文件
+        //获得时间戳
+        let timestamp = new Date().getTime();
+        $.getJSON("exception.json?"+timestamp, function(data) {
+
+            let ExceptionList = data;
+            let ExceptionListLength = ExceptionList.length;
+            let ExceptionListHTML = ``;
+
+            if(data.status == "error"){
+                ExceptionListHTML = `<p>（读取列表失败）</p>`;
+            } else if (ExceptionListLength == 0) {
+                ExceptionListHTML = `<p>（暂无异常情况）</p>`;
+            } else {
+                for (let i = 0; i < ExceptionListLength; i++) {
+                    ExceptionListHTML += `
+                    <tr>
+                        <td>${ExceptionList[i].time}</td>
+                        <td>${ExceptionList[i].way}</td>
+                        <td>${ExceptionList[i].value}</td>
+                        <td>${ExceptionList[i].note}</td>
+                    </tr>
+                    `;
+                }	
+                ExceptionListHTML = `
+                <table class="table table-hover" style=" width: 800px">
+                    <thead>
+                        <tr>
+                            <th>时间（UTC+8）</th>
+                            <th>复信方式</th>
+                            <th>复信地址/账号</th>
+                            <th>说明</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        ${ExceptionListHTML}
+                    </tbody>
+                </table>`;
+            }
+            document.getElementById("exception-table").innerHTML = ExceptionListHTML;
+
+        });
+    </script>
+    <div class="hr"></div>
+    <End/>
+    <p style="color: #bbb">本页封面图片作者是 <a href="https://unsplash.com/@priscilladupreez">Priscilla Du Preez</a> ，来自 <a href="https://unsplash.com/photos/7s3biR6HATU">Unsplash</a> 。</p>
+</Layout>

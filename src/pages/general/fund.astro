@@ -1,0 +1,38 @@
+---
+import Layout from '/src/layouts/AstroPage.astro';
+import End from '/src/components/ArticleEnd.astro';
+const title = '资金详单';
+const enTitle = 'Fund Detail';
+const keywords = [''];
+const desc = "KnowSex 的资金使用情况。";
+const bgPath = "/source/img/fund-cover.jpg";
+---
+<Layout title={title} desc={desc} keywords={keywords} enTitle={enTitle} bgPath={bgPath}>
+    <p>KnowSex 以年为单位更新资金使用情况，每年年初以电子表格形式公布详单。您可在下方下载已公布的资金详单。</p>
+    <p>如有疑问，请<a href="/general/communicate">联系我们</a>。</p>
+
+    <table class="table table-hover">
+        <tr>
+          <th>年份</th>
+          <th>下载</th>
+        </tr>
+        <tr>
+            <td>2021</td>
+            <td>
+                <a href="/general/fund/file/2021.xlsx" download>MS Office (.xlsx)</a><br>
+                <a href="/general/fund/file/2021.ods" download>开放文档格式 (.ods)</a><br>
+                <a href="/general/fund/file/2021.et" download>WPS Office (.et)</a>
+            </td>
+        </tr>
+        <tr>
+            <td>2022</td>
+            <td>
+                <a href="/general/fund/file/2022.xlsx" download>MS Office (.xlsx)</a><br>
+                <a href="/general/fund/file/2022.ods" download>开放文档格式 (.ods)</a><br>
+                <a href="/general/fund/file/2022.et" download>WPS Office (.et)</a>
+            </td>
+        </tr>
+    </table>
+    <End />
+    <p style="color: #bbb">本页封面图片作者是 <a href="https://unsplash.com/@mitchel3uo">Mitchell Luo</a> ，来自 <a href="https://unsplash.com/photos/07LMq80klHU">Unsplash</a> 。稍有修改。</p>
+</Layout>

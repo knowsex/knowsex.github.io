@@ -1,0 +1,17 @@
+{
+  "name": "knowsex",
+  "type": "module",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "@astrojs/mdx": "^2.0.1",
+    "astro": "^4.0.4",
+    "bootstrap": "^5.2.3"
+  }
+}

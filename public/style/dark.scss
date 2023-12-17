@@ -1,0 +1,84 @@
+$background: #1b1b1b;
+$background-secondary: #2c2c2c;
+$text-primary: #fff;
+$text-secondary: #cdcdcd;
+$text-link: #8cb4ff;
+
+$tip-red: #DA706C;
+.darkmode {
+    body {
+        background-color: $background;
+    }
+    .bg-light {
+        background-color: #212529 !important;
+        color: #fff !important;
+    }
+    a{
+        color: $text-link;
+    }
+    blockquote {
+        border-left-color: #7c7c7c;
+    }
+    .main {
+        color: #fff;
+    }
+    .table {
+        color: #fff;
+        border-color: #fff3;
+    }
+    .footer {
+        background-color: #121212;
+        color: #bbb;
+        a {
+            color: #bbb;
+        }
+    }
+    .tip {
+        background: linear-gradient($background 25%,$background) no-repeat 50% 50%,linear-gradient(-45deg,$text-secondary 25%,$background 25%,$background 50%,$text-secondary 50%,$text-secondary 75%,$background 75%,$background);
+        background-size: 95% 100%,20px 20px;
+        color: $tip-red;
+        p {
+            color: $tip-red;
+        }
+    }
+    .btn-exp::before, .tip-bar svg, .notice p svg, .navbar-toggler-icon, .dark-invert {
+        filter: invert(.6);
+    }
+
+    .quote{
+        p{color: #d6d6d6!important;}
+        .source{color: $text-secondary!important;}
+    }
+
+    blockquote footer{
+        color: $text-secondary
+    }
+
+    .btn-outline-secondary{
+        filter: brightness(1.5);
+    }
+
+    .main strong {
+        color : $tip-red;
+    }
+
+    .table-hover tbody tr:hover {
+        background-color: $background-secondary;
+        td,th {color: $text-secondary;}
+    }
+
+    .title img{
+        filter: invert(.5) brightness(1.8);
+    }
+    .topbar {
+        box-shadow: 0 1px 50px rgba(255, 255, 255, 0.1);
+    }
+    .dropdown-menu {
+        background-color: $background;
+        :hover{
+            color: $text-primary;
+            background-color: $background-secondary;
+        }
+    }
+}
+@media (prefers-color-scheme: dark) {}

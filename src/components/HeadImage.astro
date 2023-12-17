@@ -1,0 +1,13 @@
+---
+const { title, enTitle, bgPath } = Astro.props;
+---
+<div class="header-thumb">
+    <div class="header-img" style={{ backgroundImage: "url('"+bgPath+"')" }}></div>
+    <div class="header-cover">
+        <div class="header-title">
+            <h1 itemprop="headline">{title}</h1>
+            <p>{enTitle}</p>
+        </div>
+    </div>
+</div>
+<div style="box-shadow: 5px 0 0 rgba(0, 0, 0, 0.5);"></div>

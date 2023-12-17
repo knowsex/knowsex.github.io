@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="100"
+   height="100"
+   viewBox="0 0 26.458333 26.458334"
+   version="1.1"
+   id="svg8"
+   inkscape:version="1.0.2 (e86c870, 2021-01-15)"
+   sodipodi:docname="绘图.svg">
+  <defs
+     id="defs2" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="1.4"
+     inkscape:cx="138.56289"
+     inkscape:cy="69.481111"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer1"
+     inkscape:document-rotation="0"
+     showgrid="false"
+     inkscape:window-width="1301"
+     inkscape:window-height="872"
+     inkscape:window-x="59"
+     inkscape:window-y="11"
+     inkscape:window-maximized="0"
+     units="px" />
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="图层 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <g
+       aria-label="▼"
+       id="text835"
+       style="font-weight:500;font-size:10.5833px;line-height:1.25;font-family:'Source Han Sans';-inkscape-font-specification:'Source Han Sans Medium';stroke-width:0.264583"
+       transform="matrix(2.6147468,0,0,2.5136938,-0.20751187,2.8946515)">
+      <path
+         d="M 10.076812,0.21017865 H 0.12851047 L 5.1026613,8.8249846 Z"
+         style="stroke-width:0.264583"
+         id="path1406" />
+    </g>
+  </g>
+</svg>

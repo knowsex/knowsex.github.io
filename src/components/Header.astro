@@ -1,0 +1,110 @@
+---
+import HeadImage from '../components/HeadImage.astro';
+
+const { isRoot=0,title='',enTitle='',bgPath='', isIndex=false } = Astro.props;
+const LogoTag = isRoot ? "h1" : "span";
+---
+
+<!--
+欢迎来到 KnowSex。如果你对代码也有一些建议，也欢迎发邮件反馈。你可以在页面的底部看到邮箱地址。
+██╗  ██╗███╗   ██╗ ██████╗ ██╗    ██╗███████╗███████╗██╗  ██╗   ███╗   ██╗███████╗████████╗
+██║ ██╔╝████╗  ██║██╔═══██╗██║    ██║██╔════╝██╔════╝╚██╗██╔╝   ████╗  ██║██╔════╝╚══██╔══╝
+█████╔╝ ██╔██╗ ██║██║   ██║██║ █╗ ██║███████╗█████╗   ╚███╔╝    ██╔██╗ ██║█████╗     ██║   
+██╔═██╗ ██║╚██╗██║██║   ██║██║███╗██║╚════██║██╔══╝   ██╔██╗    ██║╚██╗██║██╔══╝     ██║   
+██║  ██╗██║ ╚████║╚██████╔╝╚███╔███╔╝███████║███████╗██╔╝ ██╗██╗██║ ╚████║███████╗   ██║   
+╚═╝  ╚═╝╚═╝  ╚═══╝ ╚═════╝  ╚══╝╚══╝ ╚══════╝╚══════╝╚═╝  ╚═╝╚═╝╚═╝  ╚═══╝╚══════╝   ╚═╝   
+-->
+<nav class="navbar navbar-expand-lg topbar">
+    <div class="container-fluid">
+        <a href="/" target="_self">
+            <LogoTag class="title">
+                <img loading="lazy" src="/style/knowsex.svg" alt="KnowSex" style="height: 20px; vertical-align: baseline;">
+            </LogoTag>
+        </a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+            aria-label="折叠菜单">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent" style="border:none; padding: 0;">
+            <span class="me-auto"></span>
+            
+            <div class="d-flex">
+                <ul class="navbar-nav mx-auto mb-2 mb-lg-0 text-center">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/">主页</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            正文
+                        </a>
+                        <ul class="dropdown-menu text-center">
+                            <li><a class="dropdown-item" href="/main/human-reproductive-system">人类生殖系统</a></li>
+                            <li><a class="dropdown-item" href="/main/puberty-and-adolescence">青春期</a></li>
+                            <li><a class="dropdown-item" href="/main/sexual-activity">性行为</a></li>
+                            <li><a class="dropdown-item" href="/main/sexual-orientation">性取向</a></li>
+                            <li><a class="dropdown-item" href="/main/contraception">避孕</a></li>
+                            <li><a class="dropdown-item" href="/main/std">性传播疾病</a></li>
+                            <!-- <li><hr class="dropdown-divider"></li> -->
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            站务
+                        </a>
+                        <ul class="dropdown-menu text-center">
+                            <li><a class="dropdown-item" href="/general/copyright">版权许可</a></li>
+                            <li><a class="dropdown-item" href="/general/encourage">支持</a></li>
+                            <li><a class="dropdown-item" href="/general/fund">资金详单</a></li>
+                            <li><a class="dropdown-item" href="/general/communicate">来信沟通</a></li>
+                            <li><a class="dropdown-item" href="/general/about">关于</a></li>
+                            <!-- <li><hr class="dropdown-divider"></li> -->
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/sitemap">站点地图</a>
+                    </li>
+                    <li class="dropdown">
+                        <a class="nav-link" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <svg style="vertical-align: bottom;" width="20"
+                                height="20" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M24 4C12.9543 4 4 12.9543 4 24C4 35.0457 12.9543 44 24 44V4Z"
+                                    stroke="#808080" stroke-width="4" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                                <path d="M24 4C35.0457 4 44 12.9543 44 24C44 35.0457 35.0457 44 24 44V4Z"
+                                    fill="none" stroke="#808080" stroke-width="4" stroke-linejoin="round" />
+                                <path d="M24 36H9" stroke="#808080" stroke-width="4" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                                <path d="M24 28H5" stroke="#808080" stroke-width="4" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                                <path d="M24 20H5" stroke="#808080" stroke-width="4" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                                <path d="M24 12H9" stroke="#808080" stroke-width="4" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                            <span style="font-family: 'Noto Sans SC', '黑体', sans-serif;color:#808080">外观</span>
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end text-center">
+                            <li><a class="dropdown-item" onclick="chooseMode('sys')">跟随系统</a></li>
+                            <li><a class="dropdown-item" onclick="chooseMode('light')">亮色</a></li>
+                            <li><a class="dropdown-item" onclick="chooseMode('dark')">暗色</a></li>
+                        </ul>
+                    </li>
+                </ul>
+
+            </div>
+
+        </div>
+    </div>
+</nav>
+
+{
+    //不是站点总主页，但是是索引页面
+    !isRoot && isIndex &&
+    <HeadImage title={title} enTitle={enTitle} bgPath={bgPath} />   
+}

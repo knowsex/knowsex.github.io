@@ -1,0 +1,158 @@
+---
+layout: /src/layouts/Main.astro
+
+title: 梅毒
+enTitle: Syphilis
+desc: 有关性传播疾病梅毒的简要科普。
+bgPath: /source/img/Treponema_pallidum.jpg
+keywords: 
+ - 梅毒
+---
+
+import Cite from '/src/components/CiteSup.astro';
+import ReferList from '/src/components/CiteReference.astro';
+import Btn from '/src/components/OutlineBtn.astro';
+import Key from '/src/components/KeySentence.astro';
+import End from '/src/components/ArticleEnd.astro';
+
+export const citeList = [
+    {
+        "name": "性学观止",
+        "caption": "贺兰特·凯查杜里安.性学观止[M].北京:科学技术文献出版社,2019.3 - ISBN 978-7-5189-5126-0"
+    },
+    {
+        "name": "健康的性",
+        "caption": "姚锦仙,程红. 健康的性[M]. 北京:高等教育出版社,2015.3 - ISBN 978-7-04-041738-8",
+    },
+    {
+        "name": "皮肤性病学",
+        "caption": "张学军,郑捷 主编. 皮肤性病学[M]. 北京:人民卫生出版社,2018 - ISBN 978-7-117-26670-3",
+    },
+    {
+        "name": "CDC",
+        "caption": "Division of STD Prevention, National Center for HIV, Viral Hepatitis, STD, and TB Prevention, Centers for Disease Control and Prevention. Syphilis – CDC Basic Fact Sheet[G/OL]. Centers for Disease Control and Prevention, 2022(20220210)[2022-08-19]. https://www.cdc.gov/std/syphilis/stdfact-syphilis.htm"
+    },
+    {
+        "name": "梅毒诊断",
+        "caption": "中华人民共和国国家卫生和计划生育委员会. WS 273—2018 梅毒诊断[S/OL]. 未知出版地:未知出版者,2018. http://www.nhc.gov.cn/wjw/s9491/201803/5103a5425f9e47d29b91de38434b7f74.shtml"
+    }
+];
+
+梅毒是一种由病毒引起的性传播疾病。梅毒会引起人体多种多器官的损害。根据病情进程的不同，可以分为一期、二期、潜伏期和三期。
+
+传播
+--
+
+梅毒经常经过密切性接触（包括接吻）传播。该病毒也可透过黏膜表面或皮肤伤口进入。<Cite citeName='性学观止' citeList={citeList}/>孕妇若患有梅毒，胎儿可能会被感染。<Cite citeName='健康的性' citeList={citeList}/>
+
+偶然接触（共用马桶坐垫、游泳池等）一般不会导致感染。<Cite citeName='CDC' citeList={citeList}/>
+
+症状
+--
+
+对于由他人传染的，称为**后天性梅毒**。胎儿被母亲传染的，称为**先天性梅毒**。关系如下所示。<Cite citeName='皮肤性病学' citeList={citeList}/>
+
+<img loading="lazy" class="dark-invert" src="/source/img/Syphilis.svg" style="width: 100%; max-width: 600px" alt="这是一张梅毒种类及分期图。梅毒分为胎传性梅毒和获得性梅毒，它们也叫做先天梅毒和后天梅毒。不论是何种梅毒，病程小于两年的为早期，大于两年的为晚期。对于后天梅毒，在早期又可分为一期梅毒、二期梅毒和早期潜伏梅毒。先天梅毒在早期不做区分，其症状类似于后天梅毒的第二期。而在晚期，无论是先天梅毒还是后天梅毒，都可以分为皮肤黏膜骨骼梅毒、心血管梅毒、神经梅毒和晚期潜伏梅毒。"/><br/><br/>
+
+### 一期梅毒
+
+一期梅毒以一种名为**硬下疳**的皮肤损害为标志。<Cite citeName='性学观止' citeList={citeList}/><Cite citeName='健康的性' citeList={citeList}/>硬下疳表现为在病毒进入身体的位置产生豌豆大小的红色硬结块。<Cite citeName='健康的性' citeList={citeList}/><Cite citeName='CDC' citeList={citeList}/>
+
+硬下疳会在 2 ~ 4 周<Cite citeName='性学观止' citeList={citeList}/><Cite citeName='梅毒诊断' citeList={citeList}/>内出现。如不治疗，会在 3 ~ 6 周<Cite citeName='健康的性' citeList={citeList}/><Cite citeName='CDC' citeList={citeList}/>后消失。但此时病毒仍在体内，具有高传染性。
+
+即使症状消失，仍应在此时接受治疗，以免进入二期梅毒阶段。<Cite citeName='CDC' citeList={citeList}/>
+
+<div class="click-to-show">
+  <div class="row show">
+    <div class="col-md-6 img-box">
+    <p class="text-hover-img">可能含有令人不适的内容<br/>点击或轻触去除模糊</p>
+            <img loading="lazy" src="/source/img/chancre.jpg" class="img-thumbnail thumb show-after-click" alt="图 1，硬下疳"/>
+            <br/><small>图 1 硬下疳</small>
+        </div>
+    </div>
+</div>
+
+### 二期梅毒
+
+在不经治疗的情况下，硬下疳消失后的几周至几个月内，会出现全身皮疹。<Cite citeName='性学观止' citeList={citeList}/><Cite citeName='健康的性' citeList={citeList}/>此时，有可能出现头痛、发烧、关节疼痛等现象。<Cite citeName='健康的性' citeList={citeList}/>在此阶段，病毒大量繁殖播散，散布于黏膜分泌物（例如生殖器分泌物、口水）、血液、皮肤损害中。<Cite citeName='性学观止' citeList={citeList}/><Cite citeName='健康的性' citeList={citeList}/>
+
+无论是否治疗，此阶段的症状仍会自行消失。<Cite citeName='CDC' citeList={citeList}/>
+
+<div class="click-to-show">
+  <div class="row show">
+    <div class="col-md-6 img-box">
+      <p class="text-hover-img">可能含有令人不适的内容<br/>点击或轻触去除模糊</p>
+        <img loading="lazy" src="/source/img/secondary_syphilis.jpg" class="img-thumbnail thumb show-after-click" alt="图 2，二期梅毒，病毒在全身扩散导致的大腿皮疹"/>
+        <br/><small>图 2 二期梅毒，病毒在全身扩散导致的大腿皮疹</small>
+    </div>
+</div>
+</div>
+
+### 潜伏期
+
+二期梅毒过后，病程会进入 2 ~ 20 年的潜伏期。此阶段无症状，也不传染。<Cite citeName='性学观止' citeList={citeList}/>此阶段病毒进入血管、骨骼和中枢神经。如果由此引起症状，即是三期梅毒。<Cite citeName='性学观止' citeList={citeList}/>但也有可能永远不再产生症状，不再传染给性伴侣。但孕妇仍可传给胎儿。<Cite citeName='健康的性' citeList={citeList}/>
+
+### 三期梅毒
+
+大约有 33% ~ 50% 的患者进入三期梅毒。此时全身各脏器受到影响，以心血管系统与中枢神经受影响最甚。患者感染 10 ~ 20 年可出现失明、痴呆、瘫痪等症状，最终可导致死亡。
+
+<div class="click-to-show">
+  <div class="row show">
+    <div class="col-md-6 img-box">
+      <p class="text-hover-img">可能含有令人不适的内容<br/>点击或轻触去除模糊</p>
+            <img loading="lazy" src="/source/img/5330_lores.jpg" class="img-thumbnail thumb show-after-click" alt="图 3，由三期梅毒引起的一种溃疡性病变，位于鼻子。"/>
+            <br/><small>图 3 由三期梅毒引起的一种溃疡性病变</small>
+        </div>
+    </div>
+</div>
+
+### 先天性梅毒
+
+未经治疗的、患有梅毒的孕妇，大概率会发生流产、死产，或生出有**先天性梅毒**（亦称**胎传梅毒**）的婴儿。先天性梅毒导致孩子患有精神紊乱或迟钝、面部畸形等生育缺陷，通常在两岁出现获得性二期梅毒的相关症状<Cite citeName='梅毒诊断' citeList={citeList}/>。不过，在怀孕前半期进行治疗，可防范孩子患上先天性梅毒。
+
+对于梅毒血清学实验为阳性，但没有临床症状，脑脊液检查也正常的，为**隐性胎传梅毒**。<Cite citeName='梅毒诊断' citeList={citeList}/>
+
+预后
+--
+
+经治疗，多数的一期梅毒可在一年内、二期梅毒可在两年内治愈。<Cite citeName='健康的性' citeList={citeList}/>三期梅毒的预后情况取决于脏器的受损程度，给予手术和药物治疗，可拯救或延长生命。
+
+在治愈后，也有可能会再次感染梅毒。<Cite citeName='CDC' citeList={citeList}/>
+
+<End />
+<ReferList citeList={citeList}/>
+<h2>版权</h2>
+<h3 class="mt-4 mb-3">正文内容</h3>
+<p>详见<a href="/general/copyright">版权许可</a>。</p>
+<h3 class="mt-4 mb-3">图片来源</h3>
+<p>本页图片来自互联网，且均在版权合规要求下使用。</p>
+<table class="table table-bordered" style="overflow:auto">
+  <tbody>
+    <tr>
+      <th>图片编号</th>
+      <th>作者</th>
+      <th>来源</th>
+    </tr>
+    <tr>
+      <td>封面</td>
+      <td>CDC / Dr. David Cox</td>
+      <td><a href="https://phil.cdc.gov/details.aspx?pid=1977">Public Health Image Library (PHIL)</a></td>
+    </tr>
+    <tr>
+      <td>图 1</td>
+      <td>CDC / Robert Sumpter</td>
+      <td><a href="https://phil.cdc.gov/Details.aspx?pid=21854">Public Health Image Library (PHIL)</a></td>
+    </tr>
+    <tr>
+      <td>图 2</td>
+      <td>CDC</td>
+      <td><a href="https://phil.cdc.gov/Details.aspx?pid=6539">Public Health Image Library (PHIL)</a></td>
+    </tr>
+    <tr>
+      <td>图 3</td>
+      <td>CDC / J. Pledger</td>
+      <td><a href="https://phil.cdc.gov/Details.aspx?pid=5330">Public Health Image Library (PHIL)</a></td>
+    </tr>
+  </tbody>
+</table>
+<script src="/script/cw.js"></script>

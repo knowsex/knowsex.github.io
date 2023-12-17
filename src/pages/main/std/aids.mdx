@@ -1,0 +1,139 @@
+---
+layout: /src/layouts/Main.astro
+
+title: 艾滋病
+enTitle: AIDS
+desc: "有关性传播疾病艾滋病的简要科普。"
+bgPath: "/source/img/aids-cover.jpg"
+keywords: 
+ - 艾滋病
+ - 爱之病
+ - 爱滋病
+ - AIDS
+ - HIV
+ - 世界艾滋病日
+ - 艾滋病日
+ - 获得性免疫缺陷综合征
+ - 后天免疫缺乏症候群
+ - 人类免疫缺陷病毒
+ - 人类免疫缺乏病毒
+---
+
+import Cite from '/src/components/CiteSup.astro';
+import ReferList from '/src/components/CiteReference.astro';
+import Btn from '/src/components/OutlineBtn.astro';
+import Key from '/src/components/KeySentence.astro';
+import End from '/src/components/ArticleEnd.astro';
+
+export const citeList = [
+        {
+        "name":"诊断",
+        "caption": "中华人民共和国国家卫生健康委员会. WS 293-2019 艾滋病和艾滋病病毒感染诊断. 未知出版地:中华人民共和国国家卫生健康委员会, 2019. http://www.nhc.gov.cn/wjw/s9491/201905/6430aa653728439c901a7340796e4723.shtml"
+    },
+    {
+        "name": "诊疗指南",
+        "caption": "中华医学会感染病学分会艾滋病丙型肝炎学组，中国疾病预防控制中心. 中国艾滋病诊疗指南(2021年版). 协和医学杂志, 2022, 13(2): 203-226. doi: 10.12290/xhyxzz.2022-0097. https://xhyxzz.pumch.cn/cn/article/doi/10.12290/xhyxzz.2022-0097?viewType=HTML"
+    },
+    {
+        "name": "Mayo",
+        "caption": "妙佑医疗国际员工. HIV/AIDS. 妙佑医疗国际, 2022(20221228)[2023-05-13]. https://www.mayoclinic.org/zh-hans/diseases-conditions/hiv-aids/symptoms-causes/syc-20373524"
+    },
+    {
+        "name": "bmj",
+        "caption": "Ming Jie Lee, Julie Fox. HIV 暴露后预防. BMJ Best Practice, 2022-07-15[2023-09-17]. https://bestpractice.bmj.com/topics/zh-cn/1109"
+    },
+    {
+        "name":"世界艾滋病日",
+        "caption":"世界卫生组织. 世界艾滋病日. 世界卫生组织, [2023-05-13]. https://www.who.int/zh/campaigns/world-aids-day"
+    }
+];
+
+**艾滋病（AIDS）** 是由**人类免疫缺陷病毒（HIV）** 引起的传染病，该传染病导致人体免疫功能缺陷。免疫系统有助于预防感染和癌症。因此感染 HIV 后，引发感染、恶性肿瘤等疾患的可能性会增加。
+
+传播
+--
+
+与感染者的体液接触后可能会感染 HIV，特别是血液、阴道分泌物、精液、乳汁。
+
+以下途径的传播较为常见：
+
+1.  性接触。与感染者进行无保护的性行为。
+2.  血液传播。输入含有 HIV 的血液制品、与感染者共用针头等。
+3.  母婴传播。已感染 HIV 的妇女可能通过妊娠、分娩、哺乳将 HIV 传播给婴儿。
+
+诊断
+--
+
+一般先对唾液或血液做初步筛查。如有感染迹象，则会采取进一步血液化验。
+
+窗口期是指 HIV 从感染人体到血液中能被检测出感染之前的时期。<Cite citeName='诊断' citeList={citeList} />
+
+症状
+--
+
+经典的病程经历急性感染期、潜伏期、艾滋病期。<Cite citeName='诊疗指南' citeList={citeList} />
+
+### 急性期
+
+发生在感染 6 个月内，临床表现有发热、咽痛、全身乏力、关节痛等症状，1 ~ 3 周可自行缓解。
+
+### 无症状期
+
+在有或无明显症状的急性期后进入无症状期。在此期间，HIV 在感染者体内持续复制，持续 4 ~ 8 年。
+
+### 艾滋病期
+
+在此期，免疫系统已几乎无力抵抗病原体。由此可引发机会性感染、恶性肿瘤等。到晚期，未经抗反转录病毒治疗者只可存活约 18 个月。
+
+预防
+--
+
+在性行为时正确使用安全套、不与他人共用针具可预防 HIV 感染。对于 HIV 感染高风险人群，可考虑到医疗机构采取暴露前预防（ PrEP ）。<Cite citeName='诊疗指南' citeList={citeList} /><Cite citeName='Mayo' citeList={citeList} />
+
+预后
+--
+
+接触 HIV 后尽快采取暴露后预防（ PEP ）措施可大大降低感染风险，理想的时间是接触后的 2 小时内，一般不要超过 72 小时。<Cite citeName='Mayo' citeList={citeList} /><Cite citeName='bmj' citeList={citeList} />
+
+艾滋病尚无治愈方法，但有药物可控制 HIV 并预防并发症。<Cite citeName='Mayo' citeList={citeList} />建议在确诊后，即时到正规医疗机构就诊治疗。
+
+社会文化
+----
+
+为提高对 AIDS 和 HIV 的认识、团结世界各地人民面对 AIDS，世界卫生组织定每年 12 月 1 日为世界艾滋病日。<Cite citeName='世界艾滋病日' citeList={citeList} />
+
+红丝带是艾滋病的标志，象征着对艾滋病感染者的接纳和关怀。
+
+<div class="notice bg-light">
+  <p>
+    <svg width="24" height="24" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="48" height="48" fill="white" fill-opacity="0.01"></rect><path d="M21 44L20 36" stroke="#333" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"></path><path d="M44 44V12H25L26 20L27 28L28 36L21 44H44Z" fill="none" stroke="#333" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"></path><path d="M27 28H35" stroke="#333" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"></path><path d="M26 20H35" stroke="#333" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"></path><path d="M4 4H24L25 12L26 20L27 28L28 36H20H4V4Z" fill="none" stroke="#333" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"></path><path d="M10 12H17" stroke="#333" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"></path><path d="M10 20H18" stroke="#333" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"></path><path d="M10 28H19" stroke="#333" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"></path></svg>            
+    <b>相关阅读</b>            
+  </p>
+  <ul>
+    <li><a href="https://www.mayoclinic.org/zh-hans/diseases-conditions/hiv-aids/symptoms-causes/syc-20373524">HIV/AIDS - 妙佑医疗国际</a></li>
+    <li><a href="https://www.msdmanuals.cn/home/quick-facts-infections/human-immunodeficiency-virus-hiv-infection/human-immunodeficiency-virus-hiv-infection-and-aids">小知识：人类免疫缺陷病毒(HIV)感染和艾滋病(AIDS)  - 《默沙东诊疗手册大众版》</a></li>
+  </ul>
+  <p><small>这些页面不属于 KnowSex。如果您无法访问这些页面，可<a href="/general/communicate">联系我们</a>索取副本。</small></p>
+</div>
+
+<End />
+<ReferList citeList={citeList} />
+<h2>版权</h2>
+<h3 class="mt-4 mb-3">正文内容</h3>
+<p>详见<a href="/general/copyright">版权许可</a>。</p>
+<h3 class="mt-4 mb-3">图片来源</h3>
+<p>本页图片来自互联网，且均在版权合规要求下使用。</p>
+<table class="table table-bordered" style="overflow:auto">
+  <tbody>
+    <tr>
+      <th>图片编号</th>
+      <th>作者</th>
+      <th>来源</th>
+    </tr>
+    <tr>
+      <td>封面</td>
+      <td><a href="https://www.flickr.com/photos/niaid/">NIAID</a></td>
+      <td><a href="https://www.flickr.com/photos/niaid/52371087812/">Flickr</a></td>
+    </tr>
+  </tbody>
+</table>

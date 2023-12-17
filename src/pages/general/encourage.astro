@@ -1,0 +1,25 @@
+---
+import Layout from '/src/layouts/AstroPage.astro';
+import End from '/src/components/ArticleEnd.astro';
+const title = '支持';
+const enTitle = 'Encourage';
+const keywords = [''];
+const desc = "关于如何支持 KnowSex 更好地运营维护。";
+const bgPath = "/source/img/donateCover.jpg";
+---
+<Layout title={title} enTitle={enTitle} keywords={keywords} desc={desc} bgPath={bgPath}>
+    <p>作为性教育网站，KnowSex 的内容经过仔细编排，并且在外观设计和文字排版做了很多努力和调整，以优化读者的感观与阅读体验。</p>
+	<p>获取和阅读 KnowSex 不收取费用，也没有商业广告。</p>
+	<p>但网站的运营需要一些资金，这些资金用于服务器、域名、带宽等费用。我们的成员都是志愿者，不从中获利。</p>
+	<p>如果每位浏览 KnowSex 的读者都愿意支出 1 元，按照常规流量，一天便可筹够一年的总开支。如果您觉得网站的内容还不错，且愿意帮助 KnowSex 支出一些费用维持网站运作，欢迎您向我们捐助。我们目前仅支持微信支付。</p>
+	<p>KnowSex 以年为单位更新资金使用情况，每年年初以电子表格形式公布详单。您可在<a href="/general/fund/">资金详单</a>页面下载已公布的资金详单。</p>
+	<p>您可以使用微信扫描下方二维码捐助 KnowSex：</p>
+	<div class="row show"></div>
+		<div class="col-md-6 img-box">
+			<img loading="lazy" src="/source/img/wechatCode.jpg" alt="收款码，可以使用微信扫一扫功能扫描识别，输入选择赠与金额以帮助 KnowSex。" class="img-thumbnail" style="width:100%;max-width:500px"/>
+		</div>
+	</div>
+    <p>衷心感谢您对 KnowSex 的支持与喜爱。我们与您一起期待性教育更好的普及和推广。</p>
+    <End/>
+    <p style="color: #bbb">本页封面图片作者是 Linn 。</p>
+</Layout>

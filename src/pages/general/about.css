@@ -1,0 +1,41 @@
+.source {
+    display: block;
+    font-size: 80%;
+    line-height: 1.42857143;
+    color: #777;
+}
+.quote {
+    text-align: center; 
+    padding: 1.5em;
+    position: relative;
+}
+.quote p {
+    font-size: 1.5em; line-height: 45px; color: #575757;
+}
+.source {
+    display: block;
+    font-size: 80%;
+    line-height: 1.42857143;
+    color: #777;
+}
+.quote p::before {
+    color: #ddd;
+    content: "\201C";
+    font-size: 4em;
+    position: absolute;
+    left: -.6em;
+    top: .4em;
+    line-height: .1em;
+    z-index: -1;
+}
+
+.quote p::after {
+    color: #ddd;
+    content: "\201D";
+    font-size: 4em;
+    position: absolute;
+    right: -.6em;
+    bottom: .2em;
+    line-height: .1em;
+    z-index: -1;
+}

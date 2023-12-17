@@ -1,0 +1,541 @@
+---
+layout: /src/layouts/Main.astro
+
+title: 人类生殖系统
+enTitle: Human Reproductive System
+desc: 对于人类生殖系统的描述和介绍。内容有男女生殖器的结构、处女膜的形态和误解、生理现象、男女生殖器的同源等。
+bgPath: "/source/img/1-bg.jpg"
+keywords: [生殖系统, 处女膜, 乳房, 遗精, 同源器官]
+---
+import Cite from '/src/components/CiteSup.astro';
+import ReferList from '/src/components/CiteReference.astro';
+import Btn from '/src/components/OutlineBtn.astro';
+import Model from '/src/components/Model.astro';
+import CW from '/src/components/CW.astro';
+import End from '/src/components/ArticleEnd.astro';
+import '/public/style/models.css';
+
+export const citeList = [
+    {
+        "name": "生殖系统",
+        "caption": "全国科学技术名词审定委员会. 生殖系统[DB/OL]. 术语在线, 2022[2022-11-29]. https://www.termonline.cn/word/1528662805035630595/1"
+    },
+    {
+        "name": "健康的性",
+        "caption": "姚锦仙,程红. 健康的性[M]. 北京:高等教育出版社,2015.3:35-36,39,53,56,63 - ISBN 978-7-04-041738-8",
+    },
+    {
+        "name": "诊断学",
+        "caption": "万学红,卢雪峰. 诊断学[M]. 北京:人民卫生出版社,2018:333-4 - ISBN 978-7-117-26374-0",
+    },
+    {
+        "name": "系统解剖学",
+        "caption": "柏树令,应大君. 系统解剖学[M]. 北京:人民卫生出版社,2013:162 - ISBN 978-7-117-17149-6",
+    },
+    {
+        "name": "女性生殖系统概述",
+        "caption": "The Manual's Editorial Staff. 小知识：女性生殖系统概述[G/OL]. 默沙东诊疗手册大众版, c2022[2022-06-14]. https://www.msdmanuals.cn/home/quick-facts-women-s-health-issues/biology-of-the-female-reproductive-system/overview-of-the-female-reproductive-system"
+    },
+    {
+        "name": "乳房大小与泌乳关系",
+        "caption": "奶量多少与乳房大小有关系吗?[J].食品与健康,2012,No.227(07):62-63"
+    },
+    {
+        "name": "处女膜",
+        "caption": "维基百科编者. 处女膜[G/OL]. 维基百科, 2022(20220509)[2022-05-09]. https://zh.wikipedia.org/w/index.php?title=%E5%A4%84%E5%A5%B3%E8%86%9C&oldid=71551118"
+    },
+    {
+        "name": "术语在线-处女膜",
+        "caption": "全国科学技术名词审定委员会. 处女膜[DB/OL]. 术语在线, [2022][2022-06-14]. https://www.termonline.cn/word/143691/1#s1"
+    },
+    {
+        "name": "术语在线-处女膜闭锁",
+        "caption": "全国科学技术名词审定委员会. 处女膜闭锁[DB/OL]. 术语在线, [2022][2022-06-14]. https://www.termonline.cn/word/39901/1#s1"
+    },
+    {
+        "name": "法医学",
+        "caption": "王保捷, 侯一平.法医学[M].北京:人民卫生出版社, 2018:120 - ISBN 978-7-117-266635"
+    },
+    {
+        "name": "性学观止",
+        "caption": "贺兰特·凯查杜里安.性学观止[M].北京:科学技术文献出版社,2019.3:36,38,44,49,55-6,97,115 - ISBN 978-7-5189-5126-0"
+    },
+    {
+        "name": "多次发生性行为处女膜完整一例",
+        "caption": "池广举,邹军. 多次发生性行为处女膜完整一例[C]//. 中国法医学会全国第九次法医临床学学术研讨会论文集. [出版者不详],2006:289-290."
+    },
+    {
+        "name": "女性生殖系统",
+        "caption": "全国科学技术名词审定委员会. 女性生殖系统[DB/OL]. 术语在线, 2022[2022-11-29]. https://www.termonline.cn/word/1528662805039824899/1"
+    },
+    {
+        "name": "经前综合征",
+        "caption": "Biggs, WS; Demuth, RH. Premenstrual syndrome and premenstrual dysphoric disorder[J/OL]. American Family Physicians, 2011, 84(8): 918-24. PMID 22010771. https://archive.org/details/sim_american-family-physician_2011-10-15_84_8/page/918"
+    },
+    {
+        "name": "经前期综合症的治疗与护理体会",
+        "caption": "张晓英.经前期综合症的治疗与护理体会[J].医学信息(上旬刊),2011,24(01):416-417."
+    },
+    {
+        "name": "阴茎长度",
+        "caption": "王存同.国内外成人阴茎长度及周长的系统分析与比较研究[J].中国性科学,2020,29(09):143-148."
+    },
+    {
+        "name": "阴茎长度_国际",
+        "caption": "Veale, David; Miles, Sarah; Bramley, Sally; Muir, Gordon; Hodsoll, John. Am I normal? A systematic review and construction of nomograms for flaccid and erect penis length and circumference in up to 15 521 men: Nomograms for flaccid/erect penis length and circumference[J]. BJU International, 2015, 115 (6): 978–986. doi:10.1111/bju.13010. PMID 25487360."
+    },
+    {
+        "name": "阴茎长度_国际2",
+        "caption": "King, Bruce M. Average-Size Erect Penis: Fiction, Fact, and the Need for Counseling[J]. Journal of Sex & Marital Therapy, 2021, 47 (1): 80-89. doi:10.1080/0092623X.2020.1787279. PMID 32666897."
+    },
+    {
+        "name": "阴茎与睾丸等器官的性反应",
+        "caption": "Erwin J. Haeberle. 阴茎与睾丸等器官的性反应[G/OL]. 性学资料库, [2007][2022-08-08]. http://www.sexarchive.info/ECC1/penis_etc.html"
+    },
+    {
+        "name": "指导纲要",
+        "caption": "联合国教育、科学及文化组织, 联合国艾滋病规划署秘书处,联合国人口基金等. 国际性教育技术指导纲要[M/OL].2018 - ISBN 978-92-3-500020-7. https://unesdoc.unesco.org/ark:/48223/pf0000260770_chi"
+    },
+    {
+        "name": "SBHM",
+        "caption": "Alfred Charles Kinsey, Wardell Baxter Pomeroy, Clyde Eugene Martin.Sexual Behavior in the Human Male[M].1948:511 - ISBN 978-0-253-33412-8. https://books.google.com.hk/books?id=pfMKrY3VvigC&pg=PA511"
+    }
+];
+
+
+<script src="https://cdn.jsdelivr.net/npm/focus-visible@5.0.2/dist/focus-visible.min.js" defer></script>
+
+
+<CW type="nudity" />
+
+**生殖系统**是生物体内的和生殖密切相关的器官（生殖器）成分的总称。<Cite citeName="生殖系统" citeList={citeList}/>
+
+女性生殖系统
+------
+
+<div class="row show">
+    <div class="col-md-6 img-box">
+        <img loading="lazy" src="/source/img/111.jpg" class="img-thumbnail thumb" alt={`图 1，张开的女性阴部（外生殖器）`}/>
+        <br/><small>图 1 张开的女性阴部（外生殖器），图中没有描述阴毛</small>
+    </div>
+    <div class="col-md-6 img-box">
+        <img loading="lazy" src="/source/img/114.jpg" class="img-thumbnail thumb" alt="图 2，女性生殖系统"/>
+        <br/><small>图 2 女性生殖系统</small>
+    </div>
+</div>
+
+<Model filename="vulva" name="女性形态外阴" desc='模型来自 <a href="https://hiddenbeauty.ch/">Hidden Beauty</a> ，编号为 <a href="https://hiddenbeauty.ch/model/426060-VSNN-1">426060-VSNN-1</a> ，其以 <a href="https://creativecommons.org/share-your-work/public-domain/cc0/">CC 0</a> 协议发布。KnowSex 对模型有略作修改。' exposure="0.61" camera_orbit="-125.6deg 64.98deg auto" />
+
+### 生殖器简述
+
+如图 1 展示为用手张开的女性阴部，为女性生殖系统的重要组成部分。
+
+女性生殖系统的生殖器分为外生殖器（即上图所示的外阴）和内生殖器。<Cite citeName="女性生殖系统概述" citeList={citeList}/><Cite citeName="女性生殖系统" citeList={citeList}/>
+
+外部可见的**外生殖器**包括<Cite citeName="女性生殖系统概述" citeList={citeList}/>
+
+*   **阴唇**：分为**大阴唇**和**小阴唇**，阴唇的主要作用是保护**阴蒂**以及**尿道口**与**阴道口**；
+*   **阴蒂**：位于小阴唇汇合处、尿道口上方的突起，可提供性快感（详见[性行为](/main/sexual-activity)章节）；
+*   **阴道口**：阴道开口的缝隙，有**处女膜**围绕或部分覆盖（若未消失）。
+
+处于体内的**内生殖器**包括<Cite citeName="女性生殖系统概述" citeList={citeList}/>
+
+*   **卵巢**：产生卵子和女性激素；
+*   **输卵管**：卵子排出的通道；
+*   **子宫**：可供胎儿在出生前生长发育之处；
+*   **子宫颈**（又称**宫颈**）：子宫的末端；
+*   **阴道**：产道，胎儿出生经过的通道。
+
+卵巢可产生生殖细胞**卵子**，可与男性的**精子**结合成**受精卵**产生后代。
+
+受到外界刺激时，阴蒂有可能会勃起变得大而坚硬，阴唇肿胀，阴道变得湿润。
+
+阴蒂会在夜间或晨间刚睡醒时自发勃起，是正常现象。
+
+<img loading="lazy" src="/source/img/115.jpg" class="img-thumbnail thumb" alt="图 3，女性的性兴奋，阴蒂勃起变得大而坚硬，阴唇肿胀，阴道变得湿润。"/>
+<br/><small>图 3 女性的性兴奋</small><br/><br/>
+  
+
+阴唇的外观是多样的<Cite citeName="性学观止" citeList={citeList}/>，不同的人在颜色、大小等方面存在着差异。
+
+<img loading="lazy" src="/source/img/Genital_Diversity_Expanded.jpg" class="img-thumbnail thumb" alt="图 4，不同外形的女阴，在外形上存在着差异。有些颜色是偏黑色的，有些是偏粉色的。有一些小阴唇很大，有一些则很小。"/>
+<br/><small>图 4 不同外形的女阴，其中一部分去除过阴毛</small>
+
+### 乳房
+
+在生物学上，乳房并不属于生殖系统，但乳房与性和生殖密切相关。
+
+**乳头**是乳房的突起部分，**乳晕**是乳头周围的环形区域。
+
+从生殖意义角度，乳房用于哺育后代。乳房中分泌**乳汁**的器官叫做**乳腺**。在哺乳期，乳汁经由乳头排到婴儿口中。
+
+乳房的大小、形状和哺乳能力、性反应能力无关。<Cite citeName="乳房大小与泌乳关系" citeList={citeList}/><Cite citeName="性学观止" citeList={citeList}/>
+
+女性的乳房在青春期开始发育。可能一侧乳房发育得更快而导致不对称，但最终会发育得基本相等。随着年龄的增长，维持乳房形态的韧带可能会松驰，乳房下垂。这些都是正常的生理变化。<Cite citeName="性学观止" citeList={citeList}/>
+
+<img loading="lazy" src="/source/img/Weibliche_brust.jpg" class="img-thumbnail thumb" alt="图 5，乳头是乳房上的突起，乳头周围有较深颜色的乳晕。"/>
+<br/><small>图 5 乳房、乳晕和乳头</small>
+
+### 处女膜<Cite citeName="术语在线-处女膜" citeList={citeList}/><Cite citeName="术语在线-处女膜闭锁" citeList={citeList}/>
+
+**处女膜**是一层位于阴道口的环状黏膜组织，**包围**或**部分覆盖**阴道口，在中央有一直径为 1 ~ 1.5 厘米的小孔。<Cite citeName="法医学" citeList={citeList}/>
+
+囿于“处女”二字，处女膜不完整被广泛误认为是发生过初次阴道性行为的依据。事实上，包括创伤、自慰、医学检查、剧烈运动、发生性行为等都有可能导致处女膜的破裂<Cite citeName="性学观止" citeList={citeList}/>，导致暂时性的出血和疼痛。<Cite citeName="处女膜" citeList={citeList}/>以及，即使发生过经阴道的性行为，处女膜也并不一定会破裂。<Cite citeName="多次发生性行为处女膜完整一例" citeList={citeList}/>
+
+许多人认为处女膜是一层覆盖于阴道口的完整膜，这一观点是错误的，只有少数女性的处女膜上没有空隙<Cite citeName="性学观止" citeList={citeList}/>，病理学称之为“闭锁”<Cite citeName="处女膜" citeList={citeList}/><Cite citeName="术语在线-处女膜闭锁" citeList={citeList}/>，而且这种情况通常需要手术治疗<Cite citeName="健康的性" citeList={citeList}/>。
+
+<img loading="lazy" src="/source/img/hymen.jpg" class="img-thumbnail thumb" alt="图 6，处女膜的其中四种形态"/>
+<br/><small>图 6 处女膜的其中四种形态</small>
+
+### 卵子
+
+<div class="row show">
+    <div class="col-md-6 img-box">
+        <img loading="lazy" src="/source/img/Image_of_an_Ovary.jpg" class="img-thumbnail thumb" alt="图 7，单侧的卵巢示意图"/>
+        <br/><small>图 7 卵巢示意图（单侧）</small>
+    </div>
+    <div class="col-md-6 img-box">
+    </div>
+</div>
+
+人类的**卵子**是女性的生殖细胞，由卵巢所产生。
+
+卵子的生成从女性出生前就已经开始。在女性胎儿出生时，卵巢中大约含有200万个卵泡（含有卵子原型——卵母细胞的细胞聚合体）。而到青春期，能存活约 30 万 ~ 40 万个。在从青春期到绝经期的 30 多年中，大约 400 ~ 500 个卵泡能够发育成熟排出。<Cite citeName="健康的性" citeList={citeList}/>
+
+若与男性的生殖细胞**精子**结合形成**受精卵**，则会经过一系列过程，最终在子宫内膜着床，继续成长发育。
+
+### 月经
+
+月经，亦有人称“生理期”“大姨妈”“例假”，是指女性血液或黏膜定期从子宫内膜经阴道排出体外的现象。
+
+月经是女孩生理发育过程中正常而又自然的一部分。
+
+卵子由卵巢排出。若形成受精卵，则将发育为人类胚胎。为应对可能到来的胚胎，子宫内膜会增厚。在排卵后的两周内，如果没有胚胎植入子宫内膜，子宫内膜会受到激素影响分解出血。这便是月经出血的原因。而当女性怀孕后，身体内的激素将维持子宫内膜，月经便暂时停止。
+
+未受精的卵子会被身体吸收。
+
+月经周期中的排卵是生殖所需的关键身体机能。
+
+<div class="row show">
+    <div class="col-md-6 img-box">
+        <img loading="lazy" src="/source/img/MenstrualCycle_zh_hans.jpg" class="img-thumbnail thumb" alt="图 8，月经周期"/>
+        <br/><small>图 8 月经周期</small>
+    </div>
+    {/* <div class="col-md-6 img-box">
+        <img loading="lazy" src="/source/img/menstruation_uterus.jpg" class="img-thumbnail thumb" alt="图 8，生理期期间的子宫示意图"/>
+        <br/><small>图 8 生理期期间的子宫示意图</small><br/>
+    </div> */}
+</div>
+
+月经通常在 12 ~ 15 岁之间首次出现，大约于 45 ~ 55 岁时结束（这段时间又称为**更年期**、**绝经期**）。月经来临时，经血会持续流出约 2 ~ 7 天。
+
+对所有女性来说，在月经期间能够获得经期用品（如卫生巾、卫生棉条等）、干净的水源及独立卫生间是非常重要的。<Cite citeName="指导纲要" citeList={citeList}/>
+
+高达 80% 女性曾表示在月经开始前出现部分症状——常见症状包含长出粉刺、乳房变得柔软、感到疲惫、容易发怒与情绪改变。对于约 20 ~ 30% 的女性，其轻度至中度症状影响女性生活的某些方面，称为**经前综合症**。其中的 3 ~ 8% 较为严重。<Cite citeName="经前综合征" citeList={citeList}/><Cite citeName="经前期综合症的治疗与护理体会" citeList={citeList}/>
+
+**经痛**（亦称痛经、生理痛等）是女性月经来潮时产生的疼痛。经痛可分为两种：无明显疾病所致的**原发性经痛**、由一些疾病导致的**续发性经痛**。在疼痛时，服用一些药物（如布洛芬）通常可以带来缓解。<Cite citeName="性学观止" citeList={citeList}/>
+
+<button type="button" class="btn btn-exp btn-outline-secondary" data-bs-toggle="collapse" data-bs-target="#hiden_2" aria-expanded="false" aria-controls="hiden_2">有关经痛的详细说明 </button>
+<div class="collapse" id="hiden_2">
+
+**原发性经痛**发生在于女性开始出现规则性月经时，其经痛大都是发生在月经的前 1 ~ 2 天，经痛的表现为痉挛、绞痛。多数的经痛在月经的第二至三天会自动缓解，而且大部分的女性也会在年龄稍长或是生过孩子后会自然的减轻经痛或是消失经痛。疼痛通常发生在月经开始之前的几个小时或月经开始以后，而且会持续 1 至 3 天，耻骨上会有痉挛性的疼痛，有时会伴随着腰酸，疼痛也可能牵连到大腿，恶心、呕吐、腹泻的情况也很常见，严重者甚至可能晕倒，按压肚子、按摩腹部或改变姿势会减少经痛的症状。<Cite citeName="月经" citeList={citeList}/>
+
+**继发性经痛**出现在女性有一段时间没有经痛的月经之后，或是本来月经来潮的不舒服症状渐渐的转变成为明显的腹痛。其表现的疼痛比较多样性，有时表现在痉挛、绞痛，有时表现在钝痛、胀痛甚至出现剧烈的刺痛。痛的性质大部分时间会随时年纪而减轻，但有时反而会恶化。疼痛通常在月经来潮前的 1 ~ 2 周就开始，而且会持续到出血停止之后几天才慢慢缓解，病因相当的多，子宫内膜异位是最常见的原因，其次是子宫的腺肌症或是子宫内避孕器造成的疼痛等等。<Cite citeName="月经" citeList={citeList}/>
+
+</div>
+
+### 白带
+
+白带是一种粘糊状、淡白色或微黄、无特别气味的物质，由阴道壁渗出液、子宫有关的腺体和粘膜表皮上层脱落的细胞混合形成。
+
+由于青春期激素增多，白带增多是正常现象。
+
+当白带的气味、颜色和质量突发改变，应及时就医。<Cite citeName="健康的性" citeList={citeList}/>
+
+### 女性生理用品及用法
+
+为吸收月经的经血，不让经血留于衣物等处，通常会使用**卫生巾**、**卫生棉条**等生理用品。
+
+值得注意的是，在很罕见的情况下——在美国之统计数据为每 10 万名经期妇女中有 1 人，使用卫生棉条可能会引发致命的**中毒性休克综合征（TSS）**。如果在使用卫生棉条时出现 TSS 的早期症状——突发性高烧并伴有喉痛、皮疹、呕吐、腹泻、眩晕和腹痛，应立刻就医。按照说明书规定时间更换卫生棉条可以减少患病的可能性，不可超过规定的时间使用卫生棉条。<Cite citeName="性学观止" citeList={citeList}/>
+
+除了少部分特殊用途较厚的卫生巾之外，大部分的卫生巾都有封膜，使用前要先将封膜撕开，把卫生巾取出。然后将背胶上和侧翼的贴条撕下，平放在内裤的适当位置，接着将侧翼反折到内裤的另一面贴上即可。
+
+卫生棉条一般附有说明书。卫生棉条放置形式各异，使用应按照说明书步骤进行。有关中毒性休克综合征（TSS）的说明在一些说明书上也可找到。
+
+男性生殖系统
+------
+
+<div class="row show">
+    <div class="col-md-6">
+        <img loading="lazy" src="/source/img/121.jpg" class="img-thumbnail thumb" alt="图 9， 亚洲男性外生殖器（疲软状态，包皮覆盖）"/>
+        <br/><small>图 9 亚洲男性外生殖器（疲软状态，包皮覆盖）</small>
+    </div>
+    <div class="col-md-6">
+        <img loading="lazy" src="/source/img/122.jpg" class="img-thumbnail thumb" alt="图 10，阴茎（系带面，包皮翻开）"/>
+        <br/><small>图 10 阴茎（系带面，包皮翻开）</small>
+    </div>
+</div><br/>
+
+<Model filename="penis" name="阴茎与阴囊" desc='模型由 <a href="https://sketchfab.com/rossthren">rossthren</a> 制作，于 <a href="https://sketchfab.com/3d-models/flaccid-penis-37dd96fb488548789bffb54dc152e6f9">Sketchfab</a> 以 <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> 协议发布，KnowSex 对模型有略作修改。' exposure="0.57" camera_orbit="-48.9deg 83.38deg auto" />
+
+### 生殖器简述
+
+如图为男性**阴茎**。阴茎是男性**排尿**和**交配**的器官。
+
+男性生殖系统可以分为外生殖系统以及内生殖系统。
+
+**外生殖系统**包括
+
+*   **阴茎**：男性排尿和交配的器官；
+*   **阴囊**：一层薄皮肤，包围并保护**睾丸**。
+
+**内生殖系统**包括
+
+*   **睾丸**：用于产生精子和分泌雄激素，精子可与女性的卵子结合形成受精卵；
+*   **附睾**：精子在此成熟；
+*   **输精管**：输送精子的通道；
+*   **精囊**：产生精液的主要成分；
+*   **前列腺**：产生精液的主要成分前列腺液；
+*   **尿道球腺**：产生可润滑龟头及尿道的尿道球腺液。
+
+<img loading="lazy" src="/source/img/123.jpg" class="img-thumbnail thumb" alt="图 11，男性生殖系统"/>
+<br/><small>图 11 男性生殖系统</small>
+
+阴茎在受到刺激时会**勃起**。阴茎勃起过程中会**充血**，可迅速地增大、变硬。完全勃起的情况下，阴茎体部会呈坚硬状态。
+
+男性在受到性刺激时会由尿道口分泌透明无色而略粘稠的预射精液<Cite citeName="阴茎与睾丸等器官的性反应" citeList={citeList}/> （又作尿道球腺液，常被误认为是前列腺液）。
+
+成年男性的阴茎**勃起**长度平均值区间在 10 ~ 14 cm 。根据多项研究，不同种族的男性阴茎平均勃起长度没有显著差异。<Cite citeName="性学观止" citeList={citeList}/><Cite citeName="阴茎长度" citeList={citeList}/><Cite citeName="阴茎长度_国际" citeList={citeList}/><Cite citeName="阴茎长度_国际2" citeList={citeList}/>
+
+阴茎会在夜间或晨间刚睡醒时自发勃起，是正常现象。
+
+**睾丸**主要作用是产生精子和分泌**雄性激素**（主要是睾酮）。
+
+<img loading="lazy" src="/source/img/122_1.jpg" class="img-thumbnail thumb" alt="图 12，男性的性兴奋，阴茎变大并变硬。"/>
+<br/><small>图 12 男性的性兴奋</small><br/><br/>
+  
+
+阴茎的外观是多样的，不同的人在颜色、大小等方面存在着差异，在勃起时的外观也不尽相同。有些阴茎在勃起时会观察到一定弧度的弯曲。
+
+<img loading="lazy" src="/source/img/Various_size_penises.jpg" class="img-thumbnail thumb" alt="图 13，不同外形的阴茎。阴茎在外形上存在着差异。"/>
+<br/><small>图 13 不同外形的、勃起状态的阴茎，其中一部分去除过阴毛</small>
+
+### 包皮
+
+阴茎上覆盖有**包皮**作为皮肤。<Cite citeName="人类阴茎" citeList={citeList}/>幼儿的包皮较长，包着整个**龟头**，包皮口也小。随着年龄的增长，包皮逐渐退缩，包皮口也逐渐扩大。<Cite citeName="系统解剖学" citeList={citeList}/><Cite citeName="人类阴茎" citeList={citeList}/>**青春期**后包皮平时可能覆盖部分或全部龟头，阴茎勃起后可以自动或者用手轻易退到**冠状沟**后面 （如图 10 所示）。<Cite citeName="人类阴茎" citeList={citeList}/>
+
+在包皮和龟头间常会存在**包皮垢**，它们由腺体分泌物、皮肤屑和残留尿液等组成，应定期清洗龟头以去除包皮垢。<Cite citeName="健康的性" citeList={citeList}/>
+
+<button type="button" class="btn btn-exp btn-outline-secondary" data-bs-toggle="collapse" data-bs-target="#foreskin" aria-expanded="false" aria-controls="foreskin">包茎与包皮过长</button>
+<div class="collapse" id="foreskin">
+
+若是包皮不能退缩使龟头完全暴露，称之为**包皮过长**。<Cite citeName="系统解剖学" citeList={citeList}/>中国约有 50% 包皮过长的男性。若无感染，保持清洁即可。<Cite citeName="健康的性" citeList={citeList}/>
+
+成年后，若包皮口过小，包皮全部或大部分包着龟头无法上翻、复原，此症状称为**包茎**。中国约有 15% 包茎的男性。在青春期，一部分人的包茎不会消失，鉴于包茎存在可能引起阴茎癌、发炎等的危害，应到医院就诊。<Cite citeName="健康的性" citeList={citeList}/>
+
+</div>
+
+### 精子和精液
+
+人类**精子**是男性的生殖细胞，由睾丸所产生。
+
+精子从青春期起持续不断地产生，一个成熟健康的男子每天会生成 7000 万 ~ 1.5 亿个精子。睾丸生成成熟的精子需约 64 ~ 72 天。<Cite citeName="健康的性" citeList={citeList}/>
+
+**精液**一般是含有**精子**的流质，外观为半透明白色粘稠状，有类似石楠花的气味，在射出后会凝固呈胶冻状，一段时间后会液化。<Cite citeName="诊断学" citeList={citeList}/>
+
+在受到**性刺激**一段时间后，包含有精子的精液会经勃起的阴茎的尿道口射出，此过程称为**射精**。射精是生殖所需的关键身体机能。
+
+<img loading="lazy" src="/source/img/124.jpg" class="img-thumbnail thumb" alt="图 14，未液化的精液"/><br/>
+<small>图 14 精液（未液化）</small>
+
+### 遗精
+
+男性的**遗精**（又称**梦遗**）是指在睡眠过程中自发地性高潮，由此引发的**射精**现象。
+
+**自慰**的频率可能与梦遗的频率有一定相关性，一般来说梦遗的频率较高的男性可能自慰的频率会较低。 <Cite citeName="SBHM" citeList={citeList}/>
+
+外生殖器的分化
+-------
+
+在一个人还是胚胎的最开始阶段时，无论其性别，外生殖器的外观是一样的。男女两性的生殖系统经过同样的胚胎起源，经过性激素的影响，外生殖器将开始分化。<Cite citeName="性学观止" citeList={citeList}/>
+
+男性外生殖器的每个部位都可以在女性外生殖器找到对应部位，反之亦然。这被称之为**同源器官**。下面的图片展示了分化过程，同源器官用相同的颜色标示。
+
+<div class="row show">
+    <div class="col-md-6">
+        <img loading="lazy" src="/source/img/Human_genitalia.jpg" class="img-thumbnail thumb" alt="图 15， 人类的外生殖器在胚胎时期，一开始看起来没有区别。经过分化后才可以区分。"/>
+        <br/><small>图 15 男女外生殖器基于相同的胚胎</small>
+    </div>
+</div>
+
+<p class="bg-light tip-bar"><span class="darkmode-ignore">📃</span> 本章节内容有适合印刷版本。<a href="/main/other-media/">了解详情</a></p>
+
+<End/>
+
+<ReferList citeList={citeList}/>
+
+版权
+--
+
+### 正文内容
+
+详见[版权许可](/general/copyright)。
+
+### 图片来源
+
+本页图片除图 6 外，均来自互联网，且均在版权合规要求下使用。关于图 6 的版权，请见下方[“有关图 6 的版权说明”](#hymen-image-cr)。
+
+<table class="table table-bordered" style="overflow:auto">
+    <tbody>
+        <tr>
+            <th>图片编号</th>
+            <th>作者</th>
+            <th>来源</th>
+        </tr>
+        <tr>
+            <td>封面</td>
+            <td><a href="https://unsplash.com/@ujitomo">TOMOKO UJI</a></td>
+            <td><a href="https://unsplash.com/photos/jGHVjPJM_x0">Unsplash</a></td>
+        </tr>
+        <tr>
+            <td>图 1</td>
+            <td><a href="https://commons.wikimedia.org/wiki/User:GnolizX">GnolizX</a><br/>Sci-img</td>
+            <td><a href="https://commons.wikimedia.org/wiki/File:Vaginal_opening_description-zh.svg">Wikimedia
+                    Commons</a></td>
+        </tr>
+        <tr>
+            <td>图 2</td>
+            <td><a href="https://commons.wikimedia.org/wiki/User:Witcater">Witcater</a><br/><a
+                    href="https://commons.wikimedia.org/wiki/User:BruceBlaus">BruceBlaus</a></td>
+            <td><a
+                    href="https://commons.wikimedia.org/wiki/File:Blausen_0399_FemaleReproSystem_01_CHS_女性生殖系统_简体中文.png">Wikimedia
+                    Commons</a></td>
+        </tr>
+        <tr>
+            <td>图 3</td>
+            <td><a href="https://commons.wikimedia.org/wiki/User:Fotomannforever">Fotomannforever</a></td>
+            <td><a
+                    href="https://commons.wikimedia.org/wiki/File:Labia_becoming_engorged_with_blood_as_female_reaches_arousal.jpg">Wikimedia
+                    Commons</a></td>
+        </tr>
+        <tr>
+            <td>图 4</td>
+            <td>
+                <a href="https://commons.wikimedia.org/wiki/User:Coupleabc">Coupleabc</a><br/>
+                <a href="https://commons.wikimedia.org/wiki/User:Tom_Marquez">Tom Marquez</a><br/>
+                <a href="https://commons.wikimedia.org/wiki/User:Hutanisa">Hutanisa</a><br/>
+                <a href="https://commons.wikimedia.org/wiki/User:Ingrid_w">Ingrid w</a><br/>
+                Alexkhandria2K<br/>
+                Amateurlover<br/>
+                <a href="https://www.flickr.com/people/50486445@N02">Latin Temptation</a>
+            </td>
+            <td>
+                <a href="https://commons.wikimedia.org/wiki/File:Aroused_and_Shaved_Vulva.jpg">改自 Wikimedia Commons</a><br/>
+                <a href="https://commons.wikimedia.org/wiki/File:Genital_Diversity_Expanded.jpg">改自 Wikimedia Commons</a>
+            </td>
+        </tr>
+        <tr>
+            <td>图 5</td>
+            <td>
+                <a href="https://commons.wikimedia.org/wiki/User:Ralf_Roletschek">Ralf Roletschek</a>
+                <br/>
+                <a href="https://commons.wikimedia.org/wiki/User:Sansculotte">Sansbrassiere</a>
+            </td>
+            <td>改自 <a
+                    href="https://commons.wikimedia.org/wiki/File:Weibliche_brust_en.jpg">Wikimedia
+                    Commons</a></td>
+        </tr>
+        <tr>
+            <td>图 6</td>
+            <td>-</td>
+            <td>改自 <cite>Evaluation of the Sexually Abused Child SECOND EDITION</cite></td>
+        </tr>
+        <tr>
+            <td>图 7</td>
+            <td><a href="https://zealthy.in/en/">Zealthy.in</a></td>
+            <td><a href="https://zealthy.in/en/topic/guide-to-get-pregnant">改自 Zealthy.in</a></td>
+        </tr>
+        <tr>
+            <td>图 8</td>
+            <td><a href="https://commons.wikimedia.org/wiki/User:Chris_73">Chris 73</a><br/><a href="https://zh.wikipedia.org/wiki/User:KaurJmeb">KaurJmeb</a><br/><a href="https://zh.wikipedia.org/wiki/User:Dingar">Dingar</a></td>
+            <td><a href="https://commons.wikimedia.org/wiki/File:MenstrualCycle_zh_hans.png">Wikimedia Commons</a></td>
+        </tr>
+        <tr>
+            <td>图 9</td>
+            <td><a href="https://commons.wikimedia.org/wiki/User:Ganlin88">Ganlin88</a></td>
+            <td><a href="https://commons.wikimedia.org/wiki/File:Penis(Asia).jpg">Wikimedia Commons</a></td>
+        </tr>
+        <tr>
+            <td>图 10</td>
+            <td><a href="https://commons.wikimedia.org/wiki/User:Cheywen">Cheywen</a></td>
+            <td><a href="https://commons.wikimedia.org/wiki/File:Frein_du_pr%C3%A9puce.jpg">Wikimedia
+                    Commons</a></td>
+        </tr>
+        <tr>
+            <td>图 11</td>
+            <td>
+            <a href="https://commons.wikimedia.org/wiki/User:Tsaitgaist">Tsaitgaist</a><br/>
+            <a href="http://www.luckymojo.com/faqs/altsex/penis.html">alt.sex FAQ</a>
+            </td>
+            <td>
+            <a href="https://commons.wikimedia.org/wiki/File:Male_anatomy_blank.svg">Wikimedia Commons</a>
+            </td>
+        </tr>
+        <tr>
+            <td>图 12</td>
+            <td><a href="https://commons.wikimedia.org/wiki/User:Cmppp">Cmppp</a></td>
+            <td><a href="https://commons.wikimedia.org/wiki/File:Erection_development_2.png">改自 Wikimedia
+                    Commons</a></td>
+        </tr>
+        <tr>
+            <td>图 13</td>
+            <td>
+                <a href="https://commons.wikimedia.org/wiki/User:ShavedCock">ShavedCock</a><br/>
+                <a href="https://commons.wikimedia.org/wiki/User:Wumingbai">Wumingbai</a><br/>
+                <a href="https://commons.wikimedia.org/wiki/User:Cabbageinaletterbox">Cabbageinaletterbox</a><br/>
+                <a href="https://commons.wikimedia.org/wiki/User:Barebi">Barebi</a>等<br/>
+            </td>
+            <td>
+                <a href="https://commons.wikimedia.org/wiki/File:Various_size_penises.jpg">改自 Wikimedia
+                    Commons</a>
+            </td>
+        </tr>
+        <tr>
+            <td>图 14</td>
+            <td>X.Ran Lin</td>
+            <td>公有领域</td>
+        </tr>
+        <tr>
+            <td>图 15</td>
+            <td><a href="https://commons.wikimedia.org/wiki/User:Sciencia58">Sciencia58</a></td>
+            <td><a href="https://commons.wikimedia.org/wiki/File:Human_genitalia_-_development_1.png">改自 Wikimedia Commons</a></td>
+        </tr>
+    </tbody>
+</table>
+
+#### 有关图 6 的版权说明
+
+图 6 改自 Oxford University Press, Inc. 出版图书 *Evaluation of the Sexually Abused Child SECOND EDITION* 的插图。 我们尝试联系了[牛津大学出版社（中国）有限公司](https://www.oupchina.com.hk/)， 但对方未回应。本着教学目的，兹按照 [《中华人民共和国著作权法》](http://www.npc.gov.cn/npc/c30834/202011/848e73f58d4e4c5b82f69d25d46048c6.shtml)第二十四条、 [《美国版权法》第一章第 107 条](https://www.copyright.gov/title17/92chap1.html#107)与 [大韩民国《著作权法》第 35 条之 5](https://www.law.go.kr/법령/저작권법/(20221208,18547,20211207)/제35조의5) 之规定 对该图片进行合理使用（“Fair use”“저작물의 공정한 이용”）之引用。如有版权问题，请联系 [knowsex@outlook.com](mailto:knowsex@outlook.com) 。
+
+该图片所属图书版权归 Oxford University Press, Inc. 所有，版权声明如下。
+
+> Copyright © 2000 by Oxford University Press, Inc.
+
+#### Copyright Notice for Figure 6
+
+Figure 6 is an illustration edited from the book *Evaluation of the Sexually Abused Child SECOND EDITION*, published by Oxford University Press, Inc. We have tried to contact [Oxford University Press (China), Inc.](https://www.oupchina.com.hk/) but have not received a response. For educational purposes, this image is cited for fair use(“저작물의 공정한 이용”) in accordance with Article 24 of the [_Copyright Law of the People's Republic of China_](http://www.npc.gov.cn/npc/c30834/202011/848e73f58d4e4c5b82f69d25d46048c6.shtml), [Chapter 1 § 107 of _Copyright Law of the United States (Title 17)_](https://www.copyright.gov/title17/92chap1.html#107) and [Article 35-5 of _Copyright Law of the Republic of Korea_](https://www.law.go.kr/법령/저작권법/(20221208,18547,20211207)/제35조의5). If you have any questions about copyright, please contact [knowsex@outlook.com](mailto:knowsex@outlook.com) .
+
+The copyright of the book owned by Oxford University Press, Inc. and the copyright notice is as follows.
+
+> Copyright © 2000 by Oxford University Press, Inc.
+
+### 关于模型展示
+
+“女性形态外阴”模型来自 [Hidden Beauty](https://hiddenbeauty.ch/) ，编号为 [426060-VSNN-1](https://hiddenbeauty.ch/model/426060-VSNN-1) ，其以 [CC 0](https://creativecommons.org/share-your-work/public-domain/cc0/) 协议发布。KnowSex 对模型有略作修改。
+
+“阴茎与阴囊”模型由 [rossthren](https://sketchfab.com/rossthren) 制作，于 [Sketchfab](https://sketchfab.com/3d-models/flaccid-penis-37dd96fb488548789bffb54dc152e6f9) 以 [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) 协议发布，KnowSex 对模型有略作修改。
+
+模型展示功能基于 [`<model-viewer>`](https://modelviewer.dev/) ，其许可证使用 [Apache License 2.0](https://github.com/google/model-viewer/blob/master/LICENSE) 。
+
+<script src="/source/models/script.js"></script>
+<script type="module" src="https://cdn.jsdelivr.net/npm/@google/model-viewer@2.0.2/dist/model-viewer.min.js"></script>

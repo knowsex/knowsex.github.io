@@ -1,0 +1,635 @@
+@charset "UTF-8";
+.forScreenReader {
+    color: rgba(0, 0, 0, .0);
+    font-size: 1px;
+    height: 1px
+}
+
+.seen {
+    filter: blur(20px);
+    transition: .5s
+}
+
+.mod {
+    margin: 0 10%;
+    text-align: center;
+    height: auto
+}
+
+.block {
+    margin: 5% 30px;
+    padding: 2%;
+    border: 3px solid #5dbd90
+}
+
+.block h2 {
+    color: #5dbd90
+}
+
+.title {
+    color: #5dbd90;
+    padding: 10px;
+    margin: 0;
+    font-size: 1.5em;
+    line-height: 1.2;
+    /* display: block */
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' class='bi' fill='currentColor' viewBox='0 0 16 16'%3e %3cpath fill-rule='evenodd' d='M2.5 11.5A.5.5 0 0 1 3 11h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4A.5.5 0 0 1 3 7h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4A.5.5 0 0 1 3 3h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z'%3e%3c/path%3e %3c/svg%3e");
+}
+
+.nav-link {
+    color: grey;
+}
+
+.topbar {
+    position: relative;
+    -webkit-box-shadow: 0 1px 5px rgba(213, 213, 213, 0.5);
+    -moz-box-shadow: 0 1px 5px rgba(213, 213, 213, 0.5);
+    box-shadow: 0 1px 5px rgba(213, 213, 213, 0.5);
+    z-index: 1
+}
+
+.topbar-fill {
+    max-width: 1000px;
+    margin: 0 auto
+}
+
+::-moz-selection {
+    color: #000;
+    background-color: rgb(172, 98, 98)
+}
+
+::selection {
+    color: #000;
+    background-color: rgb(255, 249, 167)
+}
+
+body {
+    font-family: 'Noto Serif SC', Microsoft YaHei, -apple-system, SF UI Text, Arial, PingFang SC, Hiragino Sans GB, WenQuanYi Micro Hei, sans-serif;
+    font-weight: 400
+}
+
+.main {
+    max-width: 1000px;
+    margin: 20px auto;
+    padding: 10px 30px;
+    color: #333;
+    font-size: 17px;
+    width: auto;
+    height: auto;
+    line-height: 2;
+}
+
+.main p {
+    text-align: justify;
+}
+
+.main p[lang="en"], .main span[lang="en"], .main div [lang="en"] {
+    text-align: left;
+}
+
+.main strong {
+    color: #BC5F5C;
+    font-family: "思源黑体","Noto Sans CJK SC","Source Han Sans SC","Source Han Sans CN","Source Han Sans","Noto Sans","Noto Sans SC","PingFang SC","WenQuanYi Micro Hei","Heiti SC","STHeiti","SimHei",sans-serif;
+}
+
+small {
+    color: #757575;
+    text-align: center
+}
+
+.topbar small {
+    font-size: 70%
+}
+
+.main small::before {
+    content: '';
+    display: inline-block;
+    width: 0.8em;
+    height: 0.8em;
+    background-image: url('triangle.svg');
+    background-size: 0.8em 0.8em;
+    vertical-align: baseline;
+    margin-right: 0.15em;
+    background-repeat: no-repeat
+}
+
+blockquote footer small::before {
+    display: none !important;
+}
+
+.img-box {
+    margin-bottom: 20px;
+    position: relative
+}
+
+.thumb {
+    position: relative;
+    z-index: 0;
+    margin-top: 20px
+}
+
+.main li small::before {
+    content: ''
+}
+
+.main h3 {
+    border-left: 8px solid #BC5F5C;
+    padding: 4px 10px;
+    font-weight: bold;
+    font-size: 1.4em;
+    font-family: 'Noto Sans SC';
+    margin: .6em auto .4em;
+}
+
+.main h4 {
+    border-left: 3px solid #BC5F5C;
+    margin-top: 1em;
+    padding: .3em .5em;
+    font-weight: bold;
+    font-family: 'Noto Sans SC'
+}
+
+.header-thumb {
+    position: relative;
+    width: 100%;
+    height: 300px;
+    background-color: #b5fff1;
+    margin-bottom: 30px
+}
+
+.header-title {
+    position: relative;
+    max-width: 900px;
+    margin: 0 auto;
+    top: 100px;
+    color: white;
+    padding: 10px 40px
+}
+
+.tip {
+    width: inherit;
+    height: auto;
+    margin: 10px 0;
+    color: brown;
+    font-weight: bold;
+    background: linear-gradient(#fff 25%, #fff) no-repeat 50% 50%, linear-gradient(-45deg, #f7f7f7 25%, #fff 25%, #fff 50%, #f7f7f7 50%, #f7f7f7 75%, #fff 75%, #fff);
+    background-size: 95% 100%, 20px 20px;
+    padding: 20px 5%
+}
+
+.header-img {
+    position: absolute;
+    width: 100%;
+    height: 300px;
+    background-position: center;
+    background-size: cover
+}
+
+.no1 {
+    background-image: url('../main/human-reproductive-system/img/1-bg.jpg')
+}
+
+.no2 {
+    background-image: url('../main/sexual-activity/img/2-bg.jpg')
+}
+
+.no3 {
+    background-image: url('../main/sexual-orientation/img/3-bg.jpg')
+}
+
+.ex-rd {
+    background-image: url('../sub/img/exrd-bg.jpg')
+}
+
+.contraceptive {
+    background-image: url('../main/contraception/img/contraceptive.jpg')
+}
+
+.communicate {
+    background-image: url('../general/communicate/img/talk-bg.jpg')
+}
+
+.donate-bg {
+    background-image: url('../general/encourage/donateCover.jpg')
+}
+
+.about-bg {
+    background-image: url('../general/about/aboutCover.jpg')
+}
+
+.license-bg {
+    background-image: url('../general/copyright/license-cover.jpg')
+}
+
+.header-cover {
+    position: relative;
+    width: 100%;
+    height: 300px;
+    background-color: rgba(0, 0, 0, .3);
+    -webkit-box-shadow: 0 1px 5px rgba(0, 0, 0, .3);
+    -moz-box-shadow: 0 1px 5px rgba(0, 0, 0, .3);
+    box-shadow: 0 1px 5px rgba(0, 0, 0, .3)
+}
+
+.topbar a:link {
+    text-decoration: none
+}
+
+.topbar a:visited {
+    text-decoration: none
+}
+
+.topbar a:hover {
+    text-decoration: none
+}
+
+.topbar a:active {
+    text-decoration: none
+}
+
+.header-thumb a:link {
+    text-decoration: none
+}
+
+.header-thumb a:visited {
+    text-decoration: none
+}
+
+.header-thumb a:hover {
+    text-decoration: none
+}
+
+.header-thumb a:active {
+    text-decoration: none
+}
+
+.cover {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 5;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .3);
+    transition: .5s
+}
+
+.warn {
+    max-width: 700px;
+    margin: 20% auto;
+    padding: 30px;
+    color: white;
+    font-size: 1.5em;
+    font-weight: bold;
+    font-family: 'Noto Sans SC'
+}
+
+.lf {
+    font-size: smaller
+}
+
+video {
+    width: 100%
+}
+
+.collapse, .collapsing {
+    border: solid 1px #CCC;
+    border-radius: 8px;
+    padding: 20px 10px
+}
+
+.footer-icons {
+    line-height: 40px
+}
+
+.footer-icons a {
+    margin-right: .5em
+}
+
+.transparentButton {
+    background-color: transparent;
+    border: 1px solid;
+    border-radius: .5em;
+    color: white;
+    padding: 10px 32px;
+    text-decoration: none;
+    display: inline-block;
+    font-size: .7em;
+    margin: 1em auto;
+    cursor: pointer;
+    transition: .5s
+}
+
+.transparentButton:hover {
+    background-color: white;
+    color: #777
+}
+
+.key {
+    font-weight: bold;
+    font-family: "思源黑体","Noto Sans CJK SC","Source Han Sans SC","Source Han Sans CN","Source Han Sans","Noto Sans","Noto Sans SC","PingFang SC","WenQuanYi Micro Hei","Heiti SC","STHeiti","SimHei",sans-serif;
+}
+
+.btn-exp::before {
+    content: '';
+    display: inline-block;
+    width: 0.8em;
+    height: 0.8em;
+    background-image: url('expand.svg');
+    background-size: 0.8em 0.8em;
+    vertical-align: baseline;
+    margin-right: 0.15em;
+    background-repeat: no-repeat
+}
+
+a {
+    color: #316bc1;
+    text-decoration: none
+}
+
+b, strong {
+    font-weight: bold
+}
+
+.hr {
+    border-bottom: 1px solid rgba(184, 197, 214, .2);
+    margin: 1em 0
+}
+
+blockquote {
+    padding: 10px 20px;
+    margin: 0 0 20px;
+    font-size: 17.5px;
+    border-left: 5px solid #eee
+}
+
+blockquote footer {
+    display: block;
+    font-size: 80%;
+    line-height: 1.42857143;
+    color: #777
+}
+
+.reference-list {
+    font-size: .9em;
+    overflow-x: auto
+}
+
+.notice {
+    padding: 10px;
+    margin: 5px 0
+}
+
+.notice svg {
+    height: 1.3em
+}
+
+/* .show-after-click {
+    filter: blur(40px);
+    transition: .5s
+} */
+
+.text-hover-img {
+    position: absolute;
+    text-align: center !important;
+    left: 50%;
+    top: 50%;
+    color: #fff;
+    z-index: 1;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    font-size: .9em;
+}
+
+.click-to-show {
+    position: relative;
+    display: inline-block;
+}
+
+.tip-bar {
+    padding: 10px;
+    margin: 5px 0
+}
+
+.tip-bar svg {
+    height: 1em;
+    display: inline
+}
+
+article h2::before {
+    content: '';
+    display: inline-block;
+    width: 0.8em;
+    height: 0.8em;
+    background-image: url('sharp.svg');
+    background-size: 0.8em 0.8em;
+    vertical-align: baseline;
+    margin-right: 0.15em;
+    background-repeat: no-repeat
+}
+
+article h2 {
+    font-weight: bold;
+    font-size: 1.6em;
+    font-family: 'Noto Sans SC';
+    line-height: 2;
+}
+
+.header-title p {
+    font-size: 1em
+}
+
+.footer {
+    padding: 20px 30px;
+    background: #f9f9f9;
+    color: #4e4e4e;
+    margin: 0
+}
+
+.footer a, .link-underline a {
+    color: #4e4e4e;
+    text-decoration: underline
+}
+
+sup.reference a {
+    color: #a2a2a2;
+    font-weight: normal!important;
+}
+
+.hidden-lg {
+    display: none;
+}
+
+@media screen and (max-width:767px) {
+    footer .info-left {
+        display: flex;
+        flex-flow: column-reverse
+    }
+
+    .hidden-lg {
+        display: block;
+    }
+
+    .hidden-mobile {
+        display: none
+    }
+
+    .display-mobile {
+        display: block!important;
+    }
+}
+
+.header-title p {
+    text-align: initial;
+}
+
+.condolence {
+    filter: grayscale(80%);
+    -webkit-filter: grayscale(80%);
+    -moz-filter: grayscale(80%);
+    -ms-filter: grayscale(80%);
+    -o-filter: grayscale(80%);
+}
+
+.show-after-click {
+    filter: blur(20px) brightness(0.8);
+    transition: .5s;
+}
+
+.social-icon {
+    text-decoration: none!important;
+}
+.xef {
+    background-color: #548235 !important;
+    color: white !important;
+}
+
+.ef {
+    background-color: #c6e0b4 !important;
+    color: #000 !important;
+}
+
+.wa {
+    background-color: #fff2cc !important;
+    color: #000 !important;
+}
+
+.da {
+    background-color: #f4b084 !important;
+    color: #000 !important;
+}
+
+// article {
+
+//     .article-meta {
+//         font-family: "思源黑体","Noto Sans CJK SC","Source Han Sans SC","Source Han Sans CN","Source Han Sans","Noto Sans","Noto Sans SC","PingFang SC","WenQuanYi Micro Hei","Heiti SC","STHeiti","SimHei",sans-serif;
+//         color: grey;
+//     }
+//     h1 {
+//         font-family: "思源黑体","Noto Sans CJK SC","Source Han Sans SC","Source Han Sans CN","Source Han Sans","Noto Sans","Noto Sans SC","PingFang SC","WenQuanYi Micro Hei","Heiti SC","STHeiti","SimHei",sans-serif;
+//         font-size: 2rem;
+//     }
+// }
+/* .show-after-click:focus {
+  filter: none;
+  outline: none;
+}
+
+.show-after-click:focus + .text-hover-img {
+  display: none;
+} */
+
+/* 
+.click-to-show {
+  position: relative;
+  display: inline-block;
+}
+
+.text-hover-img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(255, 255, 255, 0.7);
+  padding: 10px;
+  border-radius: 5px;
+  text-align: center;
+  font-size: 16px;
+  line-height: 1.5;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.show-after-click {
+  filter: blur(5px);
+}
+
+.show-after-click:focus {
+  filter: none;
+  outline: none;
+}
+
+.show-after-click:focus + .text-hover-img {
+  display: none;
+}
+ */
+
+/* Text before */
+/* .icon-before::before {
+    margin-right: .3em;
+}
+.star-before::before{
+    content: "";
+} */
+
+/* Drak mode style */
+/* 
+
+.darkmode--activated a {
+    color: #93b7ed;
+    text-decoration: none;
+    isolation: isolate;
+}
+.darkmode--activated strong, h2::before, .star-before::before, h3,h4,h5 {
+    isolation: isolate;
+}
+.darkmode--activated h3,h4,h5 {
+    color: #ccc;
+}
+.darkmode--activated .title img{
+    filter: invert(.5) brightness(1.8);
+}
+.darkmode--activated .tip {
+    color: #333;
+    background: linear-gradient(#fff 25%,#fff) no-repeat 50% 50%,linear-gradient(-45deg,#3f3f3f 25%,#fff 25%,#fff 50%,#3f3f3f 50%,#3f3f3f 75%,#fff 75%,#fff);
+    background-size: 95% 100%,20px 20px;
+}
+.darkmode--activated .footer a {
+    color: #b6b6b6;
+    text-decoration: underline
+}
+.darkmode--activated .social-icon{
+    filter: brightness(2);
+}
+.darkmode--activated .dropdown-menu{
+    background: #000;
+}
+.darkmode--activated .navbar-toggler-icon{
+    filter: invert(1);
+}
+
+
+ */
+ @keyframes fadeOut {
+	0% {
+		background-color:#ffff8b;
+	}
+	100% {
+		background-color:#ffff8b00;
+	}
+  }
+.highlight-reference{background-color:#ffff8b;animation: fadeOut 5s forwards; /* 添加淡出动画 */}
+@import "dark";

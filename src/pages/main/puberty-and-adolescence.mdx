@@ -1,0 +1,339 @@
+---
+layout: /src/layouts/Main.astro
+
+title: 青春期
+enTitle: Puberty and Adolescence
+desc: 有关青春期的资料，讲解了生殖功能、外表、心理的发展和性别认同。
+bgPath: /source/img/pa-cover.jpg
+keywords: 
+ - 青春期
+ - 青春发育期
+ - 青少年
+---
+import Cite from '/src/components/CiteSup.astro';
+import ReferList from '/src/components/CiteReference.astro';
+import Btn from '/src/components/OutlineBtn.astro';
+import CW from '/src/components/CW.astro';
+import End from '/src/components/ArticleEnd.astro';
+import Key from '/src/components/KeySentence.astro';
+export const citeList = [
+    {
+        "name": "女青临床指南",
+        "caption": "Jennifer E. Dietrich, 巩纯秀 主译. 女性青春期发育：临床实践指南. 北京: 北京大学医学出版社. 2017: 19,20,22. ISBN 978-7-5659-1566-6",
+    },
+        {
+        "name": "内分泌学",
+        "caption": "陈家伦主编. 临床内分泌学. 上海: 上海科学技术出版社. 2011: 661-2,664,673. ISBN 978-7-5323-9993-2",
+    },
+    {
+        "name": "MSD男青",
+        "caption": "Irvin H. Hirsch. 男孩青春期. 默沙东诊疗手册大众版. 2023-02. https://www.msdmanuals.cn/home/men-s-health-issues/biology-of-the-male-reproductive-system/puberty-in-boys"
+    },
+
+    {
+        "name": "MSD女青",
+        "caption": "Jessica E. McLaughlin. 青春期. 默沙东诊疗手册大众版. 2022(2022-04)[2023-07-18]. https://www.msdmanuals.cn/home/women-s-health-issues/biology-of-the-female-reproductive-system/puberty-in-girls"
+    },
+
+        {
+        "name": "nemours",
+        "caption":"Nemours KidsHealth. Understanding Puberty. Nemours KidsHealth. 2022(2022-05)[2023-07-20]. <small>Information provided by Nemours Children's Health through its award-winning Nemours KidsHealth website. For more on this topic, visit KidsHealth.org.</small>. https://kidshealth.org/en/parents/understanding-puberty.html"
+    },
+    {
+        "name": "身高统计",
+        "caption": "中华人民共和国国家卫生健康委员会. 2022中国卫生健康统计年鉴. 中华人民共和国国家卫生健康委员会. 2023(2023-05-17)[2023-07-18]. http://www.nhc.gov.cn/mohwsbwstjxxzx/tjtjnj/202305/6ef68aac6bd14c1eb9375e01a0faa1fb.shtml"
+    },
+    {
+        "name": "自发勃起",
+        "caption": "University Health Service. Ask the Sexpert: Random Erections. University of Rochester. 2023(2023-04-11)[2023-07-18]. https://www.rochester.edu/uhs/ask-the-sexpert-random-erections/"
+    },
+    {
+        "name": "性学观止",
+        "caption": "贺兰特·凯查杜里安.性学观止[M].北京:世界图书出版公司北京公司,2007.9:262-79. ISBN 978-7-5062-8688-6"
+    },
+
+    {
+        "name": "发心",
+        "caption": "林崇德主编. 发展心理学. 3版. 北京: 人民教育出版社. 2018: 356-9. ISBN 978-7-107-32340-9"
+    },
+        {
+        "name": "妙佑性别认同",
+        "caption": "妙佑医疗国际员工. 儿童与性别认同：支持您的孩子. 妙佑医疗国际. 2023(2023-04-21)[2023-07-18]. https://www.mayoclinic.org/zh-hans/healthy-lifestyle/childrens-health/in-depth/children-and-gender-identity/art-20266811"
+    },
+    {
+        "name": "UNFE双性",
+        "caption": "联合国人权事务高级专员办事处, UNFE. 概况介绍 双性 INTERSEX. 联合国 UNFE. [2023-07-18]. https://www.ohchr.org/sites/default/files/Documents/Issues/Discrimination/LGBT/FactSheets/UNFE_FactSheet_Intersex_CH.pdf"
+    }
+];
+
+<CW />
+
+**青春期**指人体生殖、生理功能成熟的时期，儿童经由此期成为成人。在这一时期，生长发育较快，身体和心理将发生较大变化。
+
+人类经历青春期将获得性别特征和生殖储备能力。人体内外将发生一系列变化，以获得相应的能力。
+
+平均而言，生理女性大约在 8 - 13 岁开始青春期，生理男性大约在 9 - 14 岁开始青春期，女孩会比男孩更早进入青春期和结束青春期。当然，有些人会比平均年龄更早或更晚进入青春期。
+
+由于经过青春期，性别将可从生殖器官外观之外做出判断（例如男性的胡须和女性的乳房），因此这些变化也被称为**第二性征**。
+
+对于女性，从外表看，将主要发生以下改变：<Cite citeName='女青临床指南' citeList={citeList}/><Cite citeName='内分泌学' citeList={citeList}/>
+
+*   乳房发育
+*   阴毛发育
+*   身高增长
+*   月经初潮
+*   腋毛发育
+*   外阴外观变化
+
+<Key>女性青春期发育的第一个特征是身高增长速度的加快，但是乳腺的发育更先被察觉到。</Key>
+
+对于男性，从外表看，将会逐步发生以下改变：<Cite citeName='MSD男青' citeList={citeList}/>
+
+*   阴囊和睾丸发育
+*   阴茎发育
+*   阴毛发育
+*   身高增长
+*   胡须和腋毛发育
+*   射精能力
+
+<Key>睾丸增大被视为青春期启动的第一个特征。<Cite citeName='内分泌学' citeList={citeList}/></Key>
+
+<div class="single-img mb-2">
+    <img loading="lazy" src="/source/img/Adolescent_Period_Average_girl_4_to_16_yo.jpg" class="img-thumbnail thumb" alt="图1，4到16岁的女性"/>
+    <br/><small>图&nbsp;1&nbsp;, 4 到 16 岁的女性</small>
+</div>
+<div class="single-img mb-2">
+    <img loading="lazy" src="/source/img/Adolescent_Period_Average_boy_10_to_17_yo.jpg" class="img-thumbnail thumb" alt="图2，10到17岁的男性"/>
+    <br/><small>图&nbsp;2&nbsp;, 10 到 17 岁的男性</small>
+</div>
+<div class="row show">
+    <div class="col-md-6">
+        <img loading="lazy" src="/source/img/data_female.svg" class="img-thumbnail thumb" alt="图 3， 女性的青春期变化与年龄的关系"/>
+        <br/><small>图 3 女性的青春期变化与年龄<Cite citeName='MSD女青' citeList={citeList}/></small>
+    </div>
+    <div class="col-md-6">
+        <img loading="lazy" src="/source/img/data_male.svg" class="img-thumbnail thumb" alt="图 4， 男性的青春期变化与年龄的关系"/>
+        <br/><small>图 4 男性的青春期变化与年龄<Cite citeName='MSD男青' citeList={citeList}/></small>
+    </div>
+</div><br/>
+
+主要性征的改变
+-------
+
+### 女性乳房与外阴发育
+
+**乳房**位于人类的胸部或腹部，成对出现。在青春期，一般只有女性的乳房会发育。如果一位女性怀孕并分娩，乳房可产出乳汁，用于供给婴儿，称之为哺乳。在性行为中，也是除生殖器外最为敏感的器官。
+
+乳房发育可划分为五个阶段。在外观上看来，<Cite citeName='内分泌学' citeList={citeList}/>
+
+*   第一阶段：青春期前，乳房和周围皮肤看起来没有什么不同；
+*   第二阶段：**乳晕**开始变宽，并出现小面积隆起；
+*   第三阶段：乳房开始变得更高，乳晕继续变宽；
+*   第四阶段：乳房的高度和尺寸继续增加，**乳头**和乳晕突出；
+*   第五阶段：乳房发育到成人尺寸，乳晕恢复为乳房轮廓，乳头突出。
+
+<div class="single-img mb-2">
+<img loading="lazy" src="/source/img/Female_breasts_five_Tanner_stages.jpg" class="img-thumbnail thumb" alt="图5，乳房发育的五个阶段，如上文描述。"/>
+<br/><small>图&nbsp;5&nbsp;乳房发育的五个阶段</small>
+</div>
+
+大部分人的乳房都有略微不对称，在乳房发育时也会有所观察到。一般在发育时的不对称是暂时的。<Cite citeName='女青临床指南' citeList={citeList}/>如果乳房的发育差异过于明显，可考虑到正规医疗机构寻求医生的帮助。
+
+在青春期，阴道的长度将变长。对于外阴，大小阴唇变厚，褶皱增多，并出现色素沉着。一般地，较软的阴毛将首先在阴唇附近出现，接着在阴阜区域延伸，并逐渐可能延伸至大腿或肚脐位置。最终将可呈现典型的成人倒三角状阴毛。<Cite citeName='内分泌学' citeList={citeList}/>
+
+### 男性外阴发育
+
+在青春期，男性外阴的变化是显著变化之一。这包括阴茎、阴囊和阴毛的发育。
+
+外阴的发育可划分为五个阶段。在外观上看来，<Cite citeName='内分泌学' citeList={citeList}/>
+
+*   第一阶段：外阴未发育，呈幼童状态；
+*   第二阶段：阴囊和睾丸开始变大，阴囊皮肤变红并变得粗糙，在阴茎根部可以观察到较软的阴毛；
+*   第三阶段：阴囊和睾丸继续变大，阴茎开始变长，而后变粗，阴毛变粗，覆盖的面积变大；
+*   第四阶段：阴囊和睾丸继续变大，阴囊有色素沉着，阴茎的直径和长度增大，龟头变粗并变得轮廓明显，阴毛几乎达到成人水平，但大腿和腹股沟无分布；
+*   第五阶段：外阴形态呈成熟男性状态，阴茎停止生长。
+
+<div class="single-img mb-2">
+<img loading="lazy" src="/source/img/Male_genitalia_five_Tanner_stages.jpg" class="img-thumbnail thumb" alt="图6，男性外阴发育的五个阶段，如上文描述。"/>
+<br/><small>图&nbsp;6&nbsp;男性外阴发育的五个阶段</small>
+</div>
+
+在青春期，由于激素的波动，阴茎可能在任何时间在没有刺激或性幻想的情况下自发勃起，这是正常的。但有时勃起造成的衣物突显会带来尴尬，尤其是位于公共场合时。此时可考虑转移注意力或更换姿势，也可穿着较为宽松的衣物。<Cite citeName='自发勃起' citeList={citeList}/>
+
+随着阴茎的发育，包皮末端的开口将在青春期逐渐变大，并最终变得可以完全露出龟头。
+
+第二性征的改变
+-------
+
+### 声带与喉结
+
+在青春期前，男性和女性的声带长度没有明显差别。
+
+进入青春期后，男性声带、喉结和喉部肌肉开始出现变化，这使得男性嗓音变得低沉而粗。在这一过程中，可能会出现声嘶现象。到 15 岁左右，声音基本类似成年。<Cite citeName='内分泌学' citeList={citeList}/>
+
+### 毛发分布
+
+腋下毛发会在青春期生长，称之为**腋毛**。腋毛有吸附皮肤汗水的作用，辅助通风。
+
+随着青春期的进行，男性面部一些软而淡色的毛发将变成硬而深色的**胡须**。首先是上唇和上颊，之后蔓延至唇下和整个下巴。上唇胡须的出现通常发生在外阴发育的第三阶段时。<Cite citeName='内分泌学' citeList={citeList}/>
+
+### 面型和体型
+
+女性的骨盆和臀部将在青春期变宽，体脂将倾向分布于臀部和下肢。面部的肌肉和脂肪将使得女性面部线条柔和。<Cite citeName='内分泌学' citeList={citeList}/>
+
+在青春期，男性的力量增长更为显著，面部线条变得更为硬朗。体脂常以腹部为中心分布。<Cite citeName='内分泌学' citeList={citeList}/>
+
+身高发育
+----
+
+女孩的生长速度高峰大约出现在 11 - 14 岁，平均最大生长速度超过每年 8.3 厘米。<Cite citeName='内分泌学' citeList={citeList}/><Cite citeName='MSD女青' citeList={citeList}/>
+
+男孩的生长速度高峰大约出现在 13 - 15 岁，平均最大生长速度超过每年 9.5 厘米。<Cite citeName='内分泌学' citeList={citeList}/>
+
+<div class="single-img mb-2">
+<img loading="lazy" src="/source/img/height_data.svg" class="img-thumbnail thumb" alt="图7，中国大陆城乡青少年身高的增长值，透过图表可以看到上文提到的峰值增长"/>
+<br/><small>图&nbsp;7&nbsp;中国大陆城乡青少年平均身高增长图表<Cite citeName='身高统计' citeList={citeList}/></small>
+</div>
+
+生殖功能
+----
+
+### 女性月经初潮
+
+月经初潮指女孩初次月经。月经标志着女孩将拥有生育能力，不过最初的月经周期并无排卵。<Cite citeName='女青临床指南' citeList={citeList}/>
+
+从乳房发育到月经初潮大约需要 0.5 - 5.75 年，平均需要 2.3 年。初潮后身体开始建立生殖周期，此时的月经通常并无排卵，月经周期不稳定、不可预测。建立生殖周期需要经历数年时间。<Cite citeName='女青临床指南' citeList={citeList}/><Cite citeName='MSD女青' citeList={citeList}/>
+
+月经的到来意味着会有血液自阴道口流出。可以考虑使用卫生巾、卫生棉条或月经杯等处理经血，试着找到适合自己的方法。在月经期间，能够获得干净的水源和卫生用品是重要的。在经期前，身体可能会出现一系列状况，比如心情变差、情绪比平时更为敏感、长痘等情况。<Cite citeName='nemours' citeList={citeList}/>
+
+### 男性射精能力
+
+在青春期中期，男孩可能会在睡觉时或通过自慰发生首次射精，称之为遗精。虽然此时拥有射精能力，但一般要到后期精子质量和数量才能达到生育能力水平。<Cite citeName='内分泌学' citeList={citeList}/>
+
+发育差异
+----
+
+有很多因素会影响青春期的进程，例如遗传、营养状况、健康状态、社会、环境等，因此每个人的青春期历程时间都不尽相同。<Cite citeName='女青临床指南' citeList={citeList}/>
+
+过早地发生第二性征的改变称之为性早熟，而过晚地发生第二性征的改变称之为发育延迟、性幼稚。<Cite citeName='内分泌学' citeList={citeList}/>这些情况可能需要引起关注，并评估是否需要到医院就诊。
+
+性行为
+---
+
+进入青春期后，青少年会产生性的想法和一些性行为。诸如自慰、爱抚、性交等性行为可能会发生。
+
+**自慰**是指对自我性器官进行性刺激以达到高潮和快感的性行为。自慰是相当普遍的性行为，与性幻想紧密相关，是青少年在青春期达到性高潮的最常用办法，是一种便捷的缓解性紧张的方式。现代医学认为，作为成长的一部分，自慰是了解身体性功能的一种方式。
+
+**爱抚**的定义较为广泛，被认为是一种激发性欲的活动，但止步于性器官的相交之前。在青少年伴侣中，从不太亲密的牵手到亲密的亲吻，再到爱抚等行为，都有所体现。
+
+**性交**一般指性器官的交合。性交一般被视为是一种成年人之间的私人行为，并且必须在双方明确同意的情况下发生。由于一些诸如怀孕、感染等潜在的风险，以及考虑到对身心健康的影响，较小年纪进行性交是不被认可的，各国家和地区的法律规定也可能对此有所限制。
+
+在青少年情侣的约会中，性并不是必要或核心，了解对亲密关系的建立、如何表现得像是情侣等，都是成为成年人过程中的必要成长。<Cite citeName='性学观止' citeList={citeList}/>
+
+对自己的性行为做出明智的决策，要更加了解如何在性行为中保护自己和他人，综合考虑人际关系和个人发展，并在做出决定前全面考虑这些风险。
+
+您可以稍后在本站[《性行为》](/main/sexual-activity)一章了解更多本节内容。
+
+心理发展
+----
+
+在青春期，人体生理发育的速度相对大于心理发展，此时心理正经历从幼稚到成熟的过渡时期，因此身心会处于一种非平衡状态，引起心理发展上的矛盾。
+
+对于日渐发生的身体改变，一些青少年可能对此感到无助和不安。青少年面临性的成熟，心中或有对性的渴望，但出于社会的要求会压抑这种情绪和想法，造成生理变化对心理活动的冲击。
+
+在青春期，青少年存在心理上的成人感与幼稚性的矛盾。成熟性表现在青少年在身体发育和性成熟的情况下，产生对成熟的追求和感受，渴望成人式的信任和尊重。而幼稚性体现在认知能力、思维方法、人格特点和社会经验上。
+
+在青春期后，青少年的心理发展趋于成熟，为成人阶段做好了准备。 <Cite citeName='发心' citeList={citeList}/>
+
+性别认同
+----
+
+人在出生时，通常会被指定为某种性别。而随着儿童的成长，会逐渐对自己的性别认同做出判断。跨性别儿童的性别认同与出生时指定的性别有所不同，双性儿童的性特征不符合身体典型的传统性别二元对立规范。<Cite citeName='妙佑性别认同' citeList={citeList}/><Cite citeName='UNFE双性' citeList={citeList}/>
+
+对于双性儿童、跨性别儿童，青春期对于他们会更具有挑战性。在这种情况下，儿童需要更多的支持和理解，并需要在医生的指导下采取一些措施，以便更好地迎接青春期的变化。<Cite citeName='妙佑性别认同' citeList={citeList}/>
+
+<End />
+
+相关阅读
+----
+
+下面是一些不属于本站内容的阅读资料，供有兴趣的读者自行阅读。
+
+### 顺性别男性、女性的青春期
+
+顺性别指出生时的**指派性别**与个人**性别认同**一致。
+
+*   [默沙东诊疗手册大众版：男孩青春期](https://www.msdmanuals.cn/home/men-s-health-issues/biology-of-the-male-reproductive-system/puberty-in-boys)
+*   [默沙东诊疗手册大众版：女孩青春期](https://www.msdmanuals.cn/home/women-s-health-issues/biology-of-the-female-reproductive-system/puberty-in-girls)
+*   （英文）[Nemours KidsHealth：关于青春期的一切](https://kidshealth.org/en/kids/puberty.html) Information provided by Nemours Children's Health through its award-winning Nemours KidsHealth website. For more on this topic, visit KidsHealth.org.
+
+### 跨性别者与双性者的青春期
+
+对于跨性别儿童与双性儿童，请前往医院咨询医生的建议。
+
+*   [妙佑医疗国际：儿童与性别认同：支持您的孩子](https://www.mayoclinic.org/zh-hans/healthy-lifestyle/childrens-health/in-depth/children-and-gender-identity/art-20266811)
+*   跨性别女性（ MtF ）知识整合站点：[MtF.wiki](https://mtf.wiki)
+*   跨性别男性（ FtM ）知识整合站点：[FtM.wiki](https://ftm.wiki)
+
+<ReferList citeList={citeList}/>
+
+版权
+--
+
+### 正文内容
+
+详见[版权许可](/general/copyright)。
+
+### 图片来源
+
+本页图片来自互联网，且均在版权合规要求下使用。
+
+<table class="table table-bordered" style="overflow:auto">
+    <tbody>
+        <tr>
+            <th>图片编号</th>
+            <th>作者</th>
+            <th>来源</th>
+        </tr>
+        <tr>
+            <td>封面</td>
+            <td><a href="https://unsplash.com/@victoriano">Victoriano Izquierdo</a></td>
+            <td><a href="https://unsplash.com/photos/vkKzl4KsKv8">Unsplash</a>，有修改</td>
+        </tr>
+        <tr>
+            <td>图 1</td>
+            <td>Frank Kayley Shuttleworth</td>
+            <td><cite>The Adolescent Period</cite>, 1951. <a href="https://commons.wikimedia.org/wiki/File:Adolescent_Period_Average_girl_4_to_16_yo.jpg">Wikimedia Commons</a></td>
+        </tr>
+        <tr>
+            <td>图 2</td>
+            <td>Frank Kayley Shuttleworth</td>
+            <td><cite>The Adolescent Period</cite>, 1951. <a href="https://commons.wikimedia.org/wiki/File:Adolescent_Period_Average_boy_10_to_17_yo.jpg">Wikimedia Commons</a></td>
+        </tr>
+        <tr>
+            <td>图 3</td>
+            <td>Linn</td>
+            <td>自制；公有领域</td>
+        </tr>
+        <tr>
+            <td>图 4</td>
+            <td>Linn</td>
+            <td>自制；公有领域</td>
+        </tr>
+        <tr>
+            <td>图 5</td>
+            <td>Frank Kayley Shuttleworth</td>
+            <td><cite>The Adolescent Period</cite>, 1951. <a href="https://commons.wikimedia.org/wiki/File:Female_breasts_five_Tanner_stages.jpg">Wikimedia Commons</a></td>
+        </tr>
+        <tr>
+            <td>图 6</td>
+            <td>Frank Kayley Shuttleworth</td>
+            <td><cite>The Adolescent Period</cite>, 1951. <a href="https://commons.wikimedia.org/wiki/File:Male_genitalia_five_Tanner_stages.png">Wikimedia Commons</a></td>
+        </tr>
+        <tr>
+            <td>图 7</td>
+            <td>Linn</td>
+            <td>自制；公有领域</td>
+        </tr>
+    </tbody>
+</table>
