@@ -67,7 +67,7 @@
 }
 
 body {
-    font-family: 'Noto Serif SC', Microsoft YaHei, -apple-system, SF UI Text, Arial, PingFang SC, Hiragino Sans GB, WenQuanYi Micro Hei, sans-serif;
+    font-family: '思源宋体', 'Noto Serif SC', PingFang SC, Hiragino Sans GB, WenQuanYi Micro Hei, Microsoft YaHei, sans-serif;
     font-weight: 400
 }
 
@@ -419,23 +419,29 @@ blockquote footer {
     display: inline
 }
 
-article h2::before {
-    content: '';
-    display: inline-block;
-    width: 0.8em;
-    height: 0.8em;
-    background-image: url('sharp.svg');
-    background-size: 0.8em 0.8em;
-    vertical-align: baseline;
-    margin-right: 0.15em;
-    background-repeat: no-repeat
-}
 
-article h2 {
-    font-weight: bold;
-    font-size: 1.6em;
-    font-family: 'Noto Sans SC';
-    line-height: 2;
+article {
+    b {
+        font-weight: bold;
+        font-family: "思源黑体","Noto Sans CJK SC","Source Han Sans SC","Source Han Sans CN","Source Han Sans","Noto Sans","Noto Sans SC","PingFang SC","WenQuanYi Micro Hei","Heiti SC","STHeiti","SimHei",sans-serif;
+    }
+    h2 {
+        &::before {
+            content: '';
+            display: inline-block;
+            width: 0.8em;
+            height: 0.8em;
+            background-image: url('sharp.svg');
+            background-size: 0.8em 0.8em;
+            vertical-align: baseline;
+            margin-right: 0.15em;
+            background-repeat: no-repeat
+        }
+        font-weight: bold;
+        font-size: 1.6em;
+        font-family: 'Noto Sans SC';
+        line-height: 2;
+    }
 }
 
 .header-title p {
