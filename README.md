@@ -13,7 +13,7 @@ KnowSex 是一个性知识科普网站，望藉此减少一些社会问题的发
 
 如果你希望建立一个 KnowSex 的镜像站点，请先阅读并同意[《镜像站部署协议》](mirror-license.md)。
 
-本站点由 Astro 框架构建。如果你希望在部署本站点，请 clone 本仓库 `main` 分支，然后参阅 Astro 官方文档[《部署你的 Astro 站点》](https://docs.astro.build/zh-cn/guides/deploy/)部署站点。
+本站点由 Astro 框架构建。如果你希望部署本站点，请 clone 本仓库 `main` 分支，然后参阅 Astro 官方文档[《部署你的 Astro 站点》](https://docs.astro.build/zh-cn/guides/deploy/)部署站点。
 
 请勿修改任何文件的任何内容（除了 `CNAME` 文件），也不要在页面上添加任何广告。为保证内容准确性，请定期拉取以更新内容。
 
