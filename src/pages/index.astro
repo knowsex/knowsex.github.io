@@ -1,6 +1,8 @@
 ---
 import Layout from '../layouts/Index.astro';
 import Card from "../components/Card.astro";
+import BsCardGroup from '../components/BsCardGroup.astro';
+import BsCard from '../components/BsCard.astro';
 const title = '首页';
 const keywords = [''];
 const desc = "KnowSex 是一个性教育网站，内容涵盖生殖系统、避孕、媒介素养等多方面内容，并提供问答服务。";
@@ -59,15 +61,39 @@ const date = new Date().toLocaleString('zh-CN', { timeZone: 'Hongkong', dateStyl
     background-image: url('../general/copyright/license-cover.jpg')
 }
 
+.other-site {
+    color: #02776b;
+    font-weight: normal;
+    font-size: 1.5rem;
+    letter-spacing: 3px;
+}
+
+.other-site::before {
+    content: '';
+    background-image: url("data:image/svg+xml,%3c%3fxml version='1.0' encoding='UTF-8'%3f%3e%3csvg width='24' height='24' viewBox='0 0 48 48' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M39 34L44 39L39 44' stroke='%2302776b' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'/%3e%3cpath d='M8 12C10.2091 12 12 10.2091 12 8C12 5.79086 10.2091 4 8 4C5.79086 4 4 5.79086 4 8C4 10.2091 5.79086 12 8 12Z' fill='none' stroke='%2302776b' stroke-width='3' stroke-linejoin='round'/%3e%3cpath d='M12 8L20 8C22.2091 8 24 9.79086 24 12V35C24 37.2091 25.7909 39 28 39H44' stroke='%2302776b' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e");
+    margin-right: .5em;
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    vertical-align: -.125em;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.card-url {
+    font-size: .9em;
+    color: #aaa;
+    font-family: "Consolas", "Courier New", monospace;
+}
+
 </style>
 
 {/*
 <!-- <p class="bg-light tip-bar" aria-hidden="true">⭐ 你的 <a href="/sub/Encourage.html" style="text-decoration:underline">支持</a> 可以鼓励 KnowSex 的维护与运营。</p> -->
 <p class="bg-light tip-bar">🖋️ 网站上次修缮日期 {% now 'local' %}</p>
 */}
-{/*
-<p class="bg-light tip-bar"><span class="darkmode-ignore">ℹ️</span> 2023 年 11 月 23 日（UTC+8）起，我们将实施更新后的<a href="/general/privacy-policy">隐私政策</a>，请知悉。</p>
-*/}
+<p class="bg-light tip-bar"><span class="darkmode-ignore">ℹ️</span> 2023 年 12 月 22 日（UTC+8）起，我们将实施更新后的<a href="/general/privacy-policy">隐私政策</a>，请知悉。</p>
+
 {/*
 <!-- <p class="bg-light tip-bar"><span class="darkmode-ignore">😥</span> 因商标纠纷，网站即日起撤去纠纷标识，暂时使用“KnowSex”作为网站名称。</p> -->
 */}
@@ -91,7 +117,7 @@ const date = new Date().toLocaleString('zh-CN', { timeZone: 'Hongkong', dateStyl
     <Card href="general/communicate" bgID="talk-bg" title="来信沟通" enTitle="Communicate"/>
 
     
-<blockquote>
+<!-- <blockquote>
 	<p>在向青少年传授性卫生知识时，男女同学要一道听，不要分开……</p>
 	<p>不要试图回避，更不要搞得神秘化。</p>
 	<footer>周恩来</footer>
@@ -99,5 +125,5 @@ const date = new Date().toLocaleString('zh-CN', { timeZone: 'Hongkong', dateStyl
 <blockquote>
 	<p>近几十年来，中国青少年性发育成熟年龄不断提前，性观念越来越趋于开放，对婚前性行为持接纳态度的比例较高，但同时他们普遍缺乏性与生殖健康知识和安全性行为意识。在此背景下，青少年发生性传播感染、意外妊娠、人工流产以及遭受性和性别暴力的风险不断增加，因此性教育至关重要。</p>
 	<footer>联合国教科文组织&emsp;联合国人口基金</footer>
-</blockquote>
+</blockquote> -->
 </Layout>
