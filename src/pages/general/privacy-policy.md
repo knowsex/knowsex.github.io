@@ -10,7 +10,7 @@ keywords:
 
 # KnowSex 隐私政策
 
-生效日期：2023 年 11 月 23 日
+生效日期：2023 年 12 月 22 日
 
 考虑到 KnowSex（以下简称“我们”）在本网站提供的服务（以下简称“本服务”）将会处理你的个人信息，我们制订了隐私政策（以下简称“本政策”）如下。
 
@@ -21,6 +21,7 @@ keywords:
 - 镜像站目录域名：`xingjiaoyu.net` 及 `xingjiaoyu.wang`；
 - 博客站点域名（“**博客站点**”）：`post.knowsex.net`；
 - 不记名留言系统域名（“**留言系统**”）：`ask.knowsex.org`；
+- 中文性教育资源网：`res.knowsex.org`；
 - 站点统计域名：`analytics.knowsex.net`。
 
 ## 你的信息的收集和保留

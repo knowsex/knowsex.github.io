@@ -10,7 +10,7 @@ keywords:
 
 # KnowSex 使用条款
 
-生效日期：2023 年 12 月 17 日
+生效日期：2023 年 12 月 22 日
 
 ## 范围
 KnowSex 使用条款（以下简称“本条款”）适用于 KnowSex（以下简称“我们”）的如下站点（以下简称“本网站”）：
@@ -20,6 +20,7 @@ KnowSex 使用条款（以下简称“本条款”）适用于 KnowSex（以下�
 - 镜像站目录域名：`xingjiaoyu.net` 及 `xingjiaoyu.wang`；
 - 博客站点域名：`post.knowsex.net`；
 - 不记名留言系统域名：`ask.knowsex.org`；
+- 中文性教育资源网：`res.knowsex.org`；
 - 站点统计域名：`analytics.knowsex.net`。
 
 ## 对条款的同意
