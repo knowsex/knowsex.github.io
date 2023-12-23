@@ -80,5 +80,11 @@ $tip-red: #DA706C;
             background-color: $background-secondary;
         }
     }
+
+    //bs-card
+    .card {
+        background-color: $background;
+        border: 1px solid #595959;
+    }
 }
 @media (prefers-color-scheme: dark) {}

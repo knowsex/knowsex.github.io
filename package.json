@@ -12,6 +12,7 @@
   "dependencies": {
     "@astrojs/mdx": "^2.0.1",
     "astro": "^4.0.4",
-    "bootstrap": "^5.2.3"
+    "bootstrap": "^5.2.3",
+    "dayjs": "^1.11.10"
   }
 }

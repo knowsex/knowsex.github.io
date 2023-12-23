@@ -1,4 +1,5 @@
 import { defineConfig } from 'astro/config';
+import { remarkModifiedTime } from './remark-modified-time.mjs';
 
 import mdx from "@astrojs/mdx";
 
@@ -7,6 +8,10 @@ export default defineConfig({
   site: 'https://knowsex.net',
   integrations: [mdx()],
 
+  //文章修改时间插件
+  markdown: {
+    remarkPlugins: [remarkModifiedTime],
+  },
   //重定向之前的链接风格更换导致的链接移动
   redirects: {
     '/About.html': '/general/about/',
