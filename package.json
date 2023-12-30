@@ -3,9 +3,11 @@
   "type": "module",
   "version": "0.0.1",
   "scripts": {
-    "dev": "astro dev",
+    "dev": "pnpm --color --parallel \"/^dev:.*/\"",
+    "dev:astro": "astro dev",
+    "dev:scss": "sass --watch --no-source-map src/styles/style.scss:public/style/style.min.css",
     "start": "astro dev",
-    "build": "astro build",
+    "build": "zx ./scripts/build.mjs",
     "preview": "astro preview",
     "astro": "astro"
   },
@@ -14,5 +16,9 @@
     "astro": "^4.0.4",
     "bootstrap": "^5.2.3",
     "dayjs": "^1.11.10"
+  },
+  "devDependencies": {
+    "sass": "^1.69.6",
+    "zx": "^7.2.3"
   }
 }

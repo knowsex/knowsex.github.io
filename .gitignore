@@ -21,3 +21,7 @@ pnpm-debug.log*
 .DS_Store
 
 .vscode/
+
+# local scss dev output
+styles/*.css
+public/style/*.css
