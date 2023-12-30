@@ -1,71 +1,25 @@
 ---
-import Header from '../components/Header.astro';
-import Footer from '../components/Footer.astro';
 import HeadImage from '../components/HeadImage.astro';
+import BaseLayout from './BaseLayout.astro';
 const { title, enTitle, keywords, desc, bgPath } = Astro.props;
-const {frontmatter} = Astro.props;
-let insKeywords = "性教育,KnowSex,生理知识,性科普"
-for (let i = 0; i < keywords.length; i++) {
-	insKeywords += "," + keywords[i];
-}
-const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 
 // 如果是全站首页
 const isRoot = title == "首页" ? true : false;
 const insTitle = isRoot ? "KnowSex" : title + " - KnowSex";
 
+const baseLayoutProps = {
+	title: insTitle,
+	keywords,
+	description: desc,
+	isRoot,
+}
+
 ---
-<!DOCTYPE html>
-<html lang="zh-Hans" class="han-init">
-
-<head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-
-	<meta name="keywords" content={insKeywords} />
-	<meta name="description" content={desc} />
-
-	<meta property="og:image" content="/style/cover.jpg" />
-	<meta property="og:title" content={title} />
-	<meta property="og:description" content={desc} />
-	<meta property="og:locale" content="zh_CN" />
-	<meta property="og:site_name" content="KnowSex" />
-	<meta property="og:type" content="website" />
-
-	<meta name="twitter:site" content="@knowsex_net" />
-	<meta name="twitter:card" content="summary_large_image" />
-
-	<link rel="apple-touch-icon-precomposed" href="/style/logo_57.png" />
-	<link rel="apple-touch-icon-precomposed" sizes="114x114" href="/style/logo_114.png" />
-	<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/style/logo_144.png" />
-
-	<base target="_blank">
-	<title>{insTitle}</title>
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-	<script src="https://lf6-cdn-tos.bytecdntp.com/cdn/expire-1-M/jquery/3.1.0/jquery.min.js" type="application/javascript"></script>
-	<link href="https://lf6-cdn-tos.bytecdntp.com/cdn/expire-1-M/bootstrap/5.1.3/css/bootstrap.min.css" type="text/css" rel="stylesheet" />
-	<script src="https://lf6-cdn-tos.bytecdntp.com/cdn/expire-1-M/bootstrap/5.1.3/js/bootstrap.bundle.min.js" type="application/javascript"></script>
-	<link
-		href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@700&family=Noto+Serif+SC:wght@400;700&display=swap"
-		rel="stylesheet">
-	<link rel="stylesheet" href="/style/style.min.css">
-	<script async src="https://analytics.knowsex.net/script.js" data-website-id="74452ede-6372-4bf7-9f03-b9ecbe2f7978"></script>
-	<link rel="canonical" href={canonicalURL}/>
-	<slot name="exCSS"/>
-</head>
-<body>
-    <Header isRoot={isRoot}/>
-
-    <article itemscope="" itemtype="http://schema.org/Article">
+<BaseLayout {...baseLayoutProps}>
+	<article itemscope="" itemtype="http://schema.org/Article">
         <HeadImage title={title} enTitle={enTitle} bgPath={bgPath} />
         <div class="main">
             <slot />
         </div>
     </article>
-    
-    <Footer />
-
-</body>
-</html>
+</BaseLayout>
