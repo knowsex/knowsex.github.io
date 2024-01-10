@@ -1,4 +1,5 @@
 @charset "UTF-8";
+
 .forScreenReader {
     color: rgba(0, 0, 0, .0);
     font-size: 1px;
@@ -72,7 +73,7 @@ body {
 }
 
 .main {
-    max-width: 1000px;
+    max-width: 740px;
     margin: 20px auto;
     padding: 10px 30px;
     color: #333;
@@ -86,13 +87,15 @@ body {
     text-align: justify;
 }
 
-.main p[lang="en"], .main span[lang="en"], .main div [lang="en"] {
+.main p[lang="en"],
+.main span[lang="en"],
+.main div [lang="en"] {
     text-align: left;
 }
 
 .main strong {
     color: #BC5F5C;
-    font-family: "思源黑体","Noto Sans CJK SC","Source Han Sans SC","Source Han Sans CN","Source Han Sans","Noto Sans","Noto Sans SC","PingFang SC","WenQuanYi Micro Hei","Heiti SC","STHeiti","SimHei",sans-serif;
+    font-family: "思源黑体", "Noto Sans CJK SC", "Source Han Sans SC", "Source Han Sans CN", "Source Han Sans", "Noto Sans", "Noto Sans SC", "PingFang SC", "WenQuanYi Micro Hei", "Heiti SC", "STHeiti", "SimHei", sans-serif;
 }
 
 small {
@@ -295,7 +298,8 @@ video {
     width: 100%
 }
 
-.collapse, .collapsing {
+.collapse,
+.collapsing {
     border: solid 1px #CCC;
     border-radius: 8px;
     padding: 20px 10px
@@ -330,7 +334,7 @@ video {
 
 .key {
     font-weight: bold;
-    font-family: "思源黑体","Noto Sans CJK SC","Source Han Sans SC","Source Han Sans CN","Source Han Sans","Noto Sans","Noto Sans SC","PingFang SC","WenQuanYi Micro Hei","Heiti SC","STHeiti","SimHei",sans-serif;
+    font-family: "思源黑体", "Noto Sans CJK SC", "Source Han Sans SC", "Source Han Sans CN", "Source Han Sans", "Noto Sans", "Noto Sans SC", "PingFang SC", "WenQuanYi Micro Hei", "Heiti SC", "STHeiti", "SimHei", sans-serif;
 }
 
 .btn-exp::before {
@@ -350,7 +354,8 @@ a {
     text-decoration: none
 }
 
-b, strong {
+b,
+strong {
     font-weight: bold
 }
 
@@ -423,8 +428,9 @@ blockquote footer {
 article {
     b {
         font-weight: bold;
-        font-family: "思源黑体","Noto Sans CJK SC","Source Han Sans SC","Source Han Sans CN","Source Han Sans","Noto Sans","Noto Sans SC","PingFang SC","WenQuanYi Micro Hei","Heiti SC","STHeiti","SimHei",sans-serif;
+        font-family: "思源黑体", "Noto Sans CJK SC", "Source Han Sans SC", "Source Han Sans CN", "Source Han Sans", "Noto Sans", "Noto Sans SC", "PingFang SC", "WenQuanYi Micro Hei", "Heiti SC", "STHeiti", "SimHei", sans-serif;
     }
+
     h2 {
         &::before {
             content: '';
@@ -437,6 +443,7 @@ article {
             margin-right: 0.15em;
             background-repeat: no-repeat
         }
+
         font-weight: bold;
         font-size: 1.6em;
         font-family: 'Noto Sans SC';
@@ -455,18 +462,26 @@ article {
     margin: 0
 }
 
-.footer a, .link-underline a {
+.footer a,
+.link-underline a {
     color: #4e4e4e;
     text-decoration: underline
 }
 
 sup.reference a {
     color: #a2a2a2;
-    font-weight: normal!important;
+    font-weight: normal !important;
 }
 
 .hidden-lg {
     display: none;
+}
+
+@media screen and (min-width: 768px) {
+    // .main.article-page {
+    //     max-width: 800px;
+    // }
+    
 }
 
 @media screen and (max-width:767px) {
@@ -484,7 +499,7 @@ sup.reference a {
     }
 
     .display-mobile {
-        display: block!important;
+        display: block !important;
     }
 }
 
@@ -506,8 +521,9 @@ sup.reference a {
 }
 
 .social-icon {
-    text-decoration: none!important;
+    text-decoration: none !important;
 }
+
 .xef {
     background-color: #548235 !important;
     color: white !important;
@@ -526,6 +542,78 @@ sup.reference a {
 .da {
     background-color: #f4b084 !important;
     color: #000 !important;
+}
+
+
+
+.card {
+    transition: .5s;
+    &:hover {
+        box-shadow: 0 0 11px #f7f8f3;
+        border: 1px solid #00a99d;
+        background: #f7f8f3;
+    }
+}
+
+.article-page {
+    &.main {
+        margin-top: 3em;
+    }
+    .article-bottom-meta {
+        font-size: .9em;
+        padding:10px;
+        border-top: 5px dashed #eee;
+        border-bottom: 5px dashed #eee;
+        // time {
+        //     font-family: Consolas, "Courier New", monospace;
+        // }
+        p {
+            margin: 0;
+            &::before {
+                // content: '❦';
+                margin-right: .3em;
+            }
+        }
+    }
+    .article-meta {
+        font-family: "思源黑体","Noto Sans CJK SC","Source Han Sans SC","Source Han Sans CN","Source Han Sans","Noto Sans","Noto Sans SC","PingFang SC","WenQuanYi Micro Hei","Heiti SC","STHeiti","SimHei",sans-serif;
+        margin-bottom: 2em;
+        
+        .article-author {
+            color: grey;
+            &::before {
+                content: '■';
+                margin-right: .1em;
+            }
+        }
+        
+        h1 {
+            font-weight: bold;
+            font-size: 1.8rem;
+        }
+        // ul.tags{
+        //     list-style: none;
+        //     padding: 0;
+        //     margin: 0;
+        //     display: inline;
+        //     li {
+        //         display: inline-block;
+        //         margin-right: 1em;
+        //         a {
+        //             color: #757575;
+        //             text-decoration: none;
+        //             &:hover {
+        //                 color: #000;
+        //             }
+        //         }
+        //     }
+
+        //     li + li::before {
+        //         content: ",";
+        //     }
+        
+        // }
+    }
 }
 
 // article {
@@ -629,13 +717,21 @@ sup.reference a {
 
 
  */
- @keyframes fadeOut {
-	0% {
-		background-color:#ffff8b;
-	}
-	100% {
-		background-color:#ffff8b00;
-	}
-  }
-.highlight-reference{background-color:#ffff8b;animation: fadeOut 5s forwards; /* 添加淡出动画 */}
+@keyframes fadeOut {
+    0% {
+        background-color: #ffff8b;
+    }
+
+    100% {
+        background-color: #ffff8b00;
+    }
+}
+
+.highlight-reference {
+    background-color: #ffff8b;
+    animation: fadeOut 5s forwards;
+    /* 添加淡出动画 */
+}
+
+
 @import "dark";
