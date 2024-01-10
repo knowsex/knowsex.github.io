@@ -73,7 +73,7 @@ body {
 }
 
 .main {
-    max-width: 1000px;
+    max-width: 740px;
     margin: 20px auto;
     padding: 10px 30px;
     color: #333;
@@ -81,6 +81,10 @@ body {
     width: auto;
     height: auto;
     line-height: 2;
+}
+
+.index-main {
+    max-width: 1000px !important;
 }
 
 .main p {
@@ -564,13 +568,13 @@ sup.reference a {
         padding:10px;
         border-top: 5px dashed #eee;
         border-bottom: 5px dashed #eee;
-        time {
-            font-family: Consolas, "Courier New", monospace;
-        }
+        // time {
+        //     font-family: Consolas, "Courier New", monospace;
+        // }
         p {
             margin: 0;
             &::before {
-                content: '❦';
+                // content: '❦';
                 margin-right: .3em;
             }
         }
