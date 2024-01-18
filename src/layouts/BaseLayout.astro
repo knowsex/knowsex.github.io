@@ -10,7 +10,7 @@ const finalKeywords = baseKeywords + "," + keywords.join(",");
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 ---
 <!DOCTYPE html>
-<html lang="zh-Hans" class="han-init">
+<html lang="zh-Hans" class="han-init" prefix="og: http://ogp.me/ns#">
 
 <head>
 	<meta charset="utf-8">
