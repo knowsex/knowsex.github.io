@@ -11,6 +11,7 @@ export default defineConfig({
   //文章修改时间插件
   markdown: {
     remarkPlugins: [remarkModifiedTime],
+    remarkRehype: { footnoteLabel: "参考资料", footnoteBackLabel: "返回引用"},
   },
   //重定向之前的链接风格更换导致的链接移动
   redirects: {
