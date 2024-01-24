@@ -472,10 +472,26 @@ article {
     text-decoration: underline
 }
 
-sup.reference a {
+article sup a {
     color: #a2a2a2;
     font-weight: normal !important;
+    &::before {
+      content: '[';
+    }
+    &::after {
+      content: ']';
+    }
 }
+
+section.footnotes ol {
+    font-size: .9em;
+    overflow-x: auto;
+    li p {
+        margin: 0;
+        text-align: left;
+    }
+}
+
 
 .hidden-lg {
     display: none;
