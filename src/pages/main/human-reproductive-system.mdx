@@ -13,6 +13,7 @@ import Btn from '/src/components/OutlineBtn.astro';
 import Model from '/src/components/Model.astro';
 import CW from '/src/components/CW.astro';
 import End from '/src/components/ArticleEnd.astro';
+import Notice from '/src/components/Notice.astro';
 import '/public/style/models.css';
 
 export const citeList = [
@@ -51,6 +52,10 @@ export const citeList = [
     {
         "name": "术语在线-处女膜闭锁",
         "caption": "全国科学技术名词审定委员会. 处女膜闭锁[DB/OL]. 术语在线, [2022][2022-06-14]. https://www.termonline.cn/word/39901/1#s1"
+    },
+    {
+        "name": "重編國語辭典修訂本",
+        "caption": "臺灣教育部. 處女膜[DB/OL]. 重編國語辭典修訂本, [2023][2024-01-26]. https://dict.revised.moe.edu.tw/dictView.jsp?ID=125305&q=1&word=%E5%A4%84%E5%A5%B3%E8%86%9C",
     },
     {
         "name": "法医学",
@@ -178,7 +183,13 @@ export const citeList = [
 
 ### 处女膜<Cite citeName="术语在线-处女膜" citeList={citeList}/><Cite citeName="术语在线-处女膜闭锁" citeList={citeList}/>
 
-**处女膜**是一层位于阴道口的环状黏膜组织，**包围**或**部分覆盖**阴道口，在中央有一直径为 1 ~ 1.5 厘米的小孔。<Cite citeName="法医学" citeList={citeList}/>
+**处女膜**，在台湾地区又称**阴道前膜**、**阴道瓣**<Cite citeName="重編國語辭典修訂本" citeList={citeList}/>，是一层位于阴道口的环状黏膜组织，**包围**或**部分覆盖**阴道口，在中央有一直径为 1 ~ 1.5 厘米的小孔。<Cite citeName="法医学" citeList={citeList}/>
+
+<Notice title="词汇的变更">
+由于社会文化和历史因素的影响，“处女膜”的字面意义在一些情况下使得女性受到偏见甚至歧视。因此，在汉字文化圈的一些地区开始呼吁使用**阴道前膜**、**阴道瓣**等词汇代替“处女膜”。
+
+有关变更情况，可参考 Linn 的文章[《汉字文化圈中“处女膜”一词更名情况》](https://post.knowsex.net/archives/hymen-in-han)。
+</Notice>
 
 囿于“处女”二字，处女膜不完整被广泛误认为是发生过初次阴道性行为的依据。事实上，包括创伤、自慰、医学检查、剧烈运动、发生性行为等都有可能导致处女膜的破裂<Cite citeName="性学观止" citeList={citeList}/>，导致暂时性的出血和疼痛。<Cite citeName="处女膜" citeList={citeList}/>以及，即使发生过经阴道的性行为，处女膜也并不一定会破裂。<Cite citeName="多次发生性行为处女膜完整一例" citeList={citeList}/>
 
