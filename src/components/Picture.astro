@@ -1,0 +1,13 @@
+---
+const { src, alt, caption } = Astro.props;
+const source = "/source/img/" + src;
+//删除 src 的扩展名
+const webpPath = source.replace(/\.[^/.]+$/, "") + ".webp";
+//如果结尾是 svg，就不转换
+const isSvg = source.endsWith(".svg");
+---
+<picture>
+    {!isSvg && <source srcset={webpPath} type="image/webp" />}
+    <img loading="lazy" src={source} class="img-thumbnail thumb" alt={alt}/>
+</picture>
+<br/><small>{caption}</small>
