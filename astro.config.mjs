@@ -30,6 +30,7 @@ export default defineConfig({
     '/sub/other-media': 'main/other-media/',
     '/sub/STD': '/main/std/',
     '/sub/STD/Gonorrhea.html': '/main/std/gonorrhea/',
-    '/sub/STD/Syphilis.html': '/main/std/syphilis/'
+    '/sub/STD/Syphilis.html': '/main/std/syphilis/',
+    '/main/sexual-ph': '/main/sexual-physiology/'
   }
 });
