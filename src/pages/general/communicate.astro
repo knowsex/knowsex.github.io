@@ -8,6 +8,23 @@ const desc = "与 KnowSex 取得联系。";
 const bgPath = "/source/img/talk-bg.jpg";
 ---
 <Layout title={title} desc={desc} keywords={keywords} enTitle={enTitle} bgPath={bgPath}>
+    <div class="px-5 pb-4 py-5"
+         style="background: url('/source/img/chinese-new-year.jpg');
+                color: #fff;
+                background-position: center;
+                background-size: cover;
+         "
+    >
+        <p>
+            <b style="color: #ffe039;">春节期间正常回信</b>            
+        </p>
+        <p>春节期间，KnowSex 读者来信的回复业务正常开展，读者朋友可正常来信。</p>
+        <p>祝大家春节愉快，阖家欢乐。</p>
+        <p class="text-end">站长 Linn</p>
+        <p class="text-end">癸卯年腊月三十</p>
+    </div>
+    <small class="mb-5">背景改自 <a href="https://unsplash.com/@rumanamin">Rumman Amin</a> 上传于 <a href="https://unsplash.com/photos/nLqQqtig9kU">Unsplash</a> 的照片。
+    </small>
     {/* 
         <div class="notice bg-light" id="pauseReceive">
             <p>
@@ -62,7 +79,7 @@ const bgPath = "/source/img/talk-bg.jpg";
         <h2 id="不记名留言系统">不记名留言系统（试行）</h2>
         <p>通过下方按钮进入 KnowSex 不记名留言系统，无需提供联系方式。</p>
         <p><a class="btn btn-outline-secondary" href="https://ask.knowsex.org/" target="_blank" role="button">不记名留言系统</a></p>
-    
+        {/*
         <h2>在线表单</h2>
         <p>您也可以填写在线表单进行提问，可通过下方按钮进行填写。此服务由金山表单提供。</p>
         <p>如果太久没有收到回信，请回访本页面，查看下方<a href="#exception" target="_self">回信状态异常列表</a>。</p>
@@ -76,7 +93,9 @@ const bgPath = "/source/img/talk-bg.jpg";
         <p style="color: #A4A2A2">⇆ 表格若未完全显示，可左右滑动。</p>
     
         <div style="overflow: auto;" id="exception-table"><p>（读取列表失败）</p></div>
+        */}
     </div>
+    {/* 
     <script is:inline>
         //获取本文件夹 Exception.json 文件
         //获得时间戳
@@ -121,7 +140,7 @@ const bgPath = "/source/img/talk-bg.jpg";
 
         });
     </script>
-    <div class="hr"></div>
+    */}
     <End/>
     <p style="color: #bbb">本页封面图片作者是 <a target="_blank" href="https://unsplash.com/@priscilladupreez">Priscilla Du Preez</a> ，来自 <a target="_blank" href="https://unsplash.com/photos/7s3biR6HATU">Unsplash</a> 。</p>
 </Layout>
