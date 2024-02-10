@@ -10,7 +10,7 @@ keywords:
 
 # KnowSex 隐私政策
 
-生效日期：2023 年 12 月 22 日
+生效日期：2024 年 2 月 12 日
 
 考虑到 KnowSex（以下简称“我们”）在本网站提供的服务（以下简称“本服务”）将会处理你的个人信息，我们制订了隐私政策（以下简称“本政策”）如下。
 
@@ -22,7 +22,8 @@ keywords:
 - 博客站点域名（“**博客站点**”）：`post.knowsex.net`；
 - 不记名留言系统域名（“**留言系统**”）：`ask.knowsex.org`；
 - 中文性教育资源网：`res.knowsex.org`；
-- 站点统计域名：`analytics.knowsex.net`。
+- 站点统计域名：`analytics.knowsex.net`；
+- 组织官网域名：`knowsex.org` 及 `www.knowsex.org`。
 
 ## 你的信息的收集和保留
 
@@ -41,12 +42,8 @@ keywords:
 - 字节跳动静态资源公共库
 - Sina App Engine
 - Google Fonts
+- Cloudflare
 - jsDelivr
-
-为方便你联系我们，我们使用金山文档进行表单的处理。如果你选择使用金山文档方式联系我们，你的个人信息会被发送到金山文档。接收者主体为金山文档，你可以通过下面的链接了解你的个人信息处理情况。**如果你不同意金山文档的隐私政策和在线服务协议，你可以改为使用电子邮件的方式联系我们。**
-
-- [金山文档隐私政策](https://www.kdocs.cn/privacy/protect)
-- [金山文档在线服务协议](https://www.kdocs.cn/privacy/account)
 
 在博客站点的留言，在对来访者展示时，你的邮箱地址将被发送到头像提供商 Gravatar 以查询是否预留有头像图片。你可以通过下面的链接了解你的个人信息处理情况。
 
