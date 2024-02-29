@@ -7,6 +7,9 @@ import mdx from "@astrojs/mdx";
 export default defineConfig({
   site: 'https://knowsex.net',
   integrations: [mdx()],
+  server: {
+    host: true // Allow LAN
+  },
 
   //文章修改时间插件
   markdown: {
