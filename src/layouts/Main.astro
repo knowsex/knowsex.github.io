@@ -12,6 +12,8 @@ const baseLayoutProps = {
 	keywords: frontmatter.keywords,
 	description: frontmatter.desc,
 	isRoot,
+    author: frontmatter.author,
+    review: frontmatter.review
 }
 
 ---
@@ -19,6 +21,12 @@ const baseLayoutProps = {
 	<article itemscope="" itemtype="http://schema.org/Article">
         { !frontmatter.removeCover && <HeadImage title={frontmatter.title} enTitle={frontmatter.enTitle} bgPath={frontmatter.bgPath} /> }
         <div class="main">
+            {frontmatter.author &&
+            <div class="main-meta-author">
+                <div><span itemprop="author">{frontmatter.author}</span> / 撰写</div>
+                <div>{frontmatter.review && frontmatter.review + " / 审校" }</div>
+            </div>
+            }
             <slot />
         </div>
     </article>

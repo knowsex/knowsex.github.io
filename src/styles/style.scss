@@ -81,6 +81,12 @@ body {
     width: auto;
     height: auto;
     line-height: 2;
+    .main-meta-author {
+        font-family: "思源黑体", "Noto Sans CJK SC", "Source Han Sans SC", "Source Han Sans CN", "Source Han Sans", "Noto Sans", "Noto Sans SC", "PingFang SC", "WenQuanYi Micro Hei", "Heiti SC", "STHeiti", "SimHei", sans-serif;
+        color: grey;
+        font-size: .9em;
+        margin-bottom: 1em;
+    }
 }
 
 .index-main {
@@ -176,7 +182,7 @@ blockquote footer small::before {
     padding: 10px 40px
 }
 
-.tip {
+.cw-tip, .tip {
     width: inherit;
     height: auto;
     margin: 10px 0;
@@ -184,7 +190,8 @@ blockquote footer small::before {
     font-weight: bold;
     background: linear-gradient(#fff 25%, #fff) no-repeat 50% 50%, linear-gradient(-45deg, #f7f7f7 25%, #fff 25%, #fff 50%, #f7f7f7 50%, #f7f7f7 75%, #fff 75%, #fff);
     background-size: 95% 100%, 20px 20px;
-    padding: 20px 5%
+    padding: 20px 5%;
+    transition: 1s;
 }
 
 .header-img {
@@ -447,7 +454,7 @@ article {
             margin-right: 0.15em;
             background-repeat: no-repeat
         }
-
+        margin-top: 1em;
         font-weight: bold;
         font-size: 1.6em;
         font-family: 'Noto Sans SC';
@@ -752,6 +759,5 @@ section.footnotes ol {
     animation: fadeOut 5s forwards;
     /* 添加淡出动画 */
 }
-
 
 @import "dark";

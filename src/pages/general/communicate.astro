@@ -6,8 +6,28 @@ const enTitle = 'Communicate';
 const keywords = [''];
 const desc = "与 KnowSex 取得联系。";
 const bgPath = "/source/img/talk-bg.jpg";
+import Key from '/src/components/KeySentence.astro';
 ---
 <Layout title={title} desc={desc} keywords={keywords} enTitle={enTitle} bgPath={bgPath}>
+    {/* 
+    <div class="px-5 pb-4 py-5"
+         style="background: url('/source/img/chinese-new-year.jpg');
+                color: #fff;
+                background-position: center;
+                background-size: cover;
+         "
+    >
+        <p>
+            <b style="color: #ffe039;">春节期间正常回信</b>            
+        </p>
+        <p>春节期间，KnowSex 读者来信的回复业务正常开展，读者朋友可正常来信。</p>
+        <p>祝大家春节愉快，阖家欢乐。</p>
+        <p class="text-end">站长 Linn</p>
+        <p class="text-end">癸卯年腊月三十</p>
+    </div>
+    <small class="mb-5">背景改自 <a href="https://unsplash.com/@rumanamin">Rumman Amin</a> 上传于 <a href="https://unsplash.com/photos/nLqQqtig9kU">Unsplash</a> 的照片。
+    </small>
+    */}
     {/* 
         <div class="notice bg-light" id="pauseReceive">
             <p>
@@ -62,7 +82,47 @@ const bgPath = "/source/img/talk-bg.jpg";
         <h2 id="不记名留言系统">不记名留言系统（试行）</h2>
         <p>通过下方按钮进入 KnowSex 不记名留言系统，无需提供联系方式。</p>
         <p><a class="btn btn-outline-secondary" href="https://ask.knowsex.org/" target="_blank" role="button">不记名留言系统</a></p>
-    
+
+        <h2 id="Telegram">Telegram</h2>
+        <p>你可以通过 Telegram 留言机器人和我们取得联系，账号如下。</p>
+        <p><a href="https://t.me/KnowSex_bot">@KnowSex_bot</a></p>
+
+        <h2 id="社群平台">社群平台</h2>
+        <p>你可以与我们于各大社交媒体平台开设的账号取得联系，可采用私信、提及（@）、评论等方式。在 GitHub 平台，你还可以通过新建议题（Issue）与我们取得联系。</p>
+        <p><Key>有一些平台，在我们回复前会限制你只能发送一条消息</Key>，因此尽量将你的来信以一条内送达，不必先行问候是否在线。</p>
+        <p>我们目前正式运营的社群账号如下，可选取你方便的平台和我们联系。</p>
+        <table class="table">
+            <tr>
+                <th>平台</th>
+                <th>账号</th>
+            </tr>
+            <tr>
+                <td>即刻</td>
+                <td><a href="https://okjk.co/IJ8Ur">@KnowSex</a></td>
+            </tr>
+            <tr>
+                <td>Mastodon</td>
+                <td><a href="https://o3o.ca/@knowsex">@knowsex@o3o.ca</a></td>
+            </tr>
+            <tr>
+                <td>X (Twitter)</td>
+                <td><a href="https://twitter.com/KnowSex_net">@KnowSex_net</a></td>
+            </tr>
+            <tr>
+                <td>GitHub</td>
+                <td><a href="https://github.com/KnowSex">@KnowSex</a></td>
+            </tr>
+            <tr>
+                <td>哔哩哔哩（试行）</td>
+                <td><a href="https://space.bilibili.com/1633723421">@KnowSex_Official</a> (UID: 1633723421)</td>
+            </tr>
+            <tr>
+                <td>小红书（试行）</td>
+                <td><a href="https://www.xiaohongshu.com/user/profile/648bcdd0000000002a037f41">@KnowSex</a></td>
+            </tr>
+        </table>
+
+        {/*
         <h2>在线表单</h2>
         <p>您也可以填写在线表单进行提问，可通过下方按钮进行填写。此服务由金山表单提供。</p>
         <p>如果太久没有收到回信，请回访本页面，查看下方<a href="#exception" target="_self">回信状态异常列表</a>。</p>
@@ -76,7 +136,9 @@ const bgPath = "/source/img/talk-bg.jpg";
         <p style="color: #A4A2A2">⇆ 表格若未完全显示，可左右滑动。</p>
     
         <div style="overflow: auto;" id="exception-table"><p>（读取列表失败）</p></div>
+        */}
     </div>
+    {/* 
     <script is:inline>
         //获取本文件夹 Exception.json 文件
         //获得时间戳
@@ -121,7 +183,7 @@ const bgPath = "/source/img/talk-bg.jpg";
 
         });
     </script>
-    <div class="hr"></div>
+    */}
     <End/>
     <p style="color: #bbb">本页封面图片作者是 <a target="_blank" href="https://unsplash.com/@priscilladupreez">Priscilla Du Preez</a> ，来自 <a target="_blank" href="https://unsplash.com/photos/7s3biR6HATU">Unsplash</a> 。</p>
 </Layout>
