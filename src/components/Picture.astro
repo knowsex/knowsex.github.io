@@ -1,17 +1,20 @@
 ---
-const { src, alt, caption, media=null,horSrc=null } = Astro.props;
-const source = "/source/img/" + src;
-const horSource = "/source/img/" + horSrc;
-//删除 src 的扩展名
-const webpPath = source.replace(/\.[^/.]+$/, "") + ".webp";
-const horWebpPath = horSource.replace(/\.[^/.]+$/, "") + ".webp";
-//如果结尾是 svg，就不转换
-const isSvg = source.endsWith(".svg");
+import { Picture as AstroPicture } from 'astro:assets'
+
+import type { ImageMetadata } from 'astro'
+
+interface Props {
+    src: ImageMetadata
+    alt: string
+    caption: string
+    class: string
+}
+
+const { src, alt, caption, class: className, ...props } = Astro.props;
 ---
-<picture>
-    {media && <source srcset={horWebpPath} type="image/webp" media={media} />}
-    {media && <source srcset={horSource} media={media} />}
-    {!isSvg && <source srcset={webpPath} type="image/webp" />}
-    <img loading="lazy" src={source} class="img-thumbnail thumb" alt={alt}/>
-</picture>
-<br/><small>{caption}</small>
+<AstroPicture loading="lazy" src={src} alt={alt} formats={['avif', 'webp']} class:list={["img-thumbnail thumb", className]} {...props}></AstroPicture>
+
+{caption && <>
+    <br/>
+    <small>{caption}</small>
+</>}

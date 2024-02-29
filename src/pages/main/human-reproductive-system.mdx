@@ -15,6 +15,22 @@ import CW from '/src/components/CW.astro';
 import End from '/src/components/ArticleEnd.astro';
 import Notice from '/src/components/Notice.astro';
 import '/public/style/models.css';
+import Picture from '@/components/Picture.astro'
+import Img111 from  '@/img/111.jpg'
+import Img114 from  '@/img/114.jpg'
+import Img115 from  '@/img/115.jpg'
+import GenitalDiversityExpanded from '@/img/Genital_Diversity_Expanded.jpg'
+import WeiblicheBrust from '@/img/Weibliche_brust.jpg'
+import Hymen from '@/img/hymen.jpg'
+import ImageOfAnOvary from '@/img/Image_of_an_Ovary.jpg'
+import MenstrualCycle from '@/img/MenstrualCycle_zh_hans.jpg'
+import Img121 from  '@/img/121.jpg'
+import Img122 from  '@/img/122.jpg'
+import Img123 from  '@/img/123.jpg'
+import Img1221 from  '@/img/122_1.jpg'
+import VariousSizePenises from  '@/img/Various_size_penises.jpg'
+import Img124 from  '@/img/124.jpg'
+import HumanGenitalia from  '@/img/Human_genitalia.jpg'
 
 export const citeList = [
     {
@@ -120,12 +136,10 @@ export const citeList = [
 
 <div class="row show">
     <div class="col-md-6 img-box">
-        <img loading="lazy" src="/source/img/111.jpg" class="img-thumbnail thumb" alt={`图 1，张开的女性阴部（外生殖器）`}/>
-        <br/><small>图 1 张开的女性阴部（外生殖器），图中没有描述阴毛</small>
+        <Picture src={Img111} alt="图 1，张开的女性阴部（外生殖器）" caption="图 1 张开的女性阴部（外生殖器），图中没有描述阴毛" />
     </div>
     <div class="col-md-6 img-box">
-        <img loading="lazy" src="/source/img/114.jpg" class="img-thumbnail thumb" alt="图 2，女性生殖系统"/>
-        <br/><small>图 2 女性生殖系统</small>
+        <Picture src={Img114} alt="图 2，女性生殖系统" caption="图 2 女性生殖系统" />
     </div>
 </div>
 
@@ -157,14 +171,11 @@ export const citeList = [
 
 阴蒂会在夜间或晨间刚睡醒时自发勃起，是正常现象。
 
-<img loading="lazy" src="/source/img/115.jpg" class="img-thumbnail thumb" alt="图 3，女性的性兴奋，阴蒂勃起变得大而坚硬，阴唇肿胀，阴道变得湿润。"/>
-<br/><small>图 3 女性的性兴奋</small><br/><br/>
-  
+<Picture src={Img115} alt="图 3，女性的性兴奋，阴蒂勃起变得大而坚硬，阴唇肿胀，阴道变得湿润。" caption="图 3 女性的性兴奋" />
 
 阴唇的外观是多样的<Cite citeName="性学观止" citeList={citeList}/>，不同的人在颜色、大小等方面存在着差异。
 
-<img loading="lazy" src="/source/img/Genital_Diversity_Expanded.jpg" class="img-thumbnail thumb" alt="图 4，不同外形的女阴，在外形上存在着差异。有些颜色是偏黑色的，有些是偏粉色的。有一些小阴唇很大，有一些则很小。"/>
-<br/><small>图 4 不同外形的女阴，其中一部分去除过阴毛</small>
+<Picture src={GenitalDiversityExpanded} alt="图 4，不同外形的女阴，在外形上存在着差异。有些颜色是偏黑色的，有些是偏粉色的。有一些小阴唇很大，有一些则很小。" caption="图 4 不同外形的女阴，其中一部分去除过阴毛" />
 
 ### 乳房
 
@@ -178,8 +189,7 @@ export const citeList = [
 
 女性的乳房在青春期开始发育。可能一侧乳房发育得更快而导致不对称，但最终会发育得基本相等。随着年龄的增长，维持乳房形态的韧带可能会松驰，乳房下垂。这些都是正常的生理变化。<Cite citeName="性学观止" citeList={citeList}/>
 
-<img loading="lazy" src="/source/img/Weibliche_brust.jpg" class="img-thumbnail thumb" alt="图 5，乳头是乳房上的突起，乳头周围有较深颜色的乳晕。"/>
-<br/><small>图 5 乳房、乳晕和乳头</small>
+<Picture src={WeiblicheBrust} alt="图 5，乳头是乳房上的突起，乳头周围有较深颜色的乳晕。" caption="图 5 乳房、乳晕和乳头" />
 
 ### 处女膜<Cite citeName="术语在线-处女膜" citeList={citeList}/><Cite citeName="术语在线-处女膜闭锁" citeList={citeList}/>
 
@@ -195,15 +205,13 @@ export const citeList = [
 
 许多人认为处女膜是一层覆盖于阴道口的完整膜，这一观点是错误的，只有少数女性的处女膜上没有空隙<Cite citeName="性学观止" citeList={citeList}/>，病理学称之为“闭锁”<Cite citeName="处女膜" citeList={citeList}/><Cite citeName="术语在线-处女膜闭锁" citeList={citeList}/>，而且这种情况通常需要手术治疗<Cite citeName="健康的性" citeList={citeList}/>。
 
-<img loading="lazy" src="/source/img/hymen.jpg" class="img-thumbnail thumb" alt="图 6，处女膜的其中四种形态"/>
-<br/><small>图 6 处女膜的其中四种形态</small>
+<Picture src={Hymen} alt="图 6，处女膜的其中四种形态" caption="图 6 处女膜的其中四种形态" />
 
 ### 卵子
 
 <div class="row show">
     <div class="col-md-6 img-box">
-        <img loading="lazy" src="/source/img/Image_of_an_Ovary.jpg" class="img-thumbnail thumb" alt="图 7，单侧的卵巢示意图"/>
-        <br/><small>图 7 卵巢示意图（单侧）</small>
+        <Picture src={ImageOfAnOvary} alt="图 7，单侧的卵巢示意图" caption="图 7 卵巢示意图（单侧）" />
     </div>
     <div class="col-md-6 img-box">
     </div>
@@ -229,8 +237,7 @@ export const citeList = [
 
 <div class="row show">
     <div class="col-md-6 img-box">
-        <img loading="lazy" src="/source/img/MenstrualCycle_zh_hans.jpg" class="img-thumbnail thumb" alt="图 8，月经周期"/>
-        <br/><small>图 8 月经周期</small>
+        <Picture src={MenstrualCycle} alt="图 8，月经周期" caption="图 8 月经周期" />
     </div>
     {/* <div class="col-md-6 img-box">
         <img loading="lazy" src="/source/img/menstruation_uterus.jpg" class="img-thumbnail thumb" alt="图 8，生理期期间的子宫示意图"/>
@@ -278,12 +285,10 @@ export const citeList = [
 
 <div class="row show">
     <div class="col-md-6">
-        <img loading="lazy" src="/source/img/121.jpg" class="img-thumbnail thumb" alt="图 9， 亚洲男性外生殖器（疲软状态，包皮覆盖）"/>
-        <br/><small>图 9 亚洲男性外生殖器（疲软状态，包皮覆盖）</small>
+        <Picture src={Img121} alt="图 9， 亚洲男性外生殖器（疲软状态，包皮覆盖）" caption="图 9 亚洲男性外生殖器（疲软状态，包皮覆盖）" />
     </div>
     <div class="col-md-6">
-        <img loading="lazy" src="/source/img/122.jpg" class="img-thumbnail thumb" alt="图 10，阴茎（系带面，包皮翻开）"/>
-        <br/><small>图 10 阴茎（系带面，包皮翻开）</small>
+        <Picture src={Img122} alt="图 10，阴茎（系带面，包皮翻开）" caption="图 10 阴茎（系带面，包皮翻开）" />
     </div>
 </div><br/>
 
@@ -309,8 +314,7 @@ export const citeList = [
 *   **前列腺**：产生精液的主要成分前列腺液；
 *   **尿道球腺**：产生可润滑龟头及尿道的尿道球腺液。
 
-<img loading="lazy" src="/source/img/123.jpg" class="img-thumbnail thumb" alt="图 11，男性生殖系统"/>
-<br/><small>图 11 男性生殖系统</small>
+<Picture src={Img123} alt="图 11，男性生殖系统" caption="图 11 男性生殖系统" />
 
 阴茎在受到刺激时会**勃起**。阴茎勃起过程中会**充血**，可迅速地增大、变硬。完全勃起的情况下，阴茎体部会呈坚硬状态。
 
@@ -322,14 +326,11 @@ export const citeList = [
 
 **睾丸**主要作用是产生精子和分泌**雄性激素**（主要是睾酮）。
 
-<img loading="lazy" src="/source/img/122_1.jpg" class="img-thumbnail thumb" alt="图 12，男性的性兴奋，阴茎变大并变硬。"/>
-<br/><small>图 12 男性的性兴奋</small><br/><br/>
-  
+<Picture src={Img1221} alt="图 12，男性的性兴奋，阴茎变大并变硬。" caption="图 12 男性的性兴奋" />
 
 阴茎的外观是多样的，不同的人在颜色、大小等方面存在着差异，在勃起时的外观也不尽相同。有些阴茎在勃起时会观察到一定弧度的弯曲。
 
-<img loading="lazy" src="/source/img/Various_size_penises.jpg" class="img-thumbnail thumb" alt="图 13，不同外形的阴茎。阴茎在外形上存在着差异。"/>
-<br/><small>图 13 不同外形的、勃起状态的阴茎，其中一部分去除过阴毛</small>
+<Picture src={VariousSizePenises} alt="图 13，不同外形的阴茎。阴茎在外形上存在着差异。" caption="图 13 不同外形的、勃起状态的阴茎，其中一部分去除过阴毛" />
 
 ### 包皮
 
@@ -356,8 +357,7 @@ export const citeList = [
 
 在受到**性刺激**一段时间后，包含有精子的精液会经勃起的阴茎的尿道口射出，此过程称为**射精**。射精是生殖所需的关键身体机能。
 
-<img loading="lazy" src="/source/img/124.jpg" class="img-thumbnail thumb" alt="图 14，未液化的精液"/><br/>
-<small>图 14 精液（未液化）</small>
+<Picture src={Img124} alt="图 14，未液化的精液" caption="图 14 精液（未液化）" />
 
 ### 遗精
 
@@ -374,8 +374,7 @@ export const citeList = [
 
 <div class="row show">
     <div class="col-md-6">
-        <img loading="lazy" src="/source/img/Human_genitalia.jpg" class="img-thumbnail thumb" alt="图 15， 人类的外生殖器在胚胎时期，一开始看起来没有区别。经过分化后才可以区分。"/>
-        <br/><small>图 15 男女外生殖器基于相同的胚胎</small>
+        <Picture src={HumanGenitalia} alt="图 15， 人类的外生殖器在胚胎时期，一开始看起来没有区别。经过分化后才可以区分。" caption="图 15 男女外生殖器基于相同的胚胎" />
     </div>
 </div>
 <End/>

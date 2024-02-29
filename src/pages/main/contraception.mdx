@@ -14,6 +14,18 @@ import ReferList from '/src/components/CiteReference.astro';
 import Btn from '/src/components/OutlineBtn.astro';
 import Key from '/src/components/KeySentence.astro';
 import End from '/src/components/ArticleEnd.astro';
+import Picture from '@/components/Picture.astro';
+import Img1 from '@/img/1.jpg';
+import Img2 from '@/img/2.jpg';
+import Img3 from '@/img/3.jpg';
+import Img4 from '@/img/4.jpg';
+import Img5 from '@/img/5.jpg';
+import Img6 from '@/img/6.jpg';
+import Img7 from '@/img/7.jpg';
+import Img8 from '@/img/8.jpg';
+import Img9 from '@/img/9.jpg';
+import Img10 from '@/img/10.jpg';
+import Zwangerschapstesten from '@/img/Zwangerschapstesten.jpg'
 
 export const citeList = [
     {
@@ -148,8 +160,7 @@ export const citeList = [
 
 口服避孕药包括**复方短效口服避孕药**（每天一次）和**复方长效口服避孕药**（每月一次）。目前，**长效口服避孕药**几乎由于激素含量较高，已趋于淘汰。本文将只介绍**短效口服避孕药**。
 
-<img loading="lazy" src="/source/img/1.jpg" class="img-thumbnail thumb" alt="图 3,短效口服避孕药"/><br/>
-<small>图 3 短效口服避孕药</small><br/>
+<Picture loading="lazy" src={Img1} alt="图 3,短效口服避孕药" caption="图 3 短效口服避孕药"/>
 
 短效口服避孕药是目前最常见的避孕药。若女性正确地根据药物说明，每日规律服用这种药，避孕率接近 100%。<Cite citeName='健康的性' citeList={citeList} /><Cite citeName='复方口服避孕药临床应用中国专家共识' citeList={citeList} />
 
@@ -168,12 +179,10 @@ export const citeList = [
 
 <div class="row show">
     <div class="col-md-6">
-    <img loading="lazy" src="/source/img/2.jpg" class="img-thumbnail thumb" alt="图 4， 一种皮下埋植剂"/>
-    <br/><small>图 4 一种皮下埋植剂</small>
+        <Picture src={Img2} alt="图 4， 一种皮下埋植剂" caption="图 4 一种皮下埋植剂" />
     </div>
     <div class="col-md-6">
-    <img loading="lazy" src="/source/img/3.jpg" class="img-thumbnail thumb" alt="图 5 ，植入皮下埋植剂（视频截图）"/>
-    <br/><small>图 5 植入皮下埋植剂（视频截图）</small>
+        <Picture src={Img3} alt="图 5 ，植入皮下埋植剂（视频截图）" caption="图 5 植入皮下埋植剂（视频截图）" />
     </div>
 </div>
 
@@ -181,12 +190,10 @@ export const citeList = [
 
 <div class="row show">
     <div class="col-md-6">
-    <img loading="lazy" src="/source/img/4.jpg" class="img-thumbnail thumb" alt="图 6， 避孕贴片"/>
-    <br/><small>图 6 避孕贴片</small>
+        <Picture src={Img4} alt="图 6， 避孕贴片" caption="图 6 避孕贴片" />
     </div>
     <div class="col-md-6">
-    <img loading="lazy" src="/source/img/5.jpg" class="img-thumbnail thumb" alt="图 7， 阴道避孕环"/>
-    <br/><small>图 7 阴道避孕环</small>
+        <Picture src={Img5} alt="图 7， 阴道避孕环" caption="图 7 阴道避孕环" />
     </div>
 </div>
 
@@ -199,12 +206,9 @@ export const citeList = [
 
 ### 避孕套
 
-<img loading="lazy" src="/source/img/6.jpg" class="img-thumbnail thumb" alt="图 8，女用、男用避孕套"/><br/>
-<small>图 8 女用、男用避孕套</small><br/>
-<img loading="lazy" src="/source/img/7.jpg" class="img-thumbnail thumb" alt="图 9,展开的男用避孕套"/><br/>
-<small>图 9 展开的男用避孕套</small><br/>
-<img loading="lazy" src="/source/img/8.jpg" class="img-thumbnail thumb" alt="图 10,展开的女用避孕套"/><br/>
-<small>图 10 展开的女用避孕套</small><br/>
+<Picture src={Img6} alt="图 8，女用、男用避孕套" caption="图 8 女用、男用避孕套" />
+<Picture src={Img7} alt="图 9,展开的男用避孕套" caption="图 9 展开的男用避孕套" />
+<Picture src={Img8} alt="图 10,展开的女用避孕套" caption="图 10 展开的女用避孕套" />
 
 **避孕套**，亦作**安全套**、**保险套**、**卫生套**等，是一种护套形的屏障器具，主要应用于性交过程中，用以降低感染性传播疾病和女性怀孕的风险。避孕套均为一次使用器具，在使用后应当丢弃。
 
@@ -221,13 +225,11 @@ export const citeList = [
 
 男用避孕套较为常见，可在超市、便利店、药店等地方买到，在部分地区的街边和公共洗手间、高校的校医院等地也可以领取免费的避孕套。女用的避孕套可能在网上更容易买到。
 
-<img loading="lazy" src="/source/img/9.jpg" class="img-thumbnail thumb" alt="图 11 带有“国家免费提供”字样的避孕套外包装"/><br/>
-<small>图 11 带有“国家免费提供”字样的避孕套外包装</small><br/>
+<Picture src={Img9} alt="图 11 带有“国家免费提供”字样的避孕套外包装" caption="图 11 带有“国家免费提供”字样的避孕套外包装" />
 
 ### 宫内节育器
 
-<img loading="lazy" src="/source/img/10.jpg" class="img-thumbnail thumb" alt="图 12， 一种宫内节育器"/><br/>
-<small>图 12 一种宫内节育器</small><br/>
+<Picture src={Img10} alt="图 12， 一种宫内节育器" caption="图 12 一种宫内节育器" />
 
 宫内节育器（IUD）是中国已婚女性主要的避孕措施，其中以**含铜宫内节育器**应用最为广泛，含较强抗生育能力的铜离子。此外，还有含有激素或药物的**含药宫内节育器**。宫内节育器需要去医院进行安放，一般可放置数年。
 
@@ -278,9 +280,7 @@ export const citeList = [
 
 正常情况下，可从怀孕的女性体内检出**人绒毛膜促性腺激素（hCG）**，且 hCG 仅于怀孕的女性体内发现。因此 **hCG 试验**是可靠的验孕方式。常用的一个方法是用尿样检测其 hCG 含量，于 7 ~ 12 天内可检出。可以在药店买到相关的验孕器具。<Cite citeName='性学观止' citeList={citeList} />
 
-<img loading="lazy" src="/source/img/Zwangerschapstesten.jpg" class="img-thumbnail thumb" alt="图 13， 验孕棒，一种检测怀孕的器具，形状像一根笔，外观扁平，有一观察区域显示测试结果。"/><br/>
-<small>图 13 hCG 试验器具——验孕棒</small><br/>
-  
+<Picture src={Zwangerschapstesten} alt="图 13， 验孕棒，一种检测怀孕的器具，形状像一根笔，外观扁平，有一观察区域显示测试结果。" caption="图 13 hCG 试验器具——验孕棒" />
 
 考虑到受到各种因素影响，使用试验的方法可能会产生假阳性或假阴性结果。最终确定怀孕要依靠以下三种手段之一：<Cite citeName='性学观止' citeList={citeList} />
 

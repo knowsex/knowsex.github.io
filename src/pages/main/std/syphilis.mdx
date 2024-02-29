@@ -14,6 +14,7 @@ import ReferList from '/src/components/CiteReference.astro';
 import Btn from '/src/components/OutlineBtn.astro';
 import Key from '/src/components/KeySentence.astro';
 import End from '/src/components/ArticleEnd.astro';
+import Picture from '@/components/Picture.astro';
 
 export const citeList = [
     {
@@ -52,6 +53,7 @@ export const citeList = [
 
 对于由他人传染的，称为**后天性梅毒**。胎儿被母亲传染的，称为**先天性梅毒**。关系如下所示。<Cite citeName='皮肤性病学' citeList={citeList}/>
 
+{/* Picture 的图片宽高推导会造成图片过高 */}
 <img loading="lazy" class="dark-invert" src="/source/img/Syphilis.svg" style="width: 100%; max-width: 600px" alt="这是一张梅毒种类及分期图。梅毒分为胎传性梅毒和获得性梅毒，它们也叫做先天梅毒和后天梅毒。不论是何种梅毒，病程小于两年的为早期，大于两年的为晚期。对于后天梅毒，在早期又可分为一期梅毒、二期梅毒和早期潜伏梅毒。先天梅毒在早期不做区分，其症状类似于后天梅毒的第二期。而在晚期，无论是先天梅毒还是后天梅毒，都可以分为皮肤黏膜骨骼梅毒、心血管梅毒、神经梅毒和晚期潜伏梅毒。"/><br/><br/>
 
 ### 一期梅毒
