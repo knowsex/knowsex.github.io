@@ -81,6 +81,12 @@ body {
     width: auto;
     height: auto;
     line-height: 2;
+    .main-meta-author {
+        font-family: "思源黑体", "Noto Sans CJK SC", "Source Han Sans SC", "Source Han Sans CN", "Source Han Sans", "Noto Sans", "Noto Sans SC", "PingFang SC", "WenQuanYi Micro Hei", "Heiti SC", "STHeiti", "SimHei", sans-serif;
+        color: grey;
+        font-size: .9em;
+        margin-bottom: 1em;
+    }
 }
 
 .index-main {
