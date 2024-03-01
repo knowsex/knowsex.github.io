@@ -15,6 +15,9 @@ import Btn from '/src/components/OutlineBtn.astro';
 import Key from '/src/components/KeySentence.astro';
 import End from '/src/components/ArticleEnd.astro';
 import Picture from '@/components/Picture.astro';
+import Chancre from '@/img/chancre.jpg';
+import SecondarySyphilis from '@/img/secondary_syphilis.jpg';
+import Lores from '@/img/5330_lores.jpg';
 
 export const citeList = [
     {
@@ -64,15 +67,7 @@ export const citeList = [
 
 即使症状消失，仍应在此时接受治疗，以免进入二期梅毒阶段。<Cite citeName='CDC' citeList={citeList}/>
 
-<div class="click-to-show">
-  <div class="row show">
-    <div class="col-md-6 img-box">
-    <p class="text-hover-img">可能含有令人不适的内容<br/>点击或轻触去除模糊</p>
-            <img loading="lazy" src="/source/img/chancre.jpg" class="img-thumbnail thumb show-after-click" alt="图 1，硬下疳"/>
-            <br/><small>图 1 硬下疳</small>
-        </div>
-    </div>
-</div>
+<Picture contentWarning src={Chancre} alt="图 1，硬下疳" caption="图 1 硬下疳" />
 
 ### 二期梅毒
 
@@ -80,15 +75,7 @@ export const citeList = [
 
 无论是否治疗，此阶段的症状仍会自行消失。<Cite citeName='CDC' citeList={citeList}/>
 
-<div class="click-to-show">
-  <div class="row show">
-    <div class="col-md-6 img-box">
-      <p class="text-hover-img">可能含有令人不适的内容<br/>点击或轻触去除模糊</p>
-        <img loading="lazy" src="/source/img/secondary_syphilis.jpg" class="img-thumbnail thumb show-after-click" alt="图 2，二期梅毒，病毒在全身扩散导致的大腿皮疹"/>
-        <br/><small>图 2 二期梅毒，病毒在全身扩散导致的大腿皮疹</small>
-    </div>
-</div>
-</div>
+<Picture contentWarning src={SecondarySyphilis} alt="图 2，二期梅毒，病毒在全身扩散导致的大腿皮疹" caption="图 2 二期梅毒，病毒在全身扩散导致的大腿皮疹" />
 
 ### 潜伏期
 
@@ -98,15 +85,7 @@ export const citeList = [
 
 大约有 33% ~ 50% 的患者进入三期梅毒。此时全身各脏器受到影响，以心血管系统与中枢神经受影响最甚。患者感染 10 ~ 20 年可出现失明、痴呆、瘫痪等症状，最终可导致死亡。
 
-<div class="click-to-show">
-  <div class="row show">
-    <div class="col-md-6 img-box">
-      <p class="text-hover-img">可能含有令人不适的内容<br/>点击或轻触去除模糊</p>
-            <img loading="lazy" src="/source/img/5330_lores.jpg" class="img-thumbnail thumb show-after-click" alt="图 3，由三期梅毒引起的一种溃疡性病变，位于鼻子。"/>
-            <br/><small>图 3 由三期梅毒引起的一种溃疡性病变</small>
-        </div>
-    </div>
-</div>
+<Picture contentWarning src={Lores} alt="图 3，由三期梅毒引起的一种溃疡性病变，位于鼻子。" caption="图 3 由三期梅毒引起的一种溃疡性病变" />
 
 ### 先天性梅毒
 

@@ -1,20 +1,99 @@
 ---
-import { Picture as AstroPicture } from 'astro:assets'
+import { Picture as AstroPicture } from "astro:assets";
 
-import type { ImageMetadata } from 'astro'
+import type { ImageMetadata } from "astro";
 
 interface Props {
-    src: ImageMetadata
-    alt: string
-    caption: string
-    class: string
+  src: ImageMetadata;
+  alt: string;
+  caption: string;
+  class: string;
+  contentWarning: boolean;
 }
 
-const { src, alt, caption, class: className, ...props } = Astro.props;
+const {
+  src,
+  alt,
+  caption,
+  contentWarning,
+  class: className,
+  ...props
+} = Astro.props;
 ---
-<AstroPicture loading="lazy" src={src} alt={alt} formats={['avif', 'webp']} class:list={["img-thumbnail thumb", className]} {...props}></AstroPicture>
 
-{caption && <>
-    <br/>
-    <small>{caption}</small>
-</>}
+<div class:list={["picture-container", contentWarning && "content-warning"]}>
+  {
+    contentWarning && (
+      <p>
+        可能含有令人不适的内容
+        <br />
+        点击或轻触去除模糊
+      </p>
+    )
+  }
+
+  <AstroPicture
+    loading="lazy"
+    src={src}
+    alt={alt}
+    formats={["avif", "webp"]}
+    class:list={[
+      "img-thumbnail thumb",
+      // contentWarning && "content-warning",
+      className,
+    ]}
+    {...props}
+  />
+
+  {
+    caption && (
+      <>
+        <br />
+        <small>{caption}</small>
+      </>
+    )
+  }
+</div>
+
+<style>
+  @media (min-width: 768px) {
+    .picture-container {
+      width: 50%;
+    }
+  }
+  .picture-container {
+    position: relative;
+  }
+  .picture-container > p {
+    display: var(--warning, flex);
+    position: absolute;
+    inset: 0;
+    color: white;
+    z-index: 1;
+    font-size: 0.9rem;
+    justify-content: center;
+    align-items: center;
+    pointer-events: none;
+  }
+  .content-warning img {
+    transition: 0.5s;
+    filter: var(--filter, blur(20px) brightness(0.8));
+  }
+  .content-warning {
+    padding-bottom: 20px;
+  }
+</style>
+
+<script>
+  document
+    .querySelectorAll(".picture-container")
+    .forEach(function (contentWarningText) {
+      contentWarningText.addEventListener(
+        "click",
+        function (this: HTMLImageElement) {
+          this.style.setProperty("--filter", "none");
+          this.style.setProperty("--warning", "none");
+        }
+      );
+    });
+</script>
