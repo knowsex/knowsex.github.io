@@ -37,32 +37,26 @@ const {
     src={src}
     alt={alt}
     formats={["avif", "webp"]}
-    class:list={[
-      "img-thumbnail thumb",
-      // contentWarning && "content-warning",
-      className,
-    ]}
+    class:list={["img-thumbnail thumb", className]}
     {...props}
   />
 
-  {
-    caption && (
-      <>
-        <br />
-        <small>{caption}</small>
-      </>
-    )
-  }
+  <slot name="caption">
+    {
+      caption && (
+        <>
+          <br />
+          <small>{caption}</small>
+        </>
+      )
+    }
+  </slot>
 </div>
 
-<style>
-  @media (min-width: 768px) {
-    .picture-container {
-      width: 50%;
-    }
-  }
+<style is:global>
   .picture-container {
     position: relative;
+    width: 100%;
   }
   .picture-container > p {
     display: var(--warning, flex);
@@ -78,9 +72,6 @@ const {
   .content-warning img {
     transition: 0.5s;
     filter: var(--filter, blur(20px) brightness(0.8));
-  }
-  .content-warning {
-    padding-bottom: 20px;
   }
 </style>
 
