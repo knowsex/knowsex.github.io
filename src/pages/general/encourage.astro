@@ -1,6 +1,9 @@
 ---
 import Layout from '@/layouts/AstroPage.astro';
 import End from '@/components/ArticleEnd.astro';
+import Picture from '@/components/Picture.astro';
+import WechatCode from '@/img/wechatCode.jpg'
+
 const title = '支持';
 const enTitle = 'Encourage';
 const keywords = [''];
@@ -16,7 +19,7 @@ const bgPath = "/source/img/donateCover.jpg";
 	<p>您可以使用微信扫描下方二维码捐助 KnowSex：</p>
 	<div class="row show"></div>
 		<div class="col-md-6 img-box">
-			<img loading="lazy" src="/source/img/wechatCode.jpg" alt="收款码，可以使用微信扫一扫功能扫描识别，输入选择赠与金额以帮助 KnowSex。" class="img-thumbnail" style="width:100%;max-width:500px"/>
+			<Picture src={WechatCode} alt="收款码，可以使用微信扫一扫功能扫描识别，输入选择赠与金额以帮助 KnowSex。" style="width:100%;max-width:500px" />
 		</div>
 	</div>
     <p>衷心感谢您对 KnowSex 的支持与喜爱。我们与您一起期待性教育更好的普及和推广。</p>

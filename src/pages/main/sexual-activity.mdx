@@ -16,6 +16,9 @@ import Btn from '/src/components/OutlineBtn.astro';
 import CW from '/src/components/CW.astro';
 import End from '/src/components/ArticleEnd.astro';
 import Key from '/src/components/KeySentence.astro';
+import Picture from '@/components/Picture.astro';
+import KlimtMulherSentada from '@/img/Klimt_Mulher_sentada.jpg'
+import Gravida from '@/img/gravida.jpg'
 
 export const citeList = [
     {
@@ -81,8 +84,7 @@ export const citeList = [
 自慰
 --
 
-<img loading="lazy" src="/source/img/Klimt_Mulher_sentada.jpg" class="img-thumbnail thumb" alt="一名正在自慰的女性，画作艺术作品。"/>
-<br/><small>图 1 奥地利画家 Gustav Klimt 的画作《张开大腿的女人》</small>
+<Picture src={KlimtMulherSentada} alt="一名正在自慰的女性，画作艺术作品。" caption="图 1 奥地利画家 Gustav Klimt 的画作《张开大腿的女人》" />
 
 自慰，也作手淫，是指对自我性器官进行性刺激以达到**高潮**和快感的性行为。
 
@@ -162,8 +164,7 @@ export const citeList = [
 
 受精后的卵细胞称为**受精卵**，成功地在子宫壁着床后，受精卵会在子宫后发育约九个月的时间，这段期间即为**怀孕**（妊娠）。
 
-<img loading="lazy" src="/source/img/gravida.jpg" class="img-thumbnail thumb" alt="一名怀孕7个月的女性，腹部明显隆起。"/>
-<br/><small>图 2 一名怀孕 7 个月的女性</small>
+<Picture src={Gravida} alt="一名怀孕7个月的女性，腹部明显隆起。" caption="图 2 一名怀孕 7 个月的女性" />
 
 若胎儿正常成长，最后会**分娩**，分娩过程包括子宫肌肉的收缩、宫颈扩张、婴儿经过产道（即阴道）从阴道口**出生**。
 

@@ -16,6 +16,12 @@ import Btn from '/src/components/OutlineBtn.astro';
 import CW from '/src/components/CW.astro';
 import End from '/src/components/ArticleEnd.astro';
 import Key from '/src/components/KeySentence.astro';
+import Picture from '@/components/Picture.astro';
+import AdolescentPeriodAverageGirl from '@/img/Adolescent_Period_Average_girl_4_to_16_yo.jpg'
+import AdolescentPeriodAverageBoy from '@/img/Adolescent_Period_Average_boy_10_to_17_yo.jpg'
+import FemaleBreastsFiveTannerStages from '@/img/Female_breasts_five_Tanner_stages.jpg'
+import MaleGenitaliaFiveTannerStages from '@/img/Male_genitalia_five_Tanner_stages.jpg'
+
 export const citeList = [
     {
         "name": "女青临床指南",
@@ -99,15 +105,14 @@ export const citeList = [
 <Key Tag='p'>睾丸增大被视为男性青春期启动的第一个特征。<Cite citeName='内分泌学' citeList={citeList}/></Key>
 
 <div class="single-img mb-2">
-    <img loading="lazy" src="/source/img/Adolescent_Period_Average_girl_4_to_16_yo.jpg" class="img-thumbnail thumb" alt="图1，4到16岁的女性"/>
-    <br/><small>图&nbsp;1&nbsp;, 4 到 16 岁的女性</small>
+    <Picture src={AdolescentPeriodAverageGirl} alt="图1，4到16岁的女性" caption="图 1 , 4 到 16 岁的女性" />
 </div>
 <div class="single-img mb-2">
-    <img loading="lazy" src="/source/img/Adolescent_Period_Average_boy_10_to_17_yo.jpg" class="img-thumbnail thumb" alt="图2，10到17岁的男性"/>
-    <br/><small>图&nbsp;2&nbsp;, 10 到 17 岁的男性</small>
+    <Picture src={AdolescentPeriodAverageBoy} alt="图2，10到17岁的男性" caption="图 2 , 10 到 17 岁的男性" />
 </div>
 <div class="row show">
     <div class="col-md-6">
+        {/* svg 图片暂时不迁移 */}
         <img loading="lazy" src="/source/img/data_female.svg" class="img-thumbnail thumb" alt="图 3， 女性的青春期变化与年龄的关系"/>
         <br/><small>图 3 女性的青春期变化与年龄<Cite citeName='MSD女青' citeList={citeList}/></small>
     </div>
@@ -133,8 +138,7 @@ export const citeList = [
 *   第五阶段：乳房发育到成人尺寸，乳晕恢复为乳房轮廓，乳头突出。
 
 <div class="single-img mb-2">
-<img loading="lazy" src="/source/img/Female_breasts_five_Tanner_stages.jpg" class="img-thumbnail thumb" alt="图5，乳房发育的五个阶段，如上文描述。"/>
-<br/><small>图&nbsp;5&nbsp;乳房发育的五个阶段</small>
+    <Picture src={FemaleBreastsFiveTannerStages} alt="图5，乳房发育的五个阶段，如上文描述。" caption="图 5 乳房发育的五个阶段" />
 </div>
 
 大部分人的乳房都有略微不对称，在乳房发育时也会有所观察到。一般在发育时的不对称是暂时的。<Cite citeName='女青临床指南' citeList={citeList}/>如果乳房的发育差异过于明显，可考虑到正规医疗机构寻求医生的帮助。
@@ -154,8 +158,7 @@ export const citeList = [
 *   第五阶段：外阴形态呈成熟男性状态，阴茎停止生长。
 
 <div class="single-img mb-2">
-<img loading="lazy" src="/source/img/Male_genitalia_five_Tanner_stages.jpg" class="img-thumbnail thumb" alt="图6，男性外阴发育的五个阶段，如上文描述。"/>
-<br/><small>图&nbsp;6&nbsp;男性外阴发育的五个阶段</small>
+    <Picture src={MaleGenitaliaFiveTannerStages} alt="图6，男性外阴发育的五个阶段，如上文描述。" caption="图 6 男性外阴发育的五个阶段" />
 </div>
 
 在青春期，由于激素的波动，阴茎可能在任何时间在没有刺激或性幻想的情况下自发勃起，这是正常的。但有时勃起造成的衣物突显会带来尴尬，尤其是位于公共场合时。此时可考虑转移注意力或更换姿势，也可穿着较为宽松的衣物。<Cite citeName='自发勃起' citeList={citeList}/>

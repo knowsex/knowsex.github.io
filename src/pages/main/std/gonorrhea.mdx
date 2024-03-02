@@ -14,6 +14,9 @@ import ReferList from '/src/components/CiteReference.astro';
 import Btn from '/src/components/OutlineBtn.astro';
 import Key from '/src/components/KeySentence.astro';
 import End from '/src/components/ArticleEnd.astro';
+import Picture from '@/components/Picture.astro';
+import GonorroeMale from '@/img/SOA-gonorroe-male.jpg'
+import GonorroeFemale from '@/img/SOA-gonorroe-female.jpg'
 
 export const citeList = [
     {
@@ -54,18 +57,10 @@ export const citeList = [
 
 <div class="row show">
 <div class="col-md-6 img-box">
-    <div class="click-to-show">
-    <p class="text-hover-img">可能含有令人不适的内容<br/>点击或轻触去除模糊</p>
-    <img loading="lazy" src="/source/img/SOA-gonorroe-male.jpg" class="img-thumbnail thumb show-after-click" alt="图 1，淋病导致的男性尿道出现脓状分泌物，这些排泄物从尿道口排出。"/>
-    <br/><small>图 1 淋病导致的男性尿道出现脓状排泄物</small>
-    </div>
+    <Picture contentWarning src={GonorroeMale} alt="图 1，淋病导致的男性尿道出现脓状分泌物，这些排泄物从尿道口排出。" caption="图 1 淋病导致的男性尿道出现脓状排泄物" />
 </div>
 <div class="col-md-6 img-box">
-    <div class="click-to-show">
-    <p class="text-hover-img">可能含有令人不适的内容<br/>点击或轻触去除模糊</p>
-    <img loading="lazy" src="/source/img/SOA-gonorroe-female.jpg" class="img-thumbnail thumb show-after-click" alt="图 2，淋病导致的女性阴部出现排泄物，在该图片里，这些排泄物分布在外生殖器上。"/>
-    <br/><small>图 2 淋病导致的女性阴部排泄物</small>
-    </div>
+    <Picture contentWarning src={GonorroeFemale} alt="图 2，淋病导致的女性阴部出现排泄物，在该图片里，这些排泄物分布在外生殖器上。" caption="图 2 淋病导致的女性阴部排泄物" />
 </div>
 </div>
 

@@ -18,6 +18,11 @@ import ReferList from '/src/components/CiteReference.astro';
 import Btn from '/src/components/OutlineBtn.astro';
 import Key from '/src/components/KeySentence.astro';
 import End from '/src/components/ArticleEnd.astro';
+import Picture from '@/components/Picture.astro';
+import PenileWarts from '@/img/Penile_warts.jpg'
+import CondylomataAcuminataFemale from '@/img/SOA-Condylomata-acuminata-female.jpg'
+import PapulasPerladasGlande from '@/img/Papulas_perladas_glande_2.jpg'
+import PseudogenitalWarts from '@/img/假性濕疣.jpg'
 
 export const citeList = [
     {
@@ -64,18 +69,10 @@ export const citeList = [
 
 <div class="row show">
   <div class="col-md-6 img-box">
-    <div class="click-to-show">
-      <p class="text-hover-img">可能含有令人不适的内容<br/>点击或轻触去除模糊</p>
-      <img loading="lazy" src="/source/img/Penile_warts.jpg" class="img-thumbnail thumb show-after-click" alt="图 1，阴茎包皮出现的尖锐湿疣，在该图片里，在阴茎包皮分布着菜花样的疣。"/>
-      <br/><small>图 1 阴茎包皮上出现的尖锐湿疣</small>
-    </div>
+    <Picture contentWarning src={PenileWarts} alt="图 1，阴茎包皮出现的尖锐湿疣，在该图片里，在阴茎包皮分布着菜花样的疣。" caption="图 1 阴茎包皮上出现的尖锐湿疣" />
   </div>
   <div class="col-md-6 img-box">
-    <div class="click-to-show">
-      <p class="text-hover-img">可能含有令人不适的内容<br/>点击或轻触去除模糊</p>
-      <img loading="lazy" src="/source/img/SOA-Condylomata-acuminata-female.jpg" class="img-thumbnail thumb show-after-click" alt="图 2，女阴部位出现的尖锐湿疣，在该图片里，在女性阴部分布着菜花样的疣。"/>
-      <br/><small>图 2 女阴部位出现的尖锐湿疣</small>
-    </div>
+    <Picture contentWarning src={CondylomataAcuminataFemale} alt="图 2，女阴部位出现的尖锐湿疣，在该图片里，在女性阴部分布着菜花样的疣。" caption="图 2 女阴部位出现的尖锐湿疣" />
   </div>
 </div>
 
@@ -87,19 +84,13 @@ export const citeList = [
 尖锐湿疣常与无害的阴茎珍珠疹、假性湿疣混淆。醋酸白试验能够鉴别是否是尖锐湿疣。<Cite citeName='尖锐湿疣诊断' citeList={citeList} />
 
 <div class="row show">
-    <div class="click-to-show">
-      <p class="text-hover-img">可能含有令人不适的内容<br/>点击或轻触去除模糊</p>
-      <img loading="lazy" src="/source/img/Papulas_perladas_glande_2.jpg" class="img-thumbnail thumb show-after-click" alt="图 3，阴茎珍珠疹，在阴茎的冠状沟处分布。"/>
-      <br/><small>图 3 阴茎珍珠疹（无害）</small>
-    </div>  
+  <Picture contentWarning src={PapulasPerladasGlande} alt="图 3，阴茎珍珠疹，在阴茎的冠状沟处分布。" caption="图 3 阴茎珍珠疹（无害）" />
 </div>
 
 <div class="row show">
-  <div class="click-to-show">
-    <p class="text-hover-img">可能含有令人不适的内容<br/>点击或轻触去除模糊</p>
-    <img loading="lazy" src="/source/img/假性濕疣.jpg" class="img-thumbnail thumb show-after-click" alt="图 4，无害的假性湿疣与尖锐湿疣对比。假性湿疣对称排列小阴唇内侧或前庭处，大小较一致，头部较圆，触感柔软。尖锐湿疣以区块群居分布，颜色偏深或白色，头部尖而偏硬。"/>
-    <br/><small>图 4 假性湿疣（无害）与尖锐湿疣（图中称“菜花”）对比（<a target="_blank" href="https://www.pskin.tw/machine-info.asp?id=2038">彭贤礼皮肤科诊所</a>供图）</small>
-  </div>
+  <Picture contentWarning src={PseudogenitalWarts} alt="图 3，阴茎珍珠疹，在阴茎的冠状沟处分布。" caption="图 3 阴茎珍珠疹（无害）">
+    <small slot="caption">图 4 假性湿疣（无害）与尖锐湿疣（图中称“菜花”）对比（<a target="_blank" href="https://www.pskin.tw/machine-info.asp?id=2038">彭贤礼皮肤科诊所</a>供图）</small>
+  </Picture>
 </div>
 
 预后
