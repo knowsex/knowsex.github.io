@@ -1,11 +1,12 @@
 ---
-import { Picture as AstroPicture } from "astro:assets";
+import { getImage } from "astro:assets";
 
 import type { ImageMetadata } from "astro";
 
 interface Props {
   src: ImageMetadata;
   alt: string;
+  desktopSrc?: ImageMetadata;
   caption?: string;
   class?: string;
   contentWarning?: boolean;
@@ -15,11 +16,40 @@ interface Props {
 const {
   src,
   alt,
+  desktopSrc,
   caption,
   contentWarning = false,
   class: className,
   ...props
 } = Astro.props;
+
+const targetFormats = ["avif", "webp"];
+
+const imageSources = await Promise.all([
+  ...(desktopSrc
+    ? targetFormats
+        .map(
+          async (format) =>
+            await getImage({
+              ...props,
+              src: desktopSrc,
+              format,
+              media: "(min-width: 600px)",
+            })
+        )
+        .concat(
+          getImage({
+            ...props,
+            src: desktopSrc,
+            format: desktopSrc.format,
+            media: "(min-width: 600px)",
+          }) // 桌面端默认图片
+        )
+    : []),
+  ...targetFormats.map(
+    async (format) => await getImage({ ...props, src, format })
+  ),
+]);
 ---
 
 <div class:list={["picture-container", contentWarning && "content-warning"]}>
@@ -33,14 +63,25 @@ const {
     )
   }
 
-  <AstroPicture
-    loading="lazy"
-    src={src}
-    alt={alt}
-    formats={["avif", "webp"]}
-    class:list={["img-thumbnail thumb", className]}
-    {...props}
-  />
+  <picture>
+    {
+      imageSources.map((image) => (
+        <source
+          {...image.attributes}
+          srcset={image.src}
+          type={"image/" + image.options.format}
+          media={image.attributes.media}
+        />
+      ))
+    }
+    <img
+      src={src.src}
+      alt={alt}
+      loading="lazy"
+      class:list={["img-thumbnail thumb", className]}
+      {...props}
+    />
+  </picture>
 
   <slot name="caption">
     {
