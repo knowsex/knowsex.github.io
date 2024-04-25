@@ -10,8 +10,15 @@ const desc = "KnowSex 是一个性教育网站，内容涵盖生殖系统、避�
 // YYYY-MM-DD
 const date = new Date().toLocaleString('zh-CN', { timeZone: 'Hongkong', dateStyle: 'short' });
 
+const frontmatter = {
+    title: title,
+    desc: desc,
+    keywords: keywords,
+    date: date,
+    isRoot: true
+}
 ---
-<Layout title={title} desc={desc} keywords={keywords} isRoot=1>
+<Layout frontmatter={frontmatter} isRoot=true>
 <style is:global>
 #talk-bg {
     background-image: url('/source/img/talk-bg.jpg');

@@ -2,10 +2,10 @@
 import Footer from "@/components/Footer.astro";
 import Header from "@/components/Header.astro";
 
-const { title, keywords, description, isRoot, headerProps } = Astro.props;
+const { title, keywords, description, headerProps } = Astro.props;
 
 const baseKeywords = "性教育,KnowSex,生理知识,性科普";
-const finalKeywords = baseKeywords + "," + keywords.join(",");
+const finalKeywords = baseKeywords + "," + (keywords ? keywords.join(",") : '');
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 ---
@@ -49,7 +49,7 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 	<link rel="canonical" href={canonicalURL}/>
 </head>
 <body>
-    <Header {...headerProps} isRoot={isRoot}/>
+    <Header {...headerProps}/>
     <slot />
     <Footer />
 </body>

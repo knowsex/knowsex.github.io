@@ -1,0 +1,15 @@
+#std-bg {
+    background-image: url('/source/img/dominoes.jpg');
+}
+#syphilis-bg {
+    background-image: url('/source/img/Treponema_pallidum.jpg');
+}
+#gonorrhea-bg {
+    background-image: url('/source/img/Neisseria_gonorrhoeae.jpg');
+}
+#genital-wart-bg {
+	background-image: url('/source/img/Condyloma_acuminatum-low_mag.jpg');
+}
+#aids-bg {
+	background-image: url('/source/img/aids-cover.jpg');
+}
