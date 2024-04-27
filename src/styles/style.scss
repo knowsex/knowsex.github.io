@@ -82,7 +82,6 @@ body {
     height: auto;
     line-height: 2;
     .main-meta-author {
-        font-family: "思源黑体", "Noto Sans CJK SC", "Source Han Sans SC", "Source Han Sans CN", "Source Han Sans", "Noto Sans", "Noto Sans SC", "PingFang SC", "WenQuanYi Micro Hei", "Heiti SC", "STHeiti", "SimHei", sans-serif;
         color: grey;
         font-size: .9em;
         margin-bottom: 1em;
@@ -105,7 +104,6 @@ body {
 
 .main strong {
     color: #BC5F5C;
-    font-family: "思源黑体", "Noto Sans CJK SC", "Source Han Sans SC", "Source Han Sans CN", "Source Han Sans", "Noto Sans", "Noto Sans SC", "PingFang SC", "WenQuanYi Micro Hei", "Heiti SC", "STHeiti", "SimHei", sans-serif;
 }
 
 small {
@@ -153,7 +151,6 @@ blockquote footer small::before {
     padding: 4px 10px;
     font-weight: bold;
     font-size: 1.4em;
-    font-family: 'Noto Sans SC';
     margin: .6em auto .4em;
 }
 
@@ -162,7 +159,6 @@ blockquote footer small::before {
     // margin-top: 1em;
     padding: .3em .5em;
     font-weight: bold;
-    font-family: 'Noto Sans SC'
 }
 
 .header-thumb {
@@ -298,7 +294,6 @@ blockquote footer small::before {
     color: white;
     font-size: 1.5em;
     font-weight: bold;
-    font-family: 'Noto Sans SC'
 }
 
 .lf {
@@ -345,7 +340,6 @@ video {
 
 .key {
     font-weight: bold;
-    font-family: "思源黑体", "Noto Sans CJK SC", "Source Han Sans SC", "Source Han Sans CN", "Source Han Sans", "Noto Sans", "Noto Sans SC", "PingFang SC", "WenQuanYi Micro Hei", "Heiti SC", "STHeiti", "SimHei", sans-serif;
 }
 
 .btn-exp::before {
@@ -439,7 +433,6 @@ blockquote footer {
 article {
     b {
         font-weight: bold;
-        font-family: "思源黑体", "Noto Sans CJK SC", "Source Han Sans SC", "Source Han Sans CN", "Source Han Sans", "Noto Sans", "Noto Sans SC", "PingFang SC", "WenQuanYi Micro Hei", "Heiti SC", "STHeiti", "SimHei", sans-serif;
     }
 
     h2 {
@@ -457,7 +450,6 @@ article {
         margin-top: 1em;
         font-weight: bold;
         font-size: 1.6em;
-        font-family: 'Noto Sans SC';
         line-height: 2;
     }
 }
@@ -603,7 +595,6 @@ section.footnotes ol {
         }
     }
     .article-meta {
-        font-family: "思源黑体","Noto Sans CJK SC","Source Han Sans SC","Source Han Sans CN","Source Han Sans","Noto Sans","Noto Sans SC","PingFang SC","WenQuanYi Micro Hei","Heiti SC","STHeiti","SimHei",sans-serif;
         margin-bottom: 2em;
         
         .article-author {
@@ -758,6 +749,23 @@ section.footnotes ol {
     background-color: #ffff8b;
     animation: fadeOut 5s forwards;
     /* 添加淡出动画 */
+}
+
+.main .main-meta-author, .main strong, .main h3, .main h4, .key, article b, article h2, .article-page .article-meta {
+    font-family: '思源黑体', 'Noto Sans SC', 'Noto Sans CJK SC', 'Source Han Sans SC', 'Source Han Sans CN', 'Source Han Sans', 'Noto Sans', 'Noto Sans SC', 'PingFang SC', 'WenQuanYi Micro Hei', 'Heiti SC', 'STHeiti', 'SimHei', sans-serif;
+}
+
+html[lang="zh-TW"] {
+
+    body {
+        font-family: '思源宋體', 'Noto Serif TC', 'PingFang TC', 'Hiragino Sans GB', 'WenQuanYi Micro Hei', 'Microsoft JhengHei', sans-serif;
+    }
+
+    .main .main-meta-author, .main strong, .main h3, .main h4, .key, article b, article h2, .article-page .article-meta {
+        font-family: "思源黑體", "Noto Sans TC", "Noto Sans CJK TC", "Source Han Sans TC", "Source Han Sans TW", "Source Han Sans", "Noto Sans", "Noto Sans TC", "PingFang TC", "WenQuanYi Micro Hei", "Heiti TC", "STHeiti", "SimHei", sans-serif;
+    }
+    
+
 }
 
 @import "dark";
