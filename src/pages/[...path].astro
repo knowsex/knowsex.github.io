@@ -8,7 +8,6 @@ import IndexLayout from "@/layouts/Index.astro";
 import MarkdownPostLayout from "@/layouts/Article.astro";
 import type { AstroComponentFactory } from "astro/runtime/server/index.js";
 import CHTConverter from "@/components/CHTConverter.astro";
-import Index from "./index.astro";
 import Sitemap from "./sitemap.astro";
 
 const GeneralLayout = MainLayout;
@@ -17,7 +16,7 @@ dayjs.extend(utc);
 const chtPrefix = "zh-tw";
 
 export async function getStaticPaths() {
-  const chtPrefix = "/zh-tw";
+  const chtPrefix = "zh-tw";
   const articleEntries = await getCollection("article");
   const generalEntries = await getCollection("general");
   const mainEntries = await getCollection("main");
@@ -35,7 +34,8 @@ export async function getStaticPaths() {
       params: { path: `/article/${article.slug}` },
       props: { entry: article },
     })),
-    { params: { path: "/" }, props: { type: "index" } },
+    // 动态路由不能覆盖 index，改用在 index.astro 中渲染主页内容，在 zh-tw.astro 中渲染 zh-tw 的主页
+    // { params: { path: "/" }, props: { type: "index" } },
     { params: { path: "/sitemap" }, props: { type: "sitemap" } },
   ];
 
@@ -49,7 +49,7 @@ export async function getStaticPaths() {
   return paths;
 }
 
-const { entry, type } = Astro.props;
+const { entry } = Astro.props;
 const { path } = Astro.params;
 
 const language = path.startsWith(chtPrefix) ? "zh-tw" : "zh-hans";
@@ -68,8 +68,10 @@ if (entry) {
 ---
 
 {
-  !entry && type && (
-    <CHTConverter>{type === "index" ? <Index /> : <Sitemap />}</CHTConverter>
+  !entry && (
+    <CHTConverter>
+      <Sitemap />
+    </CHTConverter>
   )
 }
 
