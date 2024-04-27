@@ -10,6 +10,8 @@ const desc = "KnowSex 是一个性教育网站，内容涵盖生殖系统、避�
 // YYYY-MM-DD
 const date = new Date().toLocaleString('zh-CN', { timeZone: 'Hongkong', dateStyle: 'short' });
 
+const { language = "zh-hans" } = Astro.props;
+
 const frontmatter = {
     title: title,
     desc: desc,
@@ -18,7 +20,7 @@ const frontmatter = {
     isRoot: true
 }
 ---
-<Layout frontmatter={frontmatter} isRoot=true>
+<Layout frontmatter={frontmatter} isRoot=true language={language}>
 <style is:global>
 #talk-bg {
     background-image: url('/source/img/talk-bg.jpg');
