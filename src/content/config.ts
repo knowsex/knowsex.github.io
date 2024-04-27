@@ -24,7 +24,7 @@ const mainCollection = defineCollection({
     desc: z.string().optional(),
     keywords: z.array(z.string()).optional(),
     bgPath: z.string().optional(),
-    authour: z.string().optional(),
+    author: z.string().optional(),
     review: z.string().optional(),
     ifIndex: z.boolean().optional(),
     isRoot: z.boolean().optional()
@@ -39,7 +39,7 @@ const generalCollection = defineCollection({
     desc: z.string().optional(),
     keywords: z.array(z.string()).optional(),
     bgPath: z.string().optional(),
-    authour: z.string().optional(),
+    author: z.string().optional(),
     review: z.string().optional(),
     removeCover: z.boolean().optional(),
   })
