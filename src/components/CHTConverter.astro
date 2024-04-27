@@ -14,13 +14,25 @@ const isExternal = (url: string) => {
     : url.startsWith("//");
 };
 
+// 已经以 /zh-tw 开头
+const isStartWithZH_TW = (url: string) => {
+  return url.startsWith("\\zh-tw") || url.startsWith("/zh-tw");
+};
+
+// 锚点
+const isAnchor = (url: string) => {
+  return url.startsWith("#");
+};
+
 const replaceUrl = () => {
   return (tree: any) => {
     visit(tree, "element", (node) => {
       if (
         node.tagName === "a" &&
         typeof node.properties.href === "string" &&
-        !isExternal(node.properties.href)
+        !isExternal(node.properties.href) &&
+        !isAnchor(node.properties.href) &&
+        !isStartWithZH_TW(node.properties.href)
       ) {
         node.properties.href = join("/zh-tw", node.properties.href);
       }
