@@ -1,7 +1,7 @@
 ---
 import BaseLayout from './BaseLayout.astro';
 const {frontmatter, lastModified} = Astro.props;
-const {tags: keywords, description} = frontmatter
+const {tags: keywords, description, language} = frontmatter
 const pubDate = new Date(frontmatter.pubDate).toISOString().slice(0, 10);
 
 // 如果是全站首页
@@ -13,6 +13,7 @@ const baseLayoutProps = {
 	keywords,
 	description,
 	isRoot,
+	language,
 }
 
 ---

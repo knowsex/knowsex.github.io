@@ -1,0 +1,42 @@
+---
+import { rehype } from "rehype";
+import rehypeParser from "rehype-parse";
+import rehypeStringify from "rehype-stringify";
+import { visit } from "unist-util-visit";
+import isAbsoluteUrl from "is-absolute-url";
+import { join } from "path";
+
+import { convertToZH_TW } from "@/utils/cht-converter";
+
+const isExternal = (url: string) => {
+  return isAbsoluteUrl(url)
+    ? ["http", "https", "mailto"].includes(url.slice(0, url.indexOf(":")))
+    : url.startsWith("//");
+};
+
+const replaceUrl = () => {
+  return (tree: any) => {
+    visit(tree, "element", (node) => {
+      if (
+        node.tagName === "a" &&
+        typeof node.properties.href === "string" &&
+        !isExternal(node.properties.href)
+      ) {
+        node.properties.href = join("/zh-tw", node.properties.href);
+      }
+    });
+  };
+};
+
+const processor = rehype()
+  .use(rehypeParser)
+  .use(replaceUrl)
+  .use(rehypeStringify);
+
+let contents = await Astro.slots.render("default");
+
+contents = convertToZH_TW(contents);
+contents = processor.processSync(contents).value as string;
+---
+
+<Fragment set:html={contents} />

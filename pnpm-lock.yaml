@@ -17,11 +17,32 @@ dependencies:
   dayjs:
     specifier: ^1.11.10
     version: 1.11.10
+  is-absolute-url:
+    specifier: ^4.0.1
+    version: 4.0.1
+  opencc-js:
+    specifier: ^1.0.5
+    version: 1.0.5
+  rehype:
+    specifier: ^13.0.1
+    version: 13.0.1
+  rehype-parse:
+    specifier: ^9.0.0
+    version: 9.0.0
+  rehype-stringify:
+    specifier: ^10.0.0
+    version: 10.0.0
   sharp:
     specifier: ^0.33.2
     version: 0.33.2
+  unist-util-visit:
+    specifier: ^5.0.0
+    version: 5.0.0
 
 devDependencies:
+  '@types/opencc-js':
+    specifier: ^1.0.3
+    version: 1.0.3
   sass:
     specifier: ^1.69.6
     version: 1.69.6
@@ -1047,6 +1068,10 @@ packages:
     resolution: {integrity: sha512-k5fggr14DwAytoA/t8rPrIz++lXK7/DqckthCmoZOKNsEbJkId4Z//BqgApXBUGrGddrigYa1oqheo/7YmW4rg==}
     dependencies:
       undici-types: 5.26.5
+    dev: true
+
+  /@types/opencc-js@1.0.3:
+    resolution: {integrity: sha512-TENp7YkI2hNlc4dplhivSHj0hU4DORCK56VY7rniaSfA5f87uD3uv+kPIRuH9h64TGv976iVFi4gEHZZtS2y8Q==}
     dev: true
 
   /@types/ps-tree@1.1.6:
@@ -2145,6 +2170,11 @@ packages:
     resolution: {integrity: sha512-EcKzdTHVe8wFVOGEYXiW9WmJXPjqi1T+234YpJr98RiFYKHV3cdy1+3mkTE+KHTHxFFLH51SfaGOoUdW+v7ViQ==}
     dev: false
 
+  /is-absolute-url@4.0.1:
+    resolution: {integrity: sha512-/51/TKE88Lmm7Gc4/8btclNXWS+g50wXhYJq8HWIBAGUBnoAdRu1aXeh364t/O7wXDAcTJDP8PNuNKWUDWie+A==}
+    engines: {node: ^12.20.0 || ^14.13.1 || >=16.0.0}
+    dev: false
+
   /is-alphabetical@2.0.1:
     resolution: {integrity: sha512-FWyyY60MeTNyeSRpkM2Iry0G9hpr7/9kD40mD/cGQEuilcZYS4okz8SN2Q6rLCJ8gbCt6fN+rC+6tMGS99LaxQ==}
     dev: false
@@ -3077,6 +3107,10 @@ packages:
     engines: {node: '>=12'}
     dependencies:
       mimic-fn: 4.0.0
+    dev: false
+
+  /opencc-js@1.0.5:
+    resolution: {integrity: sha512-LD+1SoNnZdlRwtYTjnQdFrSVCAaYpuDqL5CkmOaHOkKoKh7mFxUicLTRVNLU5C+Jmi1vXQ3QL4jWdgSaa4sKjg==}
     dev: false
 
   /ora@7.0.1:

@@ -1,6 +1,6 @@
 ---
 import BaseLayout from './BaseLayout.astro';
-const { frontmatter, isRoot=false } = Astro.props;
+const { frontmatter, isRoot=false, language } = Astro.props;
 
 const headerProps = {
 	title: frontmatter.title,
@@ -15,6 +15,7 @@ const baseLayoutProps = {
 	keywords: frontmatter.keywords,
 	description: frontmatter.desc,
 	headerProps,
+	language,
 }
 
 ---
