@@ -751,21 +751,41 @@ section.footnotes ol {
     /* 添加淡出动画 */
 }
 
-.main .main-meta-author, .main strong, .main h3, .main h4, .key, article b, article h2, .article-page .article-meta {
+.nav-droplist-btn-with-icon{
+    color:#808080;
+
+    &::before {
+        content: '';
+        display: inline-block;
+        width: 1.2em;
+        height: 1.2em;
+        background-size: 1.2em 1.2em;
+        vertical-align: sub;
+        // margin-right: 0.15em;
+        background-repeat: no-repeat;
+    }
+}
+
+#color-switch::before {
+    background-image: url("data:image/svg+xml,%3csvg style='vertical-align: bottom%3b' width='20' height='20' viewBox='0 0 48 48' fill='none' xmlns='http://www.w3.org/2000/svg'%3e %3cpath fill-rule='evenodd' clip-rule='evenodd' d='M24 4C12.9543 4 4 12.9543 4 24C4 35.0457 12.9543 44 24 44V4Z' stroke='grey' stroke-width='4' stroke-linecap='round' stroke-linejoin='round' /%3e %3cpath d='M24 4C35.0457 4 44 12.9543 44 24C44 35.0457 35.0457 44 24 44V4Z' fill='none' stroke='grey' stroke-width='4' stroke-linejoin='round' /%3e %3cpath d='M24 36H9' stroke='grey' stroke-width='4' stroke-linecap='round' stroke-linejoin='round' /%3e %3cpath d='M24 28H5' stroke='grey' stroke-width='4' stroke-linecap='round' stroke-linejoin='round' /%3e %3cpath d='M24 20H5' stroke='grey' stroke-width='4' stroke-linecap='round' stroke-linejoin='round' /%3e %3cpath d='M24 12H9' stroke='grey' stroke-width='4' stroke-linecap='round' stroke-linejoin='round' /%3e %3c/svg%3e");
+}
+
+#language-switch::before {
+    background-image: url("data:image/svg+xml,%3csvg width='20' height='20' viewBox='0 0 48 48' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M28.2857 37H39.7143M42 42L39.7143 37L42 42ZM26 42L28.2857 37L26 42ZM28.2857 37L34 24L39.7143 37H28.2857Z' stroke='grey' stroke-width='4' stroke-linecap='round' stroke-linejoin='round'/%3e%3cpath d='M16 6L17 9' stroke='grey' stroke-width='4' stroke-linecap='round' stroke-linejoin='round'/%3e%3cpath d='M6 11H28' stroke='grey' stroke-width='4' stroke-linecap='round' stroke-linejoin='round'/%3e%3cpath d='M10 16C10 16 11.7895 22.2609 16.2632 25.7391C20.7368 29.2174 28 32 28 32' stroke='grey' stroke-width='4' stroke-linecap='round' stroke-linejoin='round'/%3e%3cpath d='M24 11C24 11 22.2105 19.2174 17.7368 23.7826C13.2632 28.3478 6 32 6 32' stroke='grey' stroke-width='4' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e");
+}
+
+.main .main-meta-author, .main strong, .main h3, .main h4, .key, article b, article h2, .article-page .article-meta, .nav-droplist-btn-with-icon {
     font-family: '思源黑体', 'Noto Sans SC', 'Noto Sans CJK SC', 'Source Han Sans SC', 'Source Han Sans CN', 'Source Han Sans', 'Noto Sans', 'Noto Sans SC', 'PingFang SC', 'WenQuanYi Micro Hei', 'Heiti SC', 'STHeiti', 'SimHei', sans-serif;
 }
 
-html[lang="zh-TW"] {
-
+html:lang(zh-TW) {
     body {
         font-family: '思源宋體', 'Noto Serif TC', 'PingFang TC', 'Hiragino Sans GB', 'WenQuanYi Micro Hei', 'Microsoft JhengHei', sans-serif;
     }
 
-    .main .main-meta-author, .main strong, .main h3, .main h4, .key, article b, article h2, .article-page .article-meta {
+    .main .main-meta-author, .main strong, .main h3, .main h4, .key, article b, article h2, .article-page .article-meta, .nav-droplist-btn-with-icon {
         font-family: "思源黑體", "Noto Sans TC", "Noto Sans CJK TC", "Source Han Sans TC", "Source Han Sans TW", "Source Han Sans", "Noto Sans", "Noto Sans TC", "PingFang TC", "WenQuanYi Micro Hei", "Heiti TC", "STHeiti", "SimHei", sans-serif;
     }
-    
-
 }
 
 @import "dark";

@@ -125,6 +125,10 @@ const frontmatter = {
     </p>
     <div id="domain-notice"></div>
     <div class="browser_tip"></div>
+    {
+        language == 'zh-tw' && 
+        <p class="bg-light tip-bar"><span class="darkmode-ignore">ℹ️</span> 本页面由自动化程序从简体中文转换而来，如发现错误欢迎<a href="/general/communicate">报告给我们</a>。</p>
+    }
     <br>
     <div style="color:grey; font-size:.8em;">构建日期 {date}</div>
     <Card href="main/human-reproductive-system" bgID="no1" title="人类生殖系统" enTitle="Human Reproductive System"/>
@@ -154,4 +158,30 @@ const frontmatter = {
         <p>近几十年来，中国青少年性发育成熟年龄不断提前，性观念越来越趋于开放，对婚前性行为持接纳态度的比例较高，但同时他们普遍缺乏性与生殖健康知识和安全性行为意识。在此背景下，青少年发生性传播感染、意外妊娠、人工流产以及遭受性和性别暴力的风险不断增加，因此性教育至关重要。</p>
         <footer>联合国教科文组织&emsp;联合国人口基金</footer>
     </blockquote>
+    <script is:inline>
+        const domains = [
+            "knowsex.net", 
+            "knowsex.vercel.app", 
+            "knowsex.on.fleek.co", 
+            "knowsex.github.io", 
+            "knowsex.pages.dev", 
+            "knowsex.prvcy.page", 
+            "knowsex.eu.org",
+
+            "sex.edu.hoilai.com",
+            "sex.edu.laifun.cn"
+        ];
+        const domainCheckHostname = window.location.hostname;
+        var domainCheckValid = false;
+        domains.forEach(function(domain) {
+            if (domainCheckHostname === domain || domainCheckHostname.endsWith("." + domain)) {
+                domainCheckValid = true;
+            }
+        });
+        if (!domainCheckValid) {
+            if(document.getElementById("domain-notice")){
+                document.getElementById("domain-notice").innerHTML = `<p class="bg-light tip-bar"><span class="darkmode-ignore">ℹ️</span> 您正在访问非官方提供的镜像网站。所提供的内容可能已经陈旧，最新页面请访问 <a href="https://knowsex.net/">knowsex.net</a>。</p>`;
+            }
+        }
+    </script>
 </Layout>
