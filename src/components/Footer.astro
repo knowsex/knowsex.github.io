@@ -229,8 +229,7 @@
         </p>
     </div>
 </footer>
-<script src="/script/script.js" is:inline></script>
-<script src="/script/domain-check.js" is:inline></script>
+<script src="/script/script.js?20240428" is:inline></script>
 <script is:inline>
     // Dark mode requires
     function chooseMode(mode) {
@@ -276,5 +275,21 @@
         }
     }
     window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', matchSys);
+
+    function switchLanguage(lang) {
+        let path = window.location.pathname;
+
+        if (!path.startsWith("/zh-tw") && lang === "zh-tw") {
+            window.location.href = "/zh-tw" + path;
+            localStorage.setItem("userLang", "zh-tw");
+        } 
+        
+        else if (path.startsWith("/zh-tw") && lang === "zh-hans") {
+            window.location.href = path.replace(/^\/zh-tw/, "");
+            localStorage.setItem("userLang", "zh-hans");
+        }
+
+    }
+
 </script>
 <script src="https://lf26-cdn-tos.bytecdntp.com/cdn/expire-1-M/instant.page/5.1.0/instantpage.min.js"></script>

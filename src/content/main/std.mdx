@@ -1,44 +1,27 @@
 ---
-import Layout from '../../../layouts/Index.astro';
-import Card from "../../../components/Card.astro";
-const title = '性传播疾病';
-const enTitle = 'Sexually Transmitted Diseases';
-const keywords = ['性传播疾病','性病','STD','STDs'];
-const desc = "KnowSex 是一个性教育网站，内容涵盖生殖系统、避孕、媒介素养等多方面内容，并提供问答服务。";
+title: 性传播疾病
+enTitle: Sexually Transmitted Diseases
+desc: KnowSex 是一个性教育网站，内容涵盖生殖系统、避孕、媒介素养等多方面内容，并提供问答服务。
+bgPath: /source/img/dominoes.jpg
+ifIndex: true
+isRoot: false
+keywords: 
+- 性传播疾病
+- 性病
+- STD
+- STDs
 ---
-<Layout title={title} desc={desc} keywords={keywords} isRoot={false} enTitle={enTitle} bgPath="/source/img/dominoes.jpg">
-
-<style is:global>
-#std-bg {
-    background-image: url('/source/img/dominoes.jpg');
-}
-#syphilis-bg {
-    background-image: url('/source/img/Treponema_pallidum.jpg');
-}
-#gonorrhea-bg {
-    background-image: url('/source/img/Neisseria_gonorrhoeae.jpg');
-}
-#genital-wart-bg {
-	background-image: url('/source/img/Condyloma_acuminatum-low_mag.jpg');
-}
-#aids-bg {
-	background-image: url('/source/img/aids-cover.jpg');
-}
-</style>
+import './_std.css';
+import Card from "@/components/Card.astro";
 
 <p><strong>性传播疾病</strong>指主要与性行为有关、通过性接触等行为传播的一类疾病。此类疾病并不仅影响到生殖系统，还会影响到身体其他部位。</p>
 <p>根据中华人民共和国卫生部颁布的<a target="_blank" href="http://www.nhc.gov.cn/fzs/s3576/201808/24b10d17a2b74e42a9385254cf6f3ccd.shtml">《性病防治管理办法》</a>，性传播疾病主要包括<strong>梅毒</strong>、<strong>淋病</strong>、<strong>生殖道沙眼衣原体感染</strong>、<strong>尖锐湿疣</strong>、<strong>生殖器疱疹</strong>和<strong>艾滋病</strong>六种。此外，性传播疾病还有<strong>软下疳</strong>、<strong>乙肝</strong>等。</p>
 <p class="bg-light tip-bar">
     <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M10 28V35H18" stroke="#333" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><path d="M18 28H42V42H18V35V28Z" fill="none" stroke="#333" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><line x1="6" y1="13.5" x2="6" y2="12.5" stroke="#333" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><line x1="6" y1="20" x2="6" y2="19" stroke="#333" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><line x1="6" y1="7" x2="6" y2="6" stroke="#333" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><line x1="32" y1="13.5" x2="32" y2="12.5" stroke="#333" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><line x1="32" y1="20" x2="32" y2="19" stroke="#333" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><line x1="32" y1="7" x2="32" y2="6" stroke="#333" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><line x1="32" y1="20" x2="31" y2="20" stroke="#333" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><line x1="7" y1="20" x2="6" y2="20" stroke="#333" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><line x1="7" y1="6" x2="6" y2="6" stroke="#333" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><line x1="13" y1="6" x2="12" y2="6" stroke="#333" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><line x1="19.5" y1="6" x2="18.5" y2="6" stroke="#333" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><line x1="19.5" y1="20" x2="18.5" y2="20" stroke="#333" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><line x1="26" y1="6" x2="25" y2="6" stroke="#333" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><line x1="13" y1="20" x2="12" y2="20" stroke="#333" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><line x1="26" y1="20" x2="25" y2="20" stroke="#333" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><line x1="32" y1="6" x2="31" y2="6" stroke="#333" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></svg>
-    本页面的子页面未来会有新增。
+    <span>本页面的子页面未来会有新增。</span>
 </p><br/>
 
 <Card href="/main/std/syphilis" bgID="syphilis-bg" title="梅毒" enTitle="Syphilis"/>
 <Card href="/main/std/gonorrhea" bgID="gonorrhea-bg" title="淋病" enTitle="Gonorrhea"/>
 <Card href="/main/std/genital-wart" bgID="genital-wart-bg" title="尖锐湿疣" enTitle="Genital Wart"/>
 <Card href="/main/std/aids" bgID="aids-bg" title="艾滋病" enTitle="AIDS"/>
-
-
-
-
-</Layout>

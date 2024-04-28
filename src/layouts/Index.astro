@@ -1,20 +1,21 @@
 ---
 import BaseLayout from './BaseLayout.astro';
-const { keywords, title, desc, enTitle='', bgPath='', isRoot=false, isIndex=true } = Astro.props;
+const { frontmatter, isRoot=false, language } = Astro.props;
 
 const headerProps = {
-	title,
-	enTitle,
-	bgPath,
-	isIndex,
+	title: frontmatter.title,
+	enTitle: frontmatter.enTitle,
+	bgPath: frontmatter.bgPath,
+	isIndex: true,
+	isRoot: isRoot,
 }
 
 const baseLayoutProps = {
-	isRoot,
-	title: isRoot ? "KnowSex" : title + " - KnowSex",
-	keywords,
-	description: desc,
+	title: isRoot ? "KnowSex" : frontmatter.title + " - KnowSex",
+	keywords: frontmatter.keywords,
+	description: frontmatter.desc,
 	headerProps,
+	language,
 }
 
 ---

@@ -1,7 +1,7 @@
 ---
-import HeadImage from '../components/HeadImage.astro';
+import HeadImage from '@/components/HeadImage.astro';
 import BaseLayout from './BaseLayout.astro';
-const { frontmatter } = Astro.props;
+const { frontmatter, language } = Astro.props;
 
 // 如果是全站首页
 const isRoot = frontmatter.title == "首页" ? true : false;
@@ -13,7 +13,8 @@ const baseLayoutProps = {
 	description: frontmatter.desc,
 	isRoot,
     author: frontmatter.author,
-    review: frontmatter.review
+    review: frontmatter.review,
+    language,
 }
 
 ---

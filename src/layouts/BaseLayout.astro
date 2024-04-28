@@ -1,28 +1,60 @@
 ---
+import CHTConverter from "@/components/CHTConverter.astro";
 import Footer from "@/components/Footer.astro";
 import Header from "@/components/Header.astro";
+import { convertToZH_TW } from "@/utils/cht-converter";
 
-const { title, keywords, description, isRoot, headerProps } = Astro.props;
+interface Props {
+	title: string;
+	keywords: string[];
+	description: string;
+	headerProps?: Record<string, unknown>;
+	language?: 'zh-hans' | 'zh-tw';
+}
+
+const { title, keywords, description, headerProps, language = 'zh-hans' } = Astro.props;
 
 const baseKeywords = "性教育,KnowSex,生理知识,性科普";
-const finalKeywords = baseKeywords + "," + keywords.join(",");
+const finalKeywords = baseKeywords + "," + (keywords ? keywords.join(",") : '');
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 ---
 <!DOCTYPE html>
-<html lang="zh-Hans" class="han-init" prefix="og: http://ogp.me/ns#">
+<html lang={language} class="han-init" prefix="og: http://ogp.me/ns#">
 
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-
-	<meta name="keywords" content={finalKeywords} />
-	<meta name="description" content={description} />
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	{
+		language === 'zh-hans' && (
+			<meta name="keywords" content={finalKeywords} />
+			<meta name="description" content={description} />
+			<meta property="og:title" content={title} />
+			<meta property="og:description" content={description} />
+			<title>{title}</title>
+			<link
+			href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@700&family=Noto+Serif+SC:wght@400;700&display=swap"
+			rel="stylesheet">
+		)
+	}
+	{
+		language === 'zh-tw' && (
+			<meta name="keywords" content={convertToZH_TW(finalKeywords)} />
+			<meta name="description" content={convertToZH_TW(description)} />
+			<meta property="og:title" content={convertToZH_TW(title)} />
+			<meta property="og:description" content={convertToZH_TW(description)} />
+			<title>{convertToZH_TW(title)}</title>
+			<link
+			href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@600&family=Noto+Serif+TC:wght@400;700&display=swap"
+			rel="stylesheet">
+		)
+	
+	}
 
 	<meta property="og:image" content="/style/cover.jpg" />
-	<meta property="og:title" content={title} />
-	<meta property="og:description" content={description} />
-	<meta property="og:locale" content="zh_CN" />
+	
 	<meta property="og:site_name" content="KnowSex" />
 	<meta property="og:type" content="website" />
 
@@ -34,23 +66,31 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 	<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/style/logo_144.png" />
 
 	<!-- <base target="_blank"> -->
-	<title>{title}</title>
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
 	<script src="https://lf6-cdn-tos.bytecdntp.com/cdn/expire-1-M/jquery/3.1.0/jquery.min.js" type="application/javascript"></script>
 	<link href="https://lf6-cdn-tos.bytecdntp.com/cdn/expire-1-M/bootstrap/5.1.3/css/bootstrap.min.css" type="text/css" rel="stylesheet" />
 	<script src="https://lf6-cdn-tos.bytecdntp.com/cdn/expire-1-M/bootstrap/5.1.3/js/bootstrap.bundle.min.js" type="application/javascript"></script>
-	<link
-		href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@700&family=Noto+Serif+SC:wght@400;700&display=swap"
-		rel="stylesheet">
-	<link rel="stylesheet" href="/style/style.min.css?20240229">
+	
+	<link rel="stylesheet" href="/style/style.min.css?20240428">
 	<script async src="https://analytics.knowsex.net/script.js" data-website-id="74452ede-6372-4bf7-9f03-b9ecbe2f7978"></script>
 	<link rel="canonical" href={canonicalURL}/>
 </head>
 <body>
-    <Header {...headerProps} isRoot={isRoot}/>
-    <slot />
-    <Footer />
+	{
+		language === 'zh-hans' && (
+			<Header {...headerProps}/>
+				<slot />
+			<Footer />
+		)
+	}
+	{
+		language === 'zh-tw' && (
+			<CHTConverter>
+				<Header {...headerProps}/>
+					<slot />
+				<Footer />
+			</CHTConverter>
+		)
+	}
 </body>
 </html>

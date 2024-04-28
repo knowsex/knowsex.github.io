@@ -9,7 +9,43 @@ console.log("%c欢迎来到知性，一个性教育网站。如果你觉得网�
 // let founded = Math.floor((nowDate.getTime() - startDate.getTime())/1000/60/60/24)-1;
 // document.querySelector("#countDays").textContent = `📅 知性已成立 ${founded} 天。`;
 
+
 document.addEventListener('DOMContentLoaded', function() {
+
+    document.getElementById("switch-lang-zh-hans").textContent = "简体中文";
+    document.getElementById("switch-lang-zh-tw").textContent = "臺灣正體";
+
+    if(!localStorage.getItem("userLang")){
+      const currentPath = window.location.pathname;
+      const userLanguages = navigator.languages;
+      for(let i = 0; i < userLanguages.length; i++) {
+        let lang = userLanguages[i];
+        if(lang.startsWith("zh")) {
+          if(
+              lang.includes("Hans") ||
+              lang.includes("CN")   ||
+              lang.includes("MY")   ||
+              lang.includes("SG")
+          ) {
+            if(currentPath.startsWith("/zh-tw")) window.location.href = currentPath.replace(/^\/zh-tw/, "");
+            else return;
+          }
+    
+          else if(
+              lang.includes("Hant") ||
+              lang.includes("TW")   ||
+              lang.includes("HK")   ||
+              lang.includes("MO")
+          ) {
+            if(!currentPath.startsWith("/zh-tw")) window.location.href = "/zh-tw" + currentPath;
+            else return;
+          }
+        }
+      }
+    
+    }
+    
+
     var references = document.querySelectorAll('sup.reference');
     references.forEach(function(reference) {
       reference.addEventListener('click', function(event) {

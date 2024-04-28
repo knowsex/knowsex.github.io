@@ -1,0 +1,110 @@
+---
+import { getCollection } from "astro:content";
+import dayjs from "dayjs";
+import utc from "dayjs/plugin/utc";
+
+import MainLayout from "@/layouts/Main.astro";
+import IndexLayout from "@/layouts/Index.astro";
+import MarkdownPostLayout from "@/layouts/Article.astro";
+import type { AstroComponentFactory } from "astro/runtime/server/index.js";
+import CHTConverter from "@/components/CHTConverter.astro";
+import Sitemap from "./sitemap.astro";
+
+const GeneralLayout = MainLayout;
+dayjs.extend(utc);
+
+const chtPrefix = "zh-tw";
+
+export async function getStaticPaths() {
+  const chtPrefix = "zh-tw";
+  const articleEntries = await getCollection("article");
+  const generalEntries = await getCollection("general");
+  const mainEntries = await getCollection("main");
+
+  const paths = [
+    ...mainEntries.map((main) => ({
+      params: { path: `/main/${main.slug}` },
+      props: { entry: main },
+    })),
+    ...generalEntries.map((general) => ({
+      params: { path: `/general/${general.slug}` },
+      props: { entry: general },
+    })),
+    ...articleEntries.map((article) => ({
+      params: { path: `/article/${article.slug}` },
+      props: { entry: article },
+    })),
+    // 动态路由不能覆盖 index，改用在 index.astro 中渲染主页内容，在 zh-tw.astro 中渲染 zh-tw 的主页
+    // { params: { path: "/" }, props: { type: "index" } },
+    { params: { path: "/sitemap" }, props: { type: "sitemap" } },
+  ];
+
+  paths.push(
+    ...paths.map((path) => ({
+      ...path,
+      params: { path: `${chtPrefix}${path.params.path}` },
+    }))
+  );
+
+  return paths;
+}
+
+const { entry } = Astro.props;
+const { path } = Astro.params;
+
+const language = path.startsWith(chtPrefix) ? "zh-tw" : "zh-hans";
+
+let lastModified: string = "",
+  Content: AstroComponentFactory | undefined = undefined;
+if (entry) {
+  const result = await entry?.render();
+  Content = result.Content;
+
+  //以本港时间记录最后修改日期
+  lastModified = dayjs(result.remarkPluginFrontmatter.lastModified)
+    .utcOffset(8)
+    .format("YYYY-MM-DD");
+}
+---
+
+{
+  !entry && (
+    <CHTConverter>
+      <Sitemap />
+    </CHTConverter>
+  )
+}
+
+{
+  entry?.collection === "main" &&
+    Content &&
+    (entry.data.ifIndex ? (
+      <IndexLayout language={language} frontmatter={entry.data} isRoot={false}>
+        <Content />
+      </IndexLayout>
+    ) : (
+      <MainLayout language={language} frontmatter={entry.data}>
+        <Content />
+      </MainLayout>
+    ))
+}
+
+{
+  entry?.collection === "general" && Content && (
+    <GeneralLayout language={language} frontmatter={entry.data}>
+      <Content />
+    </GeneralLayout>
+  )
+}
+
+{
+  entry?.collection === "article" && Content && (
+    <MarkdownPostLayout
+      language={language}
+      frontmatter={entry.data}
+      lastModified={lastModified}
+    >
+      <Content />
+    </MarkdownPostLayout>
+  )
+}

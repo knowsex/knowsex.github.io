@@ -70,26 +70,20 @@ const LogoTag = isRoot ? "h1" : "span";
                     <li class="nav-item">
                         <a class="nav-link" href="/sitemap">站点地图</a>
                     </li>
+
                     <li class="dropdown">
-                        <a class="nav-link" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            <svg style="vertical-align: bottom;" width="20"
-                                height="20" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path fill-rule="evenodd" clip-rule="evenodd"
-                                    d="M24 4C12.9543 4 4 12.9543 4 24C4 35.0457 12.9543 44 24 44V4Z"
-                                    stroke="#808080" stroke-width="4" stroke-linecap="round"
-                                    stroke-linejoin="round" />
-                                <path d="M24 4C35.0457 4 44 12.9543 44 24C44 35.0457 35.0457 44 24 44V4Z"
-                                    fill="none" stroke="#808080" stroke-width="4" stroke-linejoin="round" />
-                                <path d="M24 36H9" stroke="#808080" stroke-width="4" stroke-linecap="round"
-                                    stroke-linejoin="round" />
-                                <path d="M24 28H5" stroke="#808080" stroke-width="4" stroke-linecap="round"
-                                    stroke-linejoin="round" />
-                                <path d="M24 20H5" stroke="#808080" stroke-width="4" stroke-linecap="round"
-                                    stroke-linejoin="round" />
-                                <path d="M24 12H9" stroke="#808080" stroke-width="4" stroke-linecap="round"
-                                    stroke-linejoin="round" />
-                            </svg>
-                            <span style="font-family: 'Noto Sans SC', '黑体', sans-serif;color:#808080">外观</span>
+                        <a class="nav-link nav-droplist-btn-with-icon" id="language-switch" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <span>语言</span>
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end text-center">
+                            <li><a class="dropdown-item" id="switch-lang-zh-hans" onclick="switchLanguage('zh-hans')">简体中文</a></li>
+                            <li><a class="dropdown-item" id="switch-lang-zh-tw" onclick="switchLanguage('zh-tw')">臺灣正體</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="dropdown">
+                        <a class="nav-link nav-droplist-btn-with-icon" id="color-switch" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <span>外观</span>
                         </a>
                         <ul class="dropdown-menu dropdown-menu-end text-center">
                             <li><a class="dropdown-item" onclick="chooseMode('sys')">跟随系统</a></li>

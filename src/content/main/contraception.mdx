@@ -1,6 +1,4 @@
 ---
-layout: /src/layouts/Main.astro
-
 title: 避孕
 enTitle: Contraceptive
 desc: "关于避孕的介绍。涵盖多种避孕方法的介绍和避孕方法的比较说明。"
@@ -9,11 +7,11 @@ keywords:
  - 避孕
 ---
 
-import Cite from '/src/components/CiteSup.astro';
-import ReferList from '/src/components/CiteReference.astro';
-import Btn from '/src/components/OutlineBtn.astro';
-import Key from '/src/components/KeySentence.astro';
-import End from '/src/components/ArticleEnd.astro';
+import Cite from '@/components/CiteSup.astro';
+import ReferList from '@/components/CiteReference.astro';
+import Btn from '@/components/OutlineBtn.astro';
+import Key from '@/components/KeySentence.astro';
+import End from '@/components/ArticleEnd.astro';
 import Picture from '@/components/Picture.astro';
 import Img1 from '@/img/1.jpg';
 import Img2 from '@/img/2.jpg';
@@ -26,7 +24,7 @@ import Img8 from '@/img/8.jpg';
 import Img9 from '@/img/9.jpg';
 import Img10 from '@/img/10.jpg';
 import Zwangerschapstesten from '@/img/Zwangerschapstesten.jpg'
-import SpermTravelDirection from '@/img/精子行进方向.jpg'
+import SpermTravelDirection from '@/img/sperm-travel-direction.jpg'
 import Uterus from '@/img/uterus-15-edited.png'
 
 export const citeList = [
@@ -321,8 +319,8 @@ export const citeList = [
         <th style="min-width: 120px;">作用机制</th>
         <th style="min-width: 120px;">有效性：每年每百名妇女<strong>坚持正确使用</strong>的怀孕次数</th>
         <th style="min-width: 120px;">有效性：每年每百名妇女<strong>一般使用</strong>的怀孕次数</th>
-        <th style="min-width: 90px;">参考药品费用（元）</th>
-        <th style="min-width: 90px;">参考手术费用（元）</th>
+        <th style="min-width: 90px;">参考药品费用（人民币）</th>
+        <th style="min-width: 90px;">参考手术费用（人民币）</th>
         <th style="min-width: 90px;">备注</th>
         </tr>
         <tr>

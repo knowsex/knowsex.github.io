@@ -1,6 +1,6 @@
 ---
 import BaseLayout from './BaseLayout.astro';
-const {frontmatter, lastModified} = Astro.props;
+const {frontmatter, lastModified, language} = Astro.props;
 const {tags: keywords, description} = frontmatter
 const pubDate = new Date(frontmatter.pubDate).toISOString().slice(0, 10);
 
@@ -13,6 +13,7 @@ const baseLayoutProps = {
 	keywords,
 	description,
 	isRoot,
+	language,
 }
 
 ---
