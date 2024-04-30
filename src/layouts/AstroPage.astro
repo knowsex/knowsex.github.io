@@ -1,6 +1,6 @@
 ---
-import HeadImage from '../components/HeadImage.astro';
-import BaseLayout from './BaseLayout.astro';
+import HeadImage from "../components/HeadImage.astro";
+import BaseLayout from "./BaseLayout.astro";
 const { title, enTitle, keywords, desc, bgPath, language } = Astro.props;
 
 // 如果是全站首页
@@ -8,19 +8,19 @@ const isRoot = title == "首页" ? true : false;
 const insTitle = isRoot ? "KnowSex" : title + " - KnowSex";
 
 const baseLayoutProps = {
-	title: insTitle,
-	keywords,
-	description: desc,
-	isRoot,
-    language,
-}
-
+  title: insTitle,
+  keywords,
+  description: desc,
+  isRoot,
+  language,
+};
 ---
+
 <BaseLayout {...baseLayoutProps}>
-	<article itemscope="" itemtype="http://schema.org/Article">
-        <HeadImage title={title} enTitle={enTitle} bgPath={bgPath} />
-        <div class="main">
-            <slot />
-        </div>
-    </article>
+  <article itemscope="" itemtype="http://schema.org/Article">
+    <HeadImage title={title} enTitle={enTitle} bgPath={bgPath} />
+    <div class="main">
+      <slot />
+    </div>
+  </article>
 </BaseLayout>

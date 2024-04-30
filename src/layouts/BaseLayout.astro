@@ -1,7 +1,13 @@
 ---
-import CHTConverter from "@/components/CHTConverter.astro";
-import Footer from "@/components/Footer.astro";
-import Header from "@/components/Header.astro";
+// eslint-disable prettier/prettier
+// eslint-disable-next-line prettier/prettier
+// Bug of astro prettier in the file with <script>. Ref: https://github.com/withastro/prettier-plugin-astro/issues/407
+
+import Footer from "../components/Footer.astro";
+import Header from "../components/Header.astro";
+
+import CHTConverter from "../components/CHTConverter.astro";
+
 import { convertToZH_TW } from "@/utils/cht-converter";
 
 interface Props {
@@ -19,7 +25,6 @@ const finalKeywords = baseKeywords + "," + (keywords ? keywords.join(",") : '');
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 ---
-<!DOCTYPE html>
 <html lang={language} class="han-init" prefix="og: http://ogp.me/ns#">
 
 <head>

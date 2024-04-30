@@ -1,14 +1,18 @@
 ---
 const { citeList } = Astro.props;
-let referHTML = '';
+let referHTML = "";
 for (let index = 0; index < citeList.length; index++) {
-    const cite = citeList[index];
-    //自动寻找 caption 里的链接打上 a 标签
-    const caption = cite.caption.replace(/(https?:\/\/[^\s]+)/g, '<a href="$1" target="_blank" class="reference-link">$1</a>');
-    referHTML += `<li id="cite_note-${cite.name}"><span class="mw-cite-backlink"><b><a href="#cite_ref-${cite.name}" aria-label="跳转" title="跳转" target="_self"><sup>^</sup></a></b></span>&nbsp;<span class="reference-text">${caption}</span></li>`;
+  const cite = citeList[index];
+  //自动寻找 caption 里的链接打上 a 标签
+  const caption = cite.caption.replace(
+    /(https?:\/\/[^\s]+)/g,
+    '<a href="$1" target="_blank" class="reference-link">$1</a>',
+  );
+  referHTML += `<li id="cite_note-${cite.name}"><span class="mw-cite-backlink"><b><a href="#cite_ref-${cite.name}" aria-label="跳转" title="跳转" target="_self"><sup>^</sup></a></b></span>&nbsp;<span class="reference-text">${caption}</span></li>`;
 }
 ---
+
 <h2 class="reference">参考资料</h2>
-<ol class="reference-list"> 
-    <Fragment set:html={referHTML} />
+<ol class="reference-list">
+  <Fragment set:html={referHTML} />
 </ol>

@@ -1,16 +1,23 @@
 ---
-import Layout from '@/layouts/AstroPage.astro';
-import End from '@/components/ArticleEnd.astro';
-const title = '站点地图';
-const enTitle = 'Sitemap';
-const keywords = [''];
+import Layout from "@/layouts/AstroPage.astro";
+import End from "@/components/ArticleEnd.astro";
+const title = "站点地图";
+const enTitle = "Sitemap";
+const keywords = [""];
 const desc = "此页面罗列 KnowSex 的页面链接。";
 const bgPath = "/source/img/map_zhengzhou_metro.jpg";
 ---
-<Layout title={title} desc={desc} keywords={keywords} enTitle={enTitle} bgPath={bgPath}>
-<p>您可通过此页快速导航至您欲访问的页面。</p>
-<h2 class="mt-4 mb-4" id="正文">正文</h2>
-<div class="container">
+
+<Layout
+  title={title}
+  desc={desc}
+  keywords={keywords}
+  enTitle={enTitle}
+  bgPath={bgPath}
+>
+  <p>您可通过此页快速导航至您欲访问的页面。</p>
+  <h2 class="mt-4 mb-4" id="正文">正文</h2>
+  <div class="container">
     <div class="row row-cols-2 row-cols-sm-3 row-cols-md-4">
       <div class="col py-2">
         <a href="/main/human-reproductive-system">人类生殖系统</a>
@@ -58,45 +65,63 @@ const bgPath = "/source/img/map_zhengzhou_metro.jpg";
 
     <div class="col-12 py-2 mt-3">
       <a href="/main/other-media" class="key">其他媒介版本</a>
-    </div>    
-</div>
-
-<h2 class="mt-4 mb-4" id="站务">站务</h2>
-<div class="container">
-    <div class="row row-cols-2 row-cols-sm-3 row-cols-md-4">
-        <div class="col py-2">
-          <a href="/general/about">关于</a>
-        </div>
-        <div class="col py-2">
-          <a href="/general/copyright">版权许可</a>
-        </div>
-        <div class="col py-2">
-          <a href="/general/encourage">支持</a>
-        </div>
-        <div class="col py-2">
-          <a href="/general/fund">资金详单</a>
-        </div>
-        <div class="col py-2">
-          <a href="/general/communicate">来信沟通</a>
-        </div>
-        <div class="col py-2">
-          <a target="_blank" href="https://xingjiaoyu.net/" class="external-link">镜像站列表</a>
-        </div>
     </div>
-</div>
+  </div>
 
-<h2 class="mt-4 mb-4" id="附属网站">附属网站</h2>
-<div class="container">
-  <div class="row row-cols-2 row-cols-sm-3 row-cols-md-4">
+  <h2 class="mt-4 mb-4" id="站务">站务</h2>
+  <div class="container">
+    <div class="row row-cols-2 row-cols-sm-3 row-cols-md-4">
+      <div class="col py-2">
+        <a href="/general/about">关于</a>
+      </div>
+      <div class="col py-2">
+        <a href="/general/copyright">版权许可</a>
+      </div>
+      <div class="col py-2">
+        <a href="/general/encourage">支持</a>
+      </div>
+      <div class="col py-2">
+        <a href="/general/fund">资金详单</a>
+      </div>
+      <div class="col py-2">
+        <a href="/general/communicate">来信沟通</a>
+      </div>
+      <div class="col py-2">
+        <a target="_blank" href="https://xingjiaoyu.net/" class="external-link"
+          >镜像站列表</a
+        >
+      </div>
+    </div>
+  </div>
+
+  <h2 class="mt-4 mb-4" id="附属网站">附属网站</h2>
+  <div class="container">
+    <div class="row row-cols-2 row-cols-sm-3 row-cols-md-4">
       <div class="col py-2">
         <a target="_blank" href="https://res.knowsex.org/">中文性教育资源网</a>
       </div>
       <div class="col py-2">
-        <a target="_blank" href="https://post.knowsex.net/">KnowSex Post（博客）</a>
+        <a target="_blank" href="https://post.knowsex.net/"
+          >KnowSex Post（博客）</a
+        >
       </div>
+    </div>
   </div>
-</div>
 
-<End/>
-<p style="color: #bbb">本页封面图片作者是 <a target="_blank" href="https://commons.wikimedia.org/wiki/User:Windmemories">Windmemories</a> ，来自 <a target="_blank" href="https://commons.wikimedia.org/wiki/File:System_Map_of_Zhengzhou_Metro_(with_realistic_scale).png">Wikimedia Commons</a> 。该作品以 <a target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh">CC BY-SA 4.0</a> 发表，在选作背景图时略作修改。</p>
+  <End />
+  <p style="color: #bbb">
+    本页封面图片作者是 <a
+      target="_blank"
+      href="https://commons.wikimedia.org/wiki/User:Windmemories"
+      >Windmemories</a
+    > ，来自 <a
+      target="_blank"
+      href="https://commons.wikimedia.org/wiki/File:System_Map_of_Zhengzhou_Metro_(with_realistic_scale).png"
+      >Wikimedia Commons</a
+    > 。该作品以 <a
+      target="_blank"
+      href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh"
+      >CC BY-SA 4.0</a
+    > 发表，在选作背景图时略作修改。
+  </p>
 </Layout>

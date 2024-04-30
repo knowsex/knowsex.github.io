@@ -32,7 +32,7 @@ const isWhitelist = (url: string) => {
 // 链接以 ?ks-no-convert / #ks-no-convert 结尾
 const noConvertMark = (url: string) => {
   return url.endsWith("ks-no-convert");
-}
+};
 
 const replaceUrl = () => {
   return (tree: any) => {

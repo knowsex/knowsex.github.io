@@ -1,6 +1,7 @@
 ---
-import HeadImage from '@/components/HeadImage.astro';
-import BaseLayout from './BaseLayout.astro';
+import HeadImage from "@/components/HeadImage.astro";
+import BaseLayout from "./BaseLayout.astro";
+
 const { frontmatter, language } = Astro.props;
 
 // 如果是全站首页
@@ -8,27 +9,39 @@ const isRoot = frontmatter.title == "首页" ? true : false;
 const title = isRoot ? "KnowSex" : frontmatter.title + " - KnowSex";
 
 const baseLayoutProps = {
-	title,
-	keywords: frontmatter.keywords,
-	description: frontmatter.desc,
-	isRoot,
-    author: frontmatter.author,
-    review: frontmatter.review,
-    language,
-}
-
+  title,
+  keywords: frontmatter.keywords,
+  description: frontmatter.desc,
+  isRoot,
+  author: frontmatter.author,
+  review: frontmatter.review,
+  language,
+};
 ---
+
 <BaseLayout {...baseLayoutProps}>
-	<article itemscope="" itemtype="http://schema.org/Article">
-        { !frontmatter.removeCover && <HeadImage title={frontmatter.title} enTitle={frontmatter.enTitle} bgPath={frontmatter.bgPath} /> }
-        <div class="main">
-            {frontmatter.author &&
-            <div class="main-meta-author">
-                <div><span itemprop="author">{frontmatter.author}</span> / 撰写</div>
-                <div>{frontmatter.review && frontmatter.review + " / 审校" }</div>
+  <article itemscope="" itemtype="http://schema.org/Article">
+    {
+      !frontmatter.removeCover && (
+        <HeadImage
+          title={frontmatter.title}
+          enTitle={frontmatter.enTitle}
+          bgPath={frontmatter.bgPath}
+        />
+      )
+    }
+    <div class="main">
+      {
+        frontmatter.author && (
+          <div class="main-meta-author">
+            <div>
+              <span itemprop="author">{frontmatter.author}</span> / 撰写
             </div>
-            }
-            <slot />
-        </div>
-    </article>
+            <div>{frontmatter.review && frontmatter.review + " / 审校"}</div>
+          </div>
+        )
+      }
+      <slot />
+    </div>
+  </article>
 </BaseLayout>
