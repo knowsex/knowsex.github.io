@@ -20,7 +20,7 @@ pnpm-debug.log*
 # macOS-specific files
 .DS_Store
 
-.vscode/
+.vscode/settings.json
 
 # local scss dev output
 styles/*.css
