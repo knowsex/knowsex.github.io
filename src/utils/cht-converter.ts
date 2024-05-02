@@ -15,7 +15,6 @@ const customDict = [
   ["人乳头状瘤病毒", "人類乳突病毒"],
   ["综合征", "症候群"],
   ["卵泡", "濾泡"],
-  ["医学声明", "醫學聲<span></span>明"],
 
   // 信息技术名词
   ["社交媒体", "社群媒體"],
@@ -23,14 +22,15 @@ const customDict = [
 
   // 单位
   ["厘米", "公分"],
-
-  // 专有名词
-  ["术语在线", "术语在<span></span>線"],
-  ["[J].医学信息", "[J].醫學信<span></span>息"],
 ];
+
+// 保留的词汇，不转换惯用词，此列表中的用字必须是 OpenCC 标准
+const preservedIdiom = ["字節跳動", "醫學聲明", "術語在線", "[J].醫學信息"];
 
 export const convertToZH_TW = OpenCC.ConverterFactory(
   [customDict],
   OpenCC.Locale.from.cn, // 大陆 => OpenCC 标准
-  OpenCC.Locale.to.twp, // OpenCC 标准 => 台湾+自订
+  [preservedIdiom.map((entry) => `${entry} ${entry}`).join("|")].concat(
+    OpenCC.Locale.to.twp,
+  ), // OpenCC 标准 => 台湾+自订
 );
