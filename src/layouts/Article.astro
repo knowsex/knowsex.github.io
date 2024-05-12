@@ -1,7 +1,7 @@
 ---
-import BaseLayout from './BaseLayout.astro';
-const {frontmatter, lastModified, language} = Astro.props;
-const {tags: keywords, description} = frontmatter
+import BaseLayout from "./BaseLayout.astro";
+const { frontmatter, lastModified, language } = Astro.props;
+const { tags: keywords, description } = frontmatter;
 const pubDate = new Date(frontmatter.pubDate).toISOString().slice(0, 10);
 
 // 如果是全站首页
@@ -9,27 +9,26 @@ const isRoot = false;
 const title = isRoot ? "KnowSex" : frontmatter.title + " - KnowSex";
 
 const baseLayoutProps = {
-	title,
-	keywords,
-	description,
-	isRoot,
-	language,
-}
-
+  title,
+  keywords,
+  description,
+  isRoot,
+  language,
+};
 ---
+
 <BaseLayout {...baseLayoutProps}>
-	<article itemscope="" itemtype="http://schema.org/Article">
-        <div class="main article-page">
-					
-			<div class="article-meta">
-				<h1 itemprop="name">{frontmatter.title}</h1>
-				<div class="article-author">
-					<b>撰写</b> / <span itemprop="author">{frontmatter.author}</span>
-				</div>
-			</div>
-            <slot />
-			
-			<!-- <div>
+  <article itemscope="" itemtype="http://schema.org/Article">
+    <div class="main article-page">
+      <div class="article-meta">
+        <h1 itemprop="name">{frontmatter.title}</h1>
+        <div class="article-author">
+          <b>撰写</b> / <span itemprop="author">{frontmatter.author}</span>
+        </div>
+      </div>
+      <slot />
+
+      <!-- <div>
 				＃
 				<b>标签</b> / <ul class="tags">{
 					frontmatter.tags.map((tag) => {
@@ -37,12 +36,19 @@ const baseLayoutProps = {
 					})
 				}</ul>
 			</div> -->
-			<div class="text-muted article-bottom-meta">
-				<p>本页发布于 <time datetime={pubDate} itemprop="datePublished">{pubDate}</time></p>
-				<p>最后编辑于 <time datetime={lastModified} itemprop="dateModified">{lastModified}</time></p>
-			</div>
-			<!-- <hr/> -->
-        </div>
-		
-    </article>
+      <div class="text-muted article-bottom-meta">
+        <p>
+          本页发布于 <time datetime={pubDate} itemprop="datePublished"
+            >{pubDate}</time
+          >
+        </p>
+        <p>
+          最后编辑于 <time datetime={lastModified} itemprop="dateModified"
+            >{lastModified}</time
+          >
+        </p>
+      </div>
+      <!-- <hr/> -->
+    </div>
+  </article>
 </BaseLayout>

@@ -43,7 +43,7 @@ export async function getStaticPaths() {
     ...paths.map((path) => ({
       ...path,
       params: { path: `${chtPrefix}${path.params.path}` },
-    }))
+    })),
   );
 
   return paths;
@@ -102,8 +102,7 @@ if (entry) {
     <MarkdownPostLayout
       language={language}
       frontmatter={entry.data}
-      lastModified={lastModified}
-    >
+      lastModified={lastModified}>
       <Content />
     </MarkdownPostLayout>
   )

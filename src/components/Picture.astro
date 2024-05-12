@@ -35,7 +35,7 @@ const imageSources = await Promise.all([
               src: desktopSrc,
               format,
               media: "(min-width: 600px)",
-            })
+            }),
         )
         .concat(
           getImage({
@@ -43,11 +43,11 @@ const imageSources = await Promise.all([
             src: desktopSrc,
             format: desktopSrc.format,
             media: "(min-width: 600px)",
-          }) // 桌面端默认图片
+          }), // 桌面端默认图片
         )
     : []),
   ...targetFormats.map(
-    async (format) => await getImage({ ...props, src, format })
+    async (format) => await getImage({ ...props, src, format }),
   ),
 ]);
 ---
@@ -126,7 +126,7 @@ const imageSources = await Promise.all([
         function (this: HTMLImageElement) {
           this.style.setProperty("--filter", "none");
           this.style.setProperty("--warning", "none");
-        }
+        },
       );
     });
 </script>

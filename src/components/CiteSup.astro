@@ -1,15 +1,14 @@
 ---
-const { frontmatter } = Astro.props;
 const { citeName, citeList } = Astro.props;
 
-
-let citeHTML = '';
+let citeHTML = "";
 for (let index = 0; index < citeList.length; index++) {
-    const cite = citeList[index];
-    if(cite.name === citeName){
-        citeHTML = `<sup id="cite_ref-${citeName}" class="reference"><a href="#cite_note-${citeName}" target="_self" aria-label="佐证资料">${index+1}</a></sup>`;
-        break;
-    }
+  const cite = citeList[index];
+  if (cite.name === citeName) {
+    citeHTML = `<sup id="cite_ref-${citeName}" class="reference"><a href="#cite_note-${citeName}" target="_self" aria-label="佐证资料">${index + 1}</a></sup>`;
+    break;
+  }
 }
 ---
+
 <Fragment set:html={citeHTML} />

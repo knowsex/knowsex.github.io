@@ -24,28 +24,27 @@ const isAnchor = (url: string) => {
   return url.startsWith("#");
 };
 
-// 链接转换白名单
-const isWhitelist = (url: string) => {
-  return url.startsWith("/main/other-media");
+const isFile = (url: string) => {
+  return url.match(/\.[a-z]+$/gi);
 };
 
 // 链接以 ?ks-no-convert / #ks-no-convert 结尾
 const noConvertMark = (url: string) => {
   return url.endsWith("ks-no-convert");
-}
+};
+
+const shouldReplace = (href: unknown) =>
+  typeof href === "string" &&
+  !isExternal(href) &&
+  !isAnchor(href) &&
+  !isStartWithZH_TW(href) &&
+  !isFile(href) &&
+  !noConvertMark(href);
 
 const replaceUrl = () => {
   return (tree: any) => {
     visit(tree, "element", (node) => {
-      if (
-        node.tagName === "a" &&
-        typeof node.properties.href === "string" &&
-        !isExternal(node.properties.href) &&
-        !isAnchor(node.properties.href) &&
-        !isStartWithZH_TW(node.properties.href) &&
-        !noConvertMark(node.properties.href) &&
-        !isWhitelist(node.properties.href)
-      ) {
+      if (node.tagName === "a" && shouldReplace(node.properties.href)) {
         node.properties.href = join("/zh-tw", node.properties.href);
       }
     });

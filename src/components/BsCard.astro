@@ -1,17 +1,16 @@
 ---
 const { title, url, desc } = Astro.props;
-const href="https://" + url;
+const href = "https://" + url;
 ---
-<style>
-    
-</style>
+
+<style></style>
 <a class="col" target="_blank" href={href}>
-    <div class="card h-100">
-      <div class="card-body pt-4">
-        <h5 class="card-title text-center">{title}</h5>
-        <p class="card-url text-center">{url}</p>
-        <hr/>
-        <p class="card-text mx-3">{desc}</p>
-      </div>
+  <div class="card h-100">
+    <div class="card-body pt-4">
+      <h5 class="card-title text-center">{title}</h5>
+      <p class="card-url text-center">{url}</p>
+      <hr />
+      <p class="card-text mx-3">{desc}</p>
     </div>
+  </div>
 </a>

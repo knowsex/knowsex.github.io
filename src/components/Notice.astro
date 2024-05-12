@@ -1,7 +1,14 @@
 ---
-const { title='' } = Astro.props;
+const { title = "" } = Astro.props;
 ---
+
 <div class="notice bg-light px-4 pt-4 mb-3">
-    { title ? <p><b>{title}</b></p> : null }
-    <slot/>
+  {
+    title ? (
+      <p>
+        <b>{title}</b>
+      </p>
+    ) : null
+  }
+  <slot />
 </div>

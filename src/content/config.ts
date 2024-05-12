@@ -2,22 +2,22 @@
 import { z, defineCollection } from "astro:content";
 // 为每一个集合定义一个 `type` 和 `schema`
 const postsCollection = defineCollection({
-    type: 'content',
-    schema: z.object({
-      title: z.string(),
-      pubDate: z.date(),
-      description: z.string(),
-      author: z.string(),
-      // image: z.object({
-      //   url: z.string(),
-      //   alt: z.string()
-      // }),
-      tags: z.array(z.string())
-    })
+  type: "content",
+  schema: z.object({
+    title: z.string(),
+    pubDate: z.date(),
+    description: z.string(),
+    author: z.string(),
+    // image: z.object({
+    //   url: z.string(),
+    //   alt: z.string()
+    // }),
+    tags: z.array(z.string()),
+  }),
 });
 
 const mainCollection = defineCollection({
-  type: 'content',
+  type: "content",
   schema: z.object({
     title: z.string(),
     enTitle: z.string(),
@@ -27,12 +27,12 @@ const mainCollection = defineCollection({
     author: z.string().optional(),
     review: z.string().optional(),
     ifIndex: z.boolean().optional(),
-    isRoot: z.boolean().optional()
-  })
+    isRoot: z.boolean().optional(),
+  }),
 });
 
 const generalCollection = defineCollection({
-  type: 'content',
+  type: "content",
   schema: z.object({
     title: z.string(),
     enTitle: z.string().optional(),
@@ -42,12 +42,12 @@ const generalCollection = defineCollection({
     author: z.string().optional(),
     review: z.string().optional(),
     removeCover: z.boolean().optional(),
-  })
+  }),
 });
 
 // 导出一个单独的 `collections` 对象来注册你的集合
 export const collections = {
   article: postsCollection,
   main: mainCollection,
-  general: generalCollection
+  general: generalCollection,
 };
