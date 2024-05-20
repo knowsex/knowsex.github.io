@@ -39,6 +39,7 @@ const preservedIdiom = [
   "’d",
   "’s",
   "’ve",
+  "s’",
 ];
 
 export const convertToZH_TW = OpenCC.ConverterFactory(
