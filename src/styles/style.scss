@@ -793,6 +793,11 @@ section.footnotes ol {
     font-family: '思源黑体', 'Noto Sans SC', 'Noto Sans CJK SC', 'Source Han Sans SC', 'Source Han Sans CN', 'Source Han Sans', 'Noto Sans', 'Noto Sans SC', 'PingFang SC', 'WenQuanYi Micro Hei', 'Heiti SC', 'STHeiti', 'SimHei', sans-serif;
 }
 
+cite:lang(en){
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1.1rem;
+}
+
 html:lang(zh-TW) {
     body {
         font-family: '思源宋體', 'Noto Serif TC', 'PingFang TC', 'Hiragino Sans GB', 'WenQuanYi Micro Hei', 'Microsoft JhengHei', sans-serif;
