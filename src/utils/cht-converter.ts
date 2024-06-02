@@ -37,6 +37,7 @@ const preservedIdiom = [
   "醫學聲明",
   "術語在線",
   "[J].醫學信息",
+  "類型",
   "’m",
   "’t",
   "’d",
@@ -48,7 +49,12 @@ const preservedIdiom = [
 export const convertToZH_TW = OpenCC.ConverterFactory(
   [customDict],
   OpenCC.Locale.from.cn, // 大陆 => OpenCC 标准
-  [preservedIdiom.map((entry) => `${entry} ${entry}`).join("|")]
-    .concat(OpenCC.Locale.to.twp)
+  OpenCC.Locale.to.twp
+    .map(
+      (entries: string) =>
+        `${preservedIdiom
+          .map((entry) => `${entry} ${entry}`)
+          .join("|")}|${entries}`,
+    )
     .concat(symbolsConvertionDict.map((entry) => `${entry[0]} ${entry[1]}`)), // OpenCC 标准 => 台湾+自订
 );
