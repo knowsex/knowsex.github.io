@@ -44,6 +44,6 @@
     "zx": "^7.2.3"
   },
   "lint-staged": {
-    "*.{mj,cj,j,t}s": "eslint"
+    "(*.{mj,cj,j,t}s)|(*.astro)": "eslint"
   }
 }
