@@ -24,6 +24,9 @@ const baseKeywords = "性教育,KnowSex,生理知识,性科普";
 const finalKeywords = baseKeywords + "," + (keywords ? keywords.join(",") : '');
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+
+const hrefLangCN = canonicalURL.toString().replace("/zh-tw", "");
+const hrefLangTW = hrefLangCN.replace(Astro.site.host.toString(), Astro.site.host.toString() + "/zh-tw");
 ---
 <html lang={language} class="han-init" prefix="og: http://ogp.me/ns#">
 
@@ -79,6 +82,8 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 	<link rel="stylesheet" href="/style/style.min.css?20240613">
 	<script async src="https://analytics.knowsex.net/script.js" data-website-id="74452ede-6372-4bf7-9f03-b9ecbe2f7978"></script>
 	<link rel="canonical" href={canonicalURL}/>
+	<link rel="alternate" hreflang="zh-CN" href={hrefLangCN}/>
+	<link rel="alternate" hreflang="zh-TW" href={hrefLangTW}/>
 	<link rel="sitemap" href="/sitemap-index.xml" />
 </head>
 <body>
