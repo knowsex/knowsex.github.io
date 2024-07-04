@@ -18,13 +18,26 @@ const baseLayoutProps = {
 ---
 
 <BaseLayout {...baseLayoutProps}>
-  <article itemscope="" itemtype="http://schema.org/Article">
+  <article itemscope itemtype="http://schema.org/Article">
     <div class="main article-page">
       <div class="article-meta">
         <h1 itemprop="name">{frontmatter.title}</h1>
         <div class="article-author">
-          <b>撰写</b> / <span itemprop="author">{frontmatter.author}</span>
+          <b>撰写</b> / <span
+            itemprop="author"
+            itemtype="https://schema.org/Person">{frontmatter.author}</span
+          >
         </div>
+        {
+          frontmatter.translator ? (
+            <div class="article-author">
+              <b>翻译</b> /{" "}
+              <span itemprop="translator" itemtype="https://schema.org/Person">
+                {frontmatter.translator}
+              </span>
+            </div>
+          ) : null
+        }
       </div>
       <slot />
 

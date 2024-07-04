@@ -59,12 +59,12 @@
 
 ::-moz-selection {
     color: #000;
-    background-color: rgb(172, 98, 98)
+    background-color: rgb(255, 233, 145)
 }
 
 ::selection {
     color: #000;
-    background-color: rgb(255, 249, 167)
+    background-color: rgb(255, 233, 145)
 }
 
 body {
@@ -151,7 +151,7 @@ blockquote footer small::before {
     padding: 4px 10px;
     font-weight: bold;
     font-size: 1.4em;
-    margin: .6em auto .4em;
+    margin: 1em auto;
 }
 
 .main h4 {
@@ -451,6 +451,10 @@ article {
         font-weight: bold;
         font-size: 1.6em;
         line-height: 2;
+    }
+    
+    li, ol {
+        margin: 1em 0;
     }
 }
 
@@ -787,6 +791,11 @@ section.footnotes ol {
 
 .main .main-meta-author, .main strong, .main h3, .main h4, .key, article b, article h2, .article-page .article-meta, .nav-droplist-btn-with-icon {
     font-family: '思源黑体', 'Noto Sans SC', 'Noto Sans CJK SC', 'Source Han Sans SC', 'Source Han Sans CN', 'Source Han Sans', 'Noto Sans', 'Noto Sans SC', 'PingFang SC', 'WenQuanYi Micro Hei', 'Heiti SC', 'STHeiti', 'SimHei', sans-serif;
+}
+
+cite:lang(en){
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1.1rem;
 }
 
 html:lang(zh-TW) {
