@@ -1,0 +1,93 @@
+---
+import Layout from "@/layouts/Index.astro";
+import End from "@/components/ArticleEnd.astro";
+import { getCollection } from "astro:content";
+
+const title = "文章";
+const enTitle = "Article";
+const keywords = [""];
+const bgPath = "/source/img/article-bg.jpg";
+const desc =
+  "KnowSex 是一个性教育网站，内容涵盖生殖系统、避孕、媒介素养等多方面内容，并提供问答服务。";
+
+// YYYY-MM-DD
+const date = new Date().toLocaleString("zh-CN", {
+  timeZone: "Hongkong",
+  dateStyle: "short",
+});
+
+const { language = "zh-hans" } = Astro.props;
+
+const frontmatter = {
+  title: title,
+  enTitle: enTitle,
+  desc: desc,
+  keywords: keywords,
+  date: date,
+  bgPath: bgPath,
+};
+
+const allArticles = await getCollection("article");
+---
+
+<Layout frontmatter={frontmatter} language={language}>
+  <style is:global>
+    .article-list {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+    .article-list-item {
+      margin-bottom: 2.5em;
+      width: 45%;
+      min-width: 300px;
+    }
+    .article-title a {
+      color: #00a99d;
+      font-family: "思源黑体", "Noto Sans CJK SC", "Source Han Sans SC",
+        "Source Han Sans CN", "Source Han Sans", "Noto Sans", "Noto Sans SC",
+        "PingFang SC", "WenQuanYi Micro Hei", "Heiti SC", "STHeiti", "SimHei",
+        sans-serif;
+      font-size: 0.8em;
+    }
+    .article-author {
+      font-family: "思源黑体", "Noto Sans CJK SC", "Source Han Sans SC",
+        "Source Han Sans CN", "Source Han Sans", "Noto Sans", "Noto Sans SC",
+        "PingFang SC", "WenQuanYi Micro Hei", "Heiti SC", "STHeiti", "SimHei",
+        sans-serif;
+      font-size: 0.9em;
+      color: gray;
+    }
+  </style>
+
+  <p>此页面作文章的临时收录处。</p>
+  <div class="article-list">
+    {
+      allArticles.map((article) => (
+        <div class="article-list-item">
+          <h2 class="article-title">
+            <a href={`/article/${article.slug}`}>{article.data.title}</a>
+          </h2>
+          <div class="article-author">撰写 / {article.data.author}</div>
+          <div class="article-desc">{article.data.description}</div>
+          <a
+            class="article-read-btn"
+            href={`/article/${article.slug}`}
+            style=" --bs-btn-bg: black;">
+            阅读全文
+            <i class="bi bi-chevron-double-right" />
+          </a>
+        </div>
+      ))
+    }
+  </div>
+  <End />
+  <p style="color: #bbb">
+    本页封面图片作者是 <a target="_blank" href="https://unsplash.com/@jjying"
+      >JJ Ying</a
+    > ，来自 <a target="_blank" href="https://unsplash.com/photos/WmnsGyaFnCQ"
+      >Unsplash</a
+    > 。
+  </p>
+</Layout>
