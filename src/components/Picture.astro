@@ -19,6 +19,7 @@ const {
   desktopSrc,
   caption,
   contentWarning = false,
+  warningCaption = "可能含有令人不适的内容<br />点击或轻触去除模糊",
   class: className,
   ...props
 } = Astro.props;
@@ -53,15 +54,7 @@ const imageSources = await Promise.all([
 ---
 
 <div class:list={["picture-container", contentWarning && "content-warning"]}>
-  {
-    contentWarning && (
-      <p>
-        可能含有令人不适的内容
-        <br />
-        点击或轻触去除模糊
-      </p>
-    )
-  }
+  {contentWarning && <p>{warningCaption}</p>}
 
   <picture>
     {
