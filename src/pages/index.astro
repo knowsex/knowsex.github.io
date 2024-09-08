@@ -3,6 +3,7 @@ import Layout from "@/layouts/Index.astro";
 import Card from "@/components/Card.astro";
 import BsCardGroup from "@/components/BsCardGroup.astro";
 import BsCard from "@/components/BsCard.astro";
+// import { getCollection } from "astro:content";
 const title = "首页";
 const keywords = [""];
 const desc =
@@ -23,6 +24,8 @@ const frontmatter = {
   date: date,
   isRoot: true,
 };
+
+// const allArticles = await getCollection("article");
 ---
 
 <Layout frontmatter={frontmatter} isRoot="true" language={language}>
@@ -85,16 +88,15 @@ const frontmatter = {
       background-position-y: 23%;
     }
 
-    .other-site {
+    .need-icon {
       color: #02776b;
       font-weight: normal;
       font-size: 1.5rem;
       letter-spacing: 3px;
     }
 
-    .other-site::before {
+    .need-icon::before {
       content: "";
-      background-image: url("data:image/svg+xml,%3c%3fxml version='1.0' encoding='UTF-8'%3f%3e%3csvg width='24' height='24' viewBox='0 0 48 48' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M39 34L44 39L39 44' stroke='%2302776b' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'/%3e%3cpath d='M8 12C10.2091 12 12 10.2091 12 8C12 5.79086 10.2091 4 8 4C5.79086 4 4 5.79086 4 8C4 10.2091 5.79086 12 8 12Z' fill='none' stroke='%2302776b' stroke-width='3' stroke-linejoin='round'/%3e%3cpath d='M12 8L20 8C22.2091 8 24 9.79086 24 12V35C24 37.2091 25.7909 39 28 39H44' stroke='%2302776b' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e");
       margin-right: 0.5em;
       display: inline-block;
       width: 1em;
@@ -104,6 +106,15 @@ const frontmatter = {
       background-repeat: no-repeat;
       background-position: center;
     }
+
+    #other-site::before {
+      background-image: url("data:image/svg+xml,%3c%3fxml version='1.0' encoding='UTF-8'%3f%3e%3csvg width='24' height='24' viewBox='0 0 48 48' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M39 34L44 39L39 44' stroke='%2302776b' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'/%3e%3cpath d='M8 12C10.2091 12 12 10.2091 12 8C12 5.79086 10.2091 4 8 4C5.79086 4 4 5.79086 4 8C4 10.2091 5.79086 12 8 12Z' fill='none' stroke='%2302776b' stroke-width='3' stroke-linejoin='round'/%3e%3cpath d='M12 8L20 8C22.2091 8 24 9.79086 24 12V35C24 37.2091 25.7909 39 28 39H44' stroke='%2302776b' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e");
+    }
+
+    #article::before {
+      background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%2302776b' class='bi bi-journal-richtext' viewBox='0 0 16 16'%3e %3cpath d='M7.5 3.75a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0m-.861 1.542 1.33.886 1.854-1.855a.25.25 0 0 1 .289-.047L11 4.75V7a.5.5 0 0 1-.5.5h-5A.5.5 0 0 1 5 7v-.5s1.54-1.274 1.639-1.208M5 9.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5m0 2a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 0 1h-2a.5.5 0 0 1-.5-.5'/%3e %3cpath d='M3 0h10a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2v-1h1v1a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H3a1 1 0 0 0-1 1v1H1V2a2 2 0 0 1 2-2'/%3e %3cpath d='M1 5v-.5a.5.5 0 0 1 1 0V5h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1zm0 3v-.5a.5.5 0 0 1 1 0V8h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1zm0 3v-.5a.5.5 0 0 1 1 0v.5h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1z'/%3e %3c/svg%3e");
+    }
+
     .card-url {
       font-size: 0.9em;
       color: #aaa;
@@ -214,7 +225,28 @@ const frontmatter = {
     enTitle="Communicate"
   />
 
-  <h2 class="other-site mt-5 mb-4">附属站点</h2>
+  <!-- <h2 class="need-icon mt-5 mb-4" id="article">文章</h2>
+  <div class="article-list">
+    {
+      // allArticles.map((article) => (
+      //   <div class="article-list-item">
+      //     <h2 class="article-title">
+      //       <a href={`/article/${article.slug}`}>{article.data.title}</a>
+      //     </h2>
+      //     <div class="article-author">撰写 / {article.data.author}</div>
+      //     <div class="article-desc">{article.data.description}</div>
+      //     <a
+      //       class="article-read-btn"
+      //       href={`/article/${article.slug}`}
+      //       style=" --bs-btn-bg: black;">
+      //       阅读全文
+      //       <i class="bi bi-chevron-double-right" />
+      //     </a>
+      //   </div>
+      // ))
+    }
+  </div> -->
+  <h2 class="need-icon mt-5 mb-4" id="other-site">附属站点</h2>
   <BsCardGroup exClass="mb-4">
     <BsCard
       title="中文性教育资源网"
