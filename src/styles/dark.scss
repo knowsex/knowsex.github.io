@@ -18,6 +18,9 @@ $tip-red: #DA706C;
     }
     blockquote {
         border-left-color: #7c7c7c;
+        &::after {
+            color: #7c7c7c;
+        }
     }
     .main {
         color: #fff;

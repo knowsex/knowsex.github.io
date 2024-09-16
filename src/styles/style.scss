@@ -373,7 +373,20 @@ blockquote {
     padding: 10px 20px;
     margin: 0 0 20px;
     font-size: 17.5px;
-    border-left: 5px solid #eee
+    border-left: 5px solid #eee;
+    position: relative;
+
+    &::after {
+        color: #ddd;
+        content: "\201D";
+        font-size: 4em;
+        position: absolute;
+        right: -0.3em;
+        bottom: 0;
+        line-height: .1em;
+        z-index: -1;
+    }
+
 }
 
 blockquote footer {
