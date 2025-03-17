@@ -7,8 +7,8 @@ const articleCollection = defineCollection({
     title: z.string(),
     pubDate: z.date(),
     description: z.string(),
-    author: z.string(),
-    translator: z.string().optional(),
+    author: z.array(z.string()),
+    translator: z.array(z.string()).optional(),
     // image: z.object({
     //   url: z.string(),
     //   alt: z.string()
@@ -25,8 +25,8 @@ const mainCollection = defineCollection({
     desc: z.string().optional(),
     keywords: z.array(z.string()).optional(),
     bgPath: z.string().optional(),
-    author: z.string().optional(),
-    review: z.string().optional(),
+    author: z.array(z.string()).optional(),
+    review: z.array(z.string()).optional(),
     ifIndex: z.boolean().optional(),
     isRoot: z.boolean().optional(),
   }),
@@ -40,8 +40,8 @@ const generalCollection = defineCollection({
     desc: z.string().optional(),
     keywords: z.array(z.string()).optional(),
     bgPath: z.string().optional(),
-    author: z.string().optional(),
-    review: z.string().optional(),
+    author: z.array(z.string()).optional(),
+    review: z.array(z.string()).optional(),
     removeCover: z.boolean().optional(),
   }),
 });
