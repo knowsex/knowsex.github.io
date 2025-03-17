@@ -21,20 +21,35 @@ const baseLayoutProps = {
   <article itemscope itemtype="http://schema.org/Article">
     <div class="main article-page">
       <div class="article-meta">
-        <h1 itemprop="name">{frontmatter.title}</h1>
+        <h1 itemprop="headline">{frontmatter.title}</h1>
         <div class="article-author">
-          <b>撰写</b> / <span
-            itemprop="author"
-            itemtype="https://schema.org/Person">{frontmatter.author}</span
-          >
+          <b>撰写</b> / {
+            frontmatter.author.map((author: string, index: number) => (
+              <span
+                itemprop="author"
+                itemscope
+                itemtype="https://schema.org/Person">
+                <span itemprop="name">{author}</span>
+                {index < frontmatter.author.length - 1 && "，"}
+              </span>
+            ))
+          }
         </div>
         {
           frontmatter.translator ? (
             <div class="article-author">
               <b>翻译</b> /{" "}
-              <span itemprop="translator" itemtype="https://schema.org/Person">
-                {frontmatter.translator}
-              </span>
+              {frontmatter.translator.map(
+                (translator: string, index: number) => (
+                  <span
+                    itemprop="translator"
+                    itemscope
+                    itemtype="https://schema.org/Person">
+                    <span itemprop="name">{translator}</span>
+                    {index < frontmatter.translator.length - 1 && "，"}
+                  </span>
+                ),
+              )}
             </div>
           ) : null
         }

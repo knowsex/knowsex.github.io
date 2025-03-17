@@ -14,11 +14,12 @@ interface Props {
 	title: string;
 	keywords: string[];
 	description: string;
+	bgPath?: string | '/style/cover.jpg';
 	headerProps?: Record<string, unknown>;
 	language?: 'zh-hans' | 'zh-tw';
 }
 
-const { title, keywords, description, headerProps, language = 'zh-hans' } = Astro.props;
+const { title, keywords, description, headerProps, language = 'zh-hans', bgPath } = Astro.props;
 
 const baseKeywords = "性教育,KnowSex,生理知识,性科普";
 const finalKeywords = baseKeywords + "," + (keywords ? keywords.join(",") : '');
@@ -61,7 +62,7 @@ const hrefLangTW = hrefLangCN.replace(Astro.site.host.toString(), Astro.site.hos
 	
 	}
 
-	<meta property="og:image" content="/style/cover.jpg" />
+	<meta property="og:image" content={bgPath} />
 	
 	<meta property="og:site_name" content="KnowSex" />
 	<meta property="og:type" content="website" />

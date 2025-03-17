@@ -16,11 +16,13 @@ const baseLayoutProps = {
   author: frontmatter.author,
   review: frontmatter.review,
   language,
+  bgPath: frontmatter.bgPath,
 };
 ---
 
 <BaseLayout {...baseLayoutProps}>
   <article itemscope="" itemtype="http://schema.org/Article">
+    <meta itemprop="image" content={frontmatter.bgPath} />
     {
       !frontmatter.removeCover && (
         <HeadImage
@@ -35,9 +37,20 @@ const baseLayoutProps = {
         frontmatter.author && (
           <div class="main-meta-author">
             <div>
-              <span itemprop="author">{frontmatter.author}</span> / 撰写
+              {frontmatter.author.map((author: string, index: number) => (
+                <span
+                  itemprop="author"
+                  itemscope
+                  itemtype="https://schema.org/Person">
+                  <span itemprop="name">{author}</span>
+                  {index < frontmatter.author.length - 1 && "，"}
+                </span>
+              ))}
+              {" / 撰写"}
             </div>
-            <div>{frontmatter.review && frontmatter.review + " / 审校"}</div>
+            <div>
+              {frontmatter.review && frontmatter.review.join("，") + " / 审校"}
+            </div>
           </div>
         )
       }
