@@ -1,4 +1,5 @@
 @charset "UTF-8";
+@import url("https://cdn.staticfile.net/bootstrap-icons/1.11.3/font/bootstrap-icons.min.css");
 
 .forScreenReader {
     color: rgba(0, 0, 0, .0);
@@ -513,6 +514,11 @@ section.footnotes ol {
     display: none;
 }
 
+#footer-mail-info {
+    position: relative;
+    top: -5px;
+}
+
 @media screen and (min-width: 768px) {
     .main.article-page {
         max-width: 800px;
@@ -560,14 +566,15 @@ section.footnotes ol {
     text-decoration: none !important;
 
     &::before {
-        content: '';
+        font-family: bootstrap-icons;
         display: inline-block;
+        vertical-align: bottom;
         width: 26px;
         height: 26px;
+        font-size: 26px;
         background-size: 26px 26px;
-        vertical-align: bottom;
-        margin-right: 0.15em;
         background-repeat: no-repeat;
+        position: relative;
     }
 }
 
