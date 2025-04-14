@@ -1,4 +1,5 @@
 @charset "UTF-8";
+@use "sass:meta";
 @import url("https://cdn.staticfile.net/bootstrap-icons/1.11.3/font/bootstrap-icons.min.css");
 
 .forScreenReader {
@@ -564,7 +565,9 @@ section.footnotes ol {
 
 .social-icon {
     text-decoration: none !important;
-
+    .svg-bg-icons::before {
+        content: '';
+    }
     &::before {
         font-family: bootstrap-icons;
         display: inline-block;
@@ -829,5 +832,5 @@ html:lang(zh-TW) {
 }
 
 
-@import "icons";
-@import "dark";
+@include meta.load-css("icons");
+@include meta.load-css("dark");

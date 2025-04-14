@@ -35,6 +35,9 @@ $tip-red: #DA706C;
         a {
             color: #bbb;
         }
+        .svg-bg-icons {
+            filter: brightness(2.4);
+        }
     }
     .tip {
         background: linear-gradient($background 25%,$background) no-repeat 50% 50%,linear-gradient(-45deg,$text-secondary 25%,$background 25%,$background 50%,$text-secondary 50%,$text-secondary 75%,$background 75%,$background);
