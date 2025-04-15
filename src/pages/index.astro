@@ -7,7 +7,7 @@ import BsCard from "@/components/BsCard.astro";
 const title = "首页";
 const keywords = [""];
 const desc =
-  "KnowSex 是一个性教育网站，致力于为公众普及性教育，内容涵盖生殖系统、避孕、媒介素养等多方面内容，并提供问答服务。";
+  "KnowSex 是一个性教育网站，提供通俗的性教育科普读物。KnowSex 致力于向公众普及全面性教育，提供直观、明了的性教育知识和易于获取的性教育资源，内容涵盖性解剖、性生理、性取向、避孕等方方面面，并提供问答帮助服务。";
 
 // YYYY-MM-DD
 const date = new Date().toLocaleString("zh-CN", {
@@ -120,6 +120,28 @@ const frontmatter = {
       color: #aaa;
       font-family: "Consolas", "Courier New", monospace;
     }
+
+    h1 {
+      font-size: 1.3rem;
+      font-family:
+        "思源黑体", "Noto Sans SC", "Noto Sans CJK SC", "Source Han Sans SC",
+        "Source Han Sans CN", "Source Han Sans", "Noto Sans", "Noto Sans SC",
+        "PingFang SC", "WenQuanYi Micro Hei", "Heiti SC", "STHeiti", "SimHei",
+        sans-serif;
+      font-weight: normal;
+      color: #107f73;
+    }
+
+    h1:lang(zh-TW) {
+      font-size: 1.3rem;
+      font-family:
+        "思源黑體", "Noto Sans TC", "Noto Sans CJK TC", "Source Han Sans TC",
+        "Source Han Sans TW", "Source Han Sans", "Noto Sans", "Noto Sans TC",
+        "PingFang TC", "WenQuanYi Micro Hei", "Heiti TC", "STHeiti", "SimHei",
+        sans-serif;
+      font-weight: normal;
+      color: #107f73;
+    }
   </style>
 
   {
@@ -230,6 +252,17 @@ const frontmatter = {
     enTitle="Communicate"
   />
 
+  <h1 class="mt-5 mb-3">KnowSex：一份通俗的性教育科普读物</h1>
+  <p>
+    性贯穿生命始终，每个人都应接受性教育。但中文性教育的线上资源不尽丰富，且分布零散。KnowSex
+    致力于向公众普及<a
+      href="https://www.who.int/zh/news-room/questions-and-answers/item/comprehensive-sexuality-education"
+      >全&zwj;面性教育</a
+    >，提供直观、明了的性教育知识和易于获取的性教育资源，解答群众困惑，并希望藉此减少一些社会问题的发生。
+  </p>
+  <p>
+    我们依据若干分类撰写不同主题的性教育内容，并在版权合规前提下翻译有价值的外文性教育资源。得益于互联网省去了出版成本，我们能以低得多的成本将性知识呈现给本站的百万读者。
+  </p>
   <!-- <h2 class="need-icon mt-5 mb-4" id="article">文章</h2>
   <div class="article-list">
     {
