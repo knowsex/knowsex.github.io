@@ -12,6 +12,9 @@
     "node": true,
     "browser": true
   },
+  "globals": {
+    "bootstrap": "readonly"
+  },
   "overrides": [
     {
       "files": ["{src,public}/**/*.{mj,cj,j,t}s"],

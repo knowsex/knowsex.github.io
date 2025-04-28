@@ -1,0 +1,22 @@
+---
+let { msg = "", leading = false, perset = false } = Astro.props;
+switch (perset) {
+  case "mayo":
+    leading = "来自医疗机构<u>妙佑</u>（Mayo Clinic）的内容";
+    break;
+  case "msd":
+    leading = "来自医疗机构<u>默沙东</u>（MSD）的内容";
+    break;
+  default:
+    break;
+}
+---
+
+<a
+  href="#"
+  data-bs-toggle="tooltip"
+  data-bs-title={`<b>来源背景</b><br/>${leading || "根据页面信息，"}${msg}`}
+  style="color: #316bc1;"
+>
+  <i class="bi bi-info-circle"></i>
+</a>
