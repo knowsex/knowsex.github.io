@@ -14,9 +14,12 @@ switch (perset) {
 
 <button
   type="button"
-  class="btn btn-link p-1 pt-0"
+  class="btn btn-link btn-source-bg-info"
   data-bs-toggle="tooltip"
   data-bs-title={`<b>来源背景</b><br/>${leading || "根据页面信息，"}${msg}`}
 >
-  <i class="bi bi-info-circle"></i>
+  <i class="bi bi-info-circle" aria-hidden="true"></i>
+  <span class="forScreenReader">
+    来源背景介绍：{leading || "根据页面信息，"}{msg}
+  </span>
 </button>

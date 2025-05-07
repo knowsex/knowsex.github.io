@@ -5,7 +5,11 @@
 .forScreenReader {
     color: rgba(0, 0, 0, .0);
     font-size: 1px;
-    height: 1px
+    height: 1px;
+    width: 1px;
+    display: inline-block;
+    overflow: hidden;
+    text-decoration: none;
 }
 
 .seen {
@@ -821,6 +825,11 @@ cite:lang(en){
     font-size: 1.1rem;
 }
 
+.btn-source-bg-info {
+    color: #316bc1;
+    padding: 0 0 .2em 0;
+    text-decoration: none;
+}
 
 .tooltip {
     font-family: '思源宋体', 'Noto Serif SC', PingFang SC, Hiragino Sans GB, WenQuanYi Micro Hei, Microsoft YaHei, sans-serif;
