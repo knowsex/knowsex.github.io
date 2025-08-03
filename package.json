@@ -46,5 +46,6 @@
   },
   "lint-staged": {
     "(*.{mj,cj,j,t}s)|(*.astro)": "eslint"
-  }
+  },
+  "packageManager": "pnpm@10.14.0"
 }
