@@ -7,7 +7,7 @@
     "dev:astro": "astro dev",
     "dev:scss": "sass --watch --no-source-map src/styles/style.scss:public/style/style.min.css",
     "start": "astro dev",
-    "build": "zx ./scripts/build.mjs",
+    "build": "astro build && sass --no-source-map --style=compressed src/styles/style.scss:dist/style/style.min.css",
     "preview": "astro preview",
     "astro": "astro",
     "lint": "eslint .",
@@ -41,8 +41,7 @@
     "lint-staged": "^15.2.2",
     "prettier": "^3.2.5",
     "prettier-plugin-astro": "^0.13.0",
-    "sass": "^1.69.6",
-    "zx": "^7.2.3"
+    "sass": "^1.69.6"
   },
   "lint-staged": {
     "(*.{mj,cj,j,t}s)|(*.astro)": "eslint"
