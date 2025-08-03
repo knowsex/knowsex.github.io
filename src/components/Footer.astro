@@ -1,3 +1,7 @@
+---
+import HashLoader from "@/components/HashLoader.astro";
+---
+
 <div>
   <p class="px-4 text-center text-muted">
     本网站所提供的信息仅供教育科普用途。这些信息并非旨在提供专业意见，也不能代替有医疗资质者之意见。如需就诊，请咨询正规医疗机构，以免延误病情。
@@ -104,7 +108,9 @@
     </p>
   </div>
 </footer>
-<script src="/script/script.js?20250507" is:inline></script>
+<HashLoader file="./public/script/script.js">
+  {(hash: string) => <script src={`/script/script.js?${hash}`} is:inline />}
+</HashLoader>
 <script is:inline>
   // Dark mode requires
   function chooseMode(mode) {

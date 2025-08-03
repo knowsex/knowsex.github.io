@@ -1,0 +1,19 @@
+---
+import { readFile } from "node:fs/promises";
+import { createHash } from "node:crypto";
+
+interface Props {
+  file: string;
+}
+
+const { file } = Astro.props;
+
+let html = "";
+if (Astro.slots.has("default")) {
+  const content = await readFile(file, "utf-8");
+  const hash = createHash("md5").update(content).digest("hex").slice(0, 8);
+  html = await Astro.slots.render("default", [hash]);
+}
+---
+
+<Fragment set:html={html} />
