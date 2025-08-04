@@ -28,7 +28,7 @@ const finalKeywords = baseKeywords + "," + (keywords ? keywords.join(",") : '');
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 
 const hrefLangCN = canonicalURL.toString().replace("/zh-tw", "");
-const hrefLangTW = hrefLangCN.replace(Astro.site.host.toString(), Astro.site.host.toString() + "/zh-tw");
+const hrefLangTW = hrefLangCN.replace(Astro.site!.host.toString(), Astro.site!.host.toString() + "/zh-tw");
 ---
 <html lang={language} class="han-init" prefix="og: http://ogp.me/ns#">
 
