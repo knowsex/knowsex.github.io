@@ -7,6 +7,7 @@ keywords:
  - 避孕
 ---
 
+import './_contraception.css';
 import Cite from '@/components/CiteSup.astro';
 import ReferList from '@/components/CiteReference.astro';
 import Btn from '@/components/OutlineBtn.astro';
@@ -83,6 +84,10 @@ export const citeList = [
         {
             "name": "FCWCD",
             "caption": "拜耳医药保健有限公司.女用避孕套 | WCD China[G/OL].WCD China,[2022-06-13]. https://www.china-wcd.com/your-questions/female-condoms"
+        },
+        {
+            "name": "妇产科学",
+            "caption": "谢幸，孔北华，段涛主编. 妇产科学 第9版[M]. 北京：人民卫生出版社, 2018:376-7 ISBN 978-7-117-26439-6"
         }
 ]
 
@@ -265,6 +270,73 @@ export const citeList = [
 **含铜宫内节育器**最为有效，且可以继续留在体内持续避孕。
 
 <Key Tag='p'>进行措施越早，效果越好。</Key>
+
+## 避孕小测试
+
+本测试有参考复旦大学附属妇产科医院计划生育科指导黄紫蓉在《妇产科学》撰写的“避孕节育措施的选择”一节，并结合药具实际获取情况、不同避孕方法特点等编制。<Cite citeName='妇产科学' citeList={citeList} />
+
+<section id="fp-method-quiz-form">
+
+<div id="disable-js" class="fp-method-quiz">
+    <p>你未启用 JavaScript，暂无法使用本功能。</p>
+</div>
+
+<div id="q0" class="fp-method-quiz">
+    <p><strong>敬请注意：</strong>本测试结果仅供参考，不构成医学建议，您仍需结合您和伴侣的实际身体状况和医生建议做决策。</p>
+    <button onclick="fmqNext('q1')">开始测试</button>
+</div>
+
+<div id="q1" class="fp-method-quiz d-none">
+    <p>您属于下面那种情况？</p>
+    <button onclick="fmqNext('q2-1')">未生育</button>
+    <button onclick="fmqNext('q2-2')">哺乳期</button>
+    <button onclick="fmqNext('q2-3')">生育过</button>
+    <button onclick="fmqNext('r-1')">绝经过渡期</button>
+</div>
+
+<div id="q2-1" class="fp-method-quiz d-none">
+    <p>您是否希望在避孕的同时预防性传播疾病？</p>
+    <button onclick="fmqNext('r-1')"><i class="bi bi-check-lg me-2"></i>是</button>
+    <button onclick="fmqNext('r-2')"><i class="bi bi-x-lg me-2"></i>否</button>
+</div>
+
+<div id="q2-2" class="fp-method-quiz d-none">
+    <p>您在未来 3 - 5 年内是否有再次怀孕打算？</p>
+    <button onclick="fmqNext('r-1')"><i class="bi bi-check-lg me-2"></i>是</button>
+    <button onclick="fmqNext('r-3')"><i class="bi bi-x-lg me-2"></i>否</button>
+</div>
+
+<div id="q2-3" class="fp-method-quiz d-none">
+    <p>您在未来 3 - 5 年内是否有再次怀孕打算？</p>
+    <button onclick="fmqNext('r-2')"><i class="bi bi-check-lg me-2"></i>是</button>
+    <button onclick="fmqNext('r-4')"><i class="bi bi-x-lg me-2"></i>否</button>
+</div>
+
+<div id="r-1" class="fp-method-quiz d-none">
+    <p>建议您选用</p>
+    <div class="fp-method-result">阴茎避孕套</div>
+    <p><strong>敬请注意：</strong>本测试结果仅供参考，不构成医学建议，您仍需结合您和伴侣的实际身体状况和医生建议做决策。</p>
+    <button onclick="fmqNext('q1')">重新测试</button>
+</div>
+<div id="r-2" class="fp-method-quiz d-none">
+    <p>建议您选用</p>
+    <div class="fp-method-result">短效避孕药<span class="fp-or">或</span>阴茎避孕套</div>
+    <p><strong>敬请注意：</strong>本测试结果仅供参考，不构成医学建议，您仍需结合您和伴侣的实际身体状况和医生建议做决策。</p>
+    <button onclick="fmqNext('q1')">重新测试</button>
+</div>
+<div id="r-3" class="fp-method-quiz d-none">
+    <p>建议您选用</p>
+    <div class="fp-method-result">阴茎避孕套<span class="fp-or">或</span>皮下埋植剂</div>
+    <p><strong>敬请注意：</strong>本测试结果仅供参考，不构成医学建议，您仍需结合您和伴侣的实际身体状况和医生建议做决策。</p>
+    <button onclick="fmqNext('q1')">重新测试</button>
+</div>
+<div id="r-4" class="fp-method-quiz d-none">
+    <p>建议您选用</p>
+    <div class="fp-method-result">阴茎避孕套<span class="fp-or">、</span>皮下埋植剂<span class="fp-or">或</span>短效避孕药</div>
+    <p><strong>敬请注意：</strong>本测试结果仅供参考，不构成医学建议，您仍需结合您和伴侣的实际身体状况和医生建议做决策。</p>
+    <button onclick="fmqNext('q1')">重新测试</button>
+</div>
+</section>
 
 怀孕检测
 ----
@@ -528,3 +600,14 @@ export const citeList = [
     </tr>
     </tbody>
 </table>
+<script>
+{`
+$(document).ready(function() {
+  $('#disable-js').remove();
+});
+function fmqNext(nextId) {
+  $('.fp-method-quiz').addClass('d-none');
+  $('#' + nextId).removeClass('d-none').hide().fadeIn(300);
+}
+`}
+</script>

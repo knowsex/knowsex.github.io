@@ -1,7 +1,9 @@
 @charset "UTF-8";
 @use "sass:meta";
 @import url("https://mirror.hoilai.com/mirror/knowsex/bootstrap-icons/1.13.1/font/bootstrap-icons.min.css");
-
+:root {
+    --sans-font-family: '思源黑体', 'Noto Sans SC', 'Noto Sans CJK SC', 'Source Han Sans SC', 'Source Han Sans CN', 'Source Han Sans', 'Noto Sans', 'Noto Sans SC', 'PingFang SC', 'WenQuanYi Micro Hei', 'Heiti SC', 'STHeiti', 'SimHei', sans-serif;
+}
 .forScreenReader {
     color: rgba(0, 0, 0, .0);
     font-size: 1px;

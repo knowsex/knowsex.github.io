@@ -1,0 +1,56 @@
+.fp-method-quiz button {
+    margin: 1em .5em 0 0;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    background-color: #f8f9fa;
+    border: 1px solid #ced4da;
+    border-radius: 0.25rem;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.fp-method-quiz button:hover {
+    background-color: #e2e6ea;
+    border-color: #adb5bd;
+}
+
+
+
+#fp-method-quiz-form {
+    min-height: 16rem;
+    overflow-y: auto;
+    border: 1px solid #ced4da;
+    border-radius: 0.25rem;
+    padding: 3rem 2rem;
+    background-color: #ced4da2d;
+}
+
+.fp-method-result {
+    font-size: 1.5rem;
+    color: #00a99d;
+    font-family: var(--sans-font-family );
+}
+
+.fp-or {
+    color: #555;
+}
+
+.darkmode .fp-or {
+    color: #fff;
+}
+
+/* div[id^="r-"] button{
+    background-color: #00a99d;
+    color: white;
+} */
+
+div[id^="r-"] p {
+    margin-bottom: 0!important;
+}
+
+div[id^="r-"] button::before {
+    content: "\F116";
+    font-family: bootstrap-icons;
+    margin-right: 0.5rem;
+    vertical-align: middle;
+}
