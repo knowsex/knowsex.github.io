@@ -2,10 +2,12 @@
 let { msg = "", leading = false, perset = false } = Astro.props;
 switch (perset) {
   case "mayo":
-    leading = "来自医疗机构<u>妙佑</u>（Mayo Clinic）的内容";
+    leading =
+      '来自医疗机构<span class="zhuanming"><span>妙佑</span></span>（Mayo Clinic）的内容';
     break;
   case "msd":
-    leading = "来自医疗机构<u>默沙东</u>（MSD）的内容";
+    leading =
+      '来自医疗机构<span class="zhuanming"><span>默沙东</span></span>（MSD）的内容';
     break;
   default:
     break;

@@ -840,6 +840,14 @@ cite:lang(en){
     }
 }
 
+.zhuanming {
+    border-bottom: 1px solid;
+    margin: 0 1px;
+    span {
+        margin: 0 -1px;
+    }
+}
+
 html:lang(zh-TW) {
     body {
         font-family: '思源宋體', 'Noto Serif TC', 'PingFang TC', 'Hiragino Sans GB', 'WenQuanYi Micro Hei', 'Microsoft JhengHei', sans-serif;
