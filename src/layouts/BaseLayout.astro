@@ -25,6 +25,8 @@ const { title, keywords, description, headerProps, language = 'zh-hans', bgPath 
 const baseKeywords = "性教育,KnowSex,生理知识,性科普";
 const finalKeywords = baseKeywords + "," + (keywords ? keywords.join(",") : '');
 
+const realTitle = title.replace(" - KnowSex", "");
+
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 
 const hrefLangCN = canonicalURL.toString().replace("/zh-tw", "");
@@ -41,7 +43,7 @@ const hrefLangTW = hrefLangCN.replace(Astro.site!.host.toString(), Astro.site!.h
 		language === 'zh-hans' && (
 			<meta name="keywords" content={finalKeywords} />
 			<meta name="description" content={description} />
-			<meta property="og:title" content={title} />
+			<meta property="og:title" content={realTitle} />
 			<meta property="og:description" content={description} />
 			<title>{title}</title>
 			<link
@@ -53,7 +55,7 @@ const hrefLangTW = hrefLangCN.replace(Astro.site!.host.toString(), Astro.site!.h
 		language === 'zh-tw' && (
 			<meta name="keywords" content={convertToZH_TW(finalKeywords)} />
 			<meta name="description" content={convertToZH_TW(description)} />
-			<meta property="og:title" content={convertToZH_TW(title)} />
+			<meta property="og:title" content={convertToZH_TW(realTitle)} />
 			<meta property="og:description" content={convertToZH_TW(description)} />
 			<title>{convertToZH_TW(title)}</title>
 			<link
