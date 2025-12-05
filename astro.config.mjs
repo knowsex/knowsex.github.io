@@ -1,12 +1,13 @@
 import { defineConfig } from "astro/config";
 import { remarkModifiedTime } from "./remark-modified-time.mjs";
+import generateRouteTxt from "./generate-route-txt.mjs";
 import mdx from "@astrojs/mdx";
 import sitemap from "@astrojs/sitemap";
 
 // https://astro.build/config
 export default defineConfig({
   site: "https://knowsex.net",
-  integrations: [mdx(), sitemap()],
+  integrations: [mdx(), sitemap(), generateRouteTxt()],
   server: {
     host: true, // Allow LAN
   },
