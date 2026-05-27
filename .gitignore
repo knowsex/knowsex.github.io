@@ -23,5 +23,5 @@ pnpm-debug.log*
 .vscode/settings.json
 
 # local scss dev output
-styles/*.css
+src/styles/*.css
 public/style/*.css

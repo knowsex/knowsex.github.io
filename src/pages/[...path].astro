@@ -6,6 +6,7 @@ import utc from "dayjs/plugin/utc";
 import MainLayout from "@/layouts/Main.astro";
 import IndexLayout from "@/layouts/Index.astro";
 import MarkdownPostLayout from "@/layouts/Article.astro";
+import DictLayout from "@/layouts/Dict.astro";
 import type { AstroComponentFactory } from "astro/runtime/server/index.js";
 import CHTConverter from "@/components/CHTConverter.astro";
 import Sitemap from "./sitemap.astro";
@@ -19,6 +20,7 @@ export async function getStaticPaths() {
   const chtPrefix = "zh-tw";
   const articleEntries = await getCollection("article");
   const generalEntries = await getCollection("general");
+  const dictEntries = await getCollection("dict");
   const mainEntries = await getCollection("main");
 
   const paths = [
@@ -33,6 +35,10 @@ export async function getStaticPaths() {
     ...articleEntries.map((article) => ({
       params: { path: `/article/${article.slug}` },
       props: { entry: article },
+    })),
+    ...dictEntries.map((dict) => ({
+      params: { path: `/dict/${dict.slug}` },
+      props: { entry: dict },
     })),
     // 动态路由不能覆盖 index，改用在 index.astro 中渲染主页内容，在 zh-tw.astro 中渲染 zh-tw 的主页
     // { params: { path: "/" }, props: { type: "index" } },
@@ -105,5 +111,13 @@ if (entry) {
       lastModified={lastModified}>
       <Content />
     </MarkdownPostLayout>
+  )
+}
+
+{
+  entry?.collection === "dict" && Content && (
+    <DictLayout language={language} frontmatter={entry.data}>
+      <Content />
+    </DictLayout>
   )
 }

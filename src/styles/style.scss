@@ -2,7 +2,10 @@
 @use "sass:meta";
 @import url("https://mirror.hoilai.com/mirror/knowsex/bootstrap-icons/1.13.1/font/bootstrap-icons.min.css");
 :root {
+    --serif-font-family: '思源宋体', 'Noto Serif SC', PingFang SC, Hiragino Sans GB, WenQuanYi Micro Hei, Microsoft YaHei, sans-serif;
     --sans-font-family: '思源黑体', 'Noto Sans SC', 'Noto Sans CJK SC', 'Source Han Sans SC', 'Source Han Sans CN', 'Source Han Sans', 'Noto Sans', 'Noto Sans SC', 'PingFang SC', 'WenQuanYi Micro Hei', 'Heiti SC', 'STHeiti', 'SimHei', sans-serif;
+
+    --secondary-color: #808080;
 }
 .forScreenReader {
     color: rgba(0, 0, 0, .0);
@@ -76,7 +79,7 @@
 }
 
 body {
-    font-family: '思源宋体', 'Noto Serif SC', PingFang SC, Hiragino Sans GB, WenQuanYi Micro Hei, Microsoft YaHei, sans-serif;
+    font-family: var(--serif-font-family);
     font-weight: 400;
     text-autospace: normal;
 }
@@ -676,6 +679,35 @@ section.footnotes ol {
         //     }
         
         // }
+    }
+}
+
+.article-tags {
+    font-size: 90%;
+    color: var(--secondary-color);
+    span {
+        &::before {
+            content: '\F5B1';
+            font-family: bootstrap-icons;
+            margin-right: .3em;
+            position: relative;
+            top: 2px;
+        }
+    }
+}
+
+.dict-page {
+    margin-top: 0;
+    .breadcrumb-nav {
+        --bs-breadcrumb-divider: '>';
+    }
+    .breadcrumb {
+        margin-top: 0;
+        font-size: 90%;
+        font-family: var(--serif-font-family);
+    }
+    .breadcrumb-item {
+        margin: 0;
     }
 }
 

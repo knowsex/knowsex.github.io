@@ -46,9 +46,20 @@ const generalCollection = defineCollection({
   }),
 });
 
-// 导出一个单独的 `collections` 对象来注册你的集合
+const dictCollection = defineCollection({
+  type: "content",
+  schema: z.object({
+    title: z.string(),
+    description: z.string(),
+    author: z.array(z.string()),
+    tags: z.array(z.string()),
+  }),
+});
+
+// 注册集合
 export const collections = {
   article: articleCollection,
   main: mainCollection,
   general: generalCollection,
+  dict: dictCollection,
 };

@@ -92,5 +92,9 @@ $tip-red: #DA706C;
         background-color: $background;
         border: 1px solid #595959;
     }
+
+    .breadcrumb-nav {
+        filter: brightness(8);
+    }
 }
 @media (prefers-color-scheme: dark) {}
