@@ -45,17 +45,11 @@ const allArticles = await getCollection("article");
     }
     .article-title a {
       color: #00a99d;
-      font-family: "思源黑体", "Noto Sans CJK SC", "Source Han Sans SC",
-        "Source Han Sans CN", "Source Han Sans", "Noto Sans", "Noto Sans SC",
-        "PingFang SC", "WenQuanYi Micro Hei", "Heiti SC", "STHeiti", "SimHei",
-        sans-serif;
+      font-family: var(--sans-font-family);
       font-size: 0.8em;
     }
     .article-author {
-      font-family: "思源黑体", "Noto Sans CJK SC", "Source Han Sans SC",
-        "Source Han Sans CN", "Source Han Sans", "Noto Sans", "Noto Sans SC",
-        "PingFang SC", "WenQuanYi Micro Hei", "Heiti SC", "STHeiti", "SimHei",
-        sans-serif;
+      font-family: var(--sans-font-family);
       font-size: 0.9em;
       color: gray;
     }
