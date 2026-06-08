@@ -2,22 +2,11 @@
 import HashLoader from "@/components/HashLoader.astro";
 ---
 
-<div>
-  <p class="px-4 text-center text-muted">
-    本网站所提供的信息仅供教育科普用途。这些信息并非旨在提供专业意见，也不能代替有医疗资质者之意见。如需就诊，请咨询正规医疗机构，以免延误病情。
+<div class="footer-declaration">
+  <p>
+    <i class="bi bi-exclamation-diamond-fill me-2">
+    </i>本网站所提供的信息仅供教育科普用途。这些信息并非旨在提供专业意见，也不能代替有医疗资质者之意见。如需就诊，请咨询正规医疗机构，以免延误病情。
   </p>
-  <ul class="list-inline link-underline px-4 text-center text-muted">
-    <li class="list-inline-item">
-      <a href="/general/copyright">版权许可</a>
-    </li>
-    <li class="list-inline-item">
-      <a href="/general/privacy-policy">隐私政策</a>
-    </li>
-    <li class="list-inline-item">
-      <a href="/general/terms-of-use">使用条款</a>
-    </li>
-    <li class="list-inline-item"><a href="/general/about">关于</a></li>
-  </ul>
 </div>
 
 <footer class="row footer">
@@ -39,7 +28,6 @@ import HashLoader from "@/components/HashLoader.astro";
     style="width: 20%; height: 3px;
         background-color: #afafaf; margin-left: 12px;"
   />
-  <!-- <span class="hidden-lg key mb-1" style="color: #eee">*</span> -->
   <div class="col-md-7 text-md-end my-1">
     <p>
       <a
@@ -100,7 +88,18 @@ import HashLoader from "@/components/HashLoader.astro";
       >
       </a>
     </p>
-    <p class="key">Made in Zhengzhou with love.</p>
+    <ul class="list-inline link-underline">
+      <li class="list-inline-item">
+        <a href="/general/copyright">版权许可</a>
+      </li>
+      <li class="list-inline-item">
+        <a href="/general/privacy-policy">隐私政策</a>
+      </li>
+      <li class="list-inline-item">
+        <a href="/general/terms-of-use">使用条款</a>
+      </li>
+      <li class="list-inline-item"><a href="/general/about">关于</a></li>
+    </ul>
     <p id="footer-mail-info">
       <a href="mailto:KnowSex@outlook.com">
         <span id="social-icon-mail">KnowSex@outlook.com</span>
