@@ -7,6 +7,10 @@
 
     --secondary-color: #808080;
 }
+html:lang(zh-TW) {
+    --serif-font-family: '思源宋體', 'Noto Serif TC', 'PingFang TC', 'Hiragino Sans GB', 'WenQuanYi Micro Hei', 'Microsoft JhengHei', sans-serif;
+    --sans-font-family: "思源黑體", "Noto Sans TC", "Noto Sans CJK TC", "Source Han Sans TC", "Source Han Sans TW", "Source Han Sans", "Noto Sans", "Noto Sans TC", "PingFang TC", "WenQuanYi Micro Hei", "Heiti TC", "STHeiti", "SimHei", sans-serif;
+}
 .forScreenReader {
     color: rgba(0, 0, 0, .0);
     font-size: 1px;
@@ -82,6 +86,9 @@ body {
     font-family: var(--serif-font-family);
     font-weight: 400;
     text-autospace: normal;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 .main {
@@ -852,7 +859,7 @@ section.footnotes ol {
 }
 
 .main .main-meta-author, .main strong, .main h3, .main h4, .key, article b, article h2, .article-page .article-meta, .nav-droplist-btn-with-icon {
-    font-family: '思源黑体', 'Noto Sans SC', 'Noto Sans CJK SC', 'Source Han Sans SC', 'Source Han Sans CN', 'Source Han Sans', 'Noto Sans', 'Noto Sans SC', 'PingFang SC', 'WenQuanYi Micro Hei', 'Heiti SC', 'STHeiti', 'SimHei', sans-serif;
+    font-family: var(--sans-font-family);
 }
 
 cite:lang(en){
@@ -867,9 +874,9 @@ cite:lang(en){
 }
 
 .tooltip {
-    font-family: '思源宋体', 'Noto Serif SC', PingFang SC, Hiragino Sans GB, WenQuanYi Micro Hei, Microsoft YaHei, sans-serif;
+    font-family: var(--serif-font-family)
     b {
-        font-family: '思源黑体', 'Noto Sans SC', 'Noto Sans CJK SC', 'Source Han Sans SC', 'Source Han Sans CN', 'Source Han Sans', 'Noto Sans', 'Noto Sans SC', 'PingFang SC', 'WenQuanYi Micro Hei', 'Heiti SC', 'STHeiti', 'SimHei', sans-serif;
+        font-family: var(--sans-font-family);
     }
 }
 
@@ -881,22 +888,12 @@ cite:lang(en){
     }
 }
 
-html:lang(zh-TW) {
-    body {
-        font-family: '思源宋體', 'Noto Serif TC', 'PingFang TC', 'Hiragino Sans GB', 'WenQuanYi Micro Hei', 'Microsoft JhengHei', sans-serif;
-    }
-
-    .main .main-meta-author, .main strong, .main h3, .main h4, .key, article b, article h2, .article-page .article-meta, .nav-droplist-btn-with-icon {
-        font-family: "思源黑體", "Noto Sans TC", "Noto Sans CJK TC", "Source Han Sans TC", "Source Han Sans TW", "Source Han Sans", "Noto Sans", "Noto Sans TC", "PingFang TC", "WenQuanYi Micro Hei", "Heiti TC", "STHeiti", "SimHei", sans-serif;
-    }
-    .tooltip {
-        font-family: '思源宋體', 'Noto Serif TC', 'PingFang TC', 'Hiragino Sans GB', 'WenQuanYi Micro Hei', 'Microsoft JhengHei', sans-serif;
-        b {
-            font-family: "思源黑體", "Noto Sans TC", "Noto Sans CJK TC", "Source Han Sans TC", "Source Han Sans TW", "Source Han Sans", "Noto Sans", "Noto Sans TC", "PingFang TC", "WenQuanYi Micro Hei", "Heiti TC", "STHeiti", "SimHei", sans-serif;
-        }
-    }
+.footer-declaration {
+    font-family: var(--sans-font-family);
+    padding: 1.5rem 1.5rem 0;
+    text-align: center;
+    margin-top: auto;
 }
-
 
 @include meta.load-css("icons");
 @include meta.load-css("dark");
