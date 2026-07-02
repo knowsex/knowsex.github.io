@@ -13,10 +13,27 @@ const baseLayoutProps = {
   isRoot,
   language,
 };
+
+const jsonLd = {
+  "@context": "https://schema.org/",
+  "@type": "DefinedTerm",
+  name: frontmatter.title,
+  description: frontmatter.description,
+  inDefinedTermSet: {
+    "@type": "DefinedTermSet",
+    name: "KnowSex 性学词典",
+    url: "https://knowsex.net/dict/",
+  },
+};
 ---
 
 <BaseLayout {...baseLayoutProps}>
-  <article itemscope itemtype="http://schema.org/Article">
+  <article>
+    <script
+      type="application/ld+json"
+      set:html={JSON.stringify(jsonLd)}
+      is:inline
+    />
     <div class="main article-page dict-page">
       <div class="article-meta">
         <nav aria-label="breadcrumb" class="breadcrumb-nav">
@@ -28,15 +45,12 @@ const baseLayoutProps = {
             </li>
           </ol>
         </nav>
-        <h1 itemprop="headline">{frontmatter.title}</h1>
+        <h1>{frontmatter.title}</h1>
         <div class="article-author">
           <b>撰写</b> / {
             frontmatter.author.map((author: string, index: number) => (
-              <span
-                itemprop="author"
-                itemscope
-                itemtype="https://schema.org/Person">
-                <span itemprop="name">{author}</span>
+              <span>
+                <span>{author}</span>
                 {index < frontmatter.author.length - 1 && "，"}
               </span>
             ))

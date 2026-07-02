@@ -53,7 +53,13 @@ const allArticles = await getCollection("dict");
       color: gray;
     }
   </style>
-
+  <script type="application/ld+json" is:inline>
+    {
+      "@context": "https://schema.org/",
+      "@type": "DefinedTermSet",
+      "name": "KnowSex 性学词典"
+    }
+  </script>
   <div class="article-list">
     {
       allArticles.map((article) => (
