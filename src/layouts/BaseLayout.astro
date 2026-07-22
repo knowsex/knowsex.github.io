@@ -25,7 +25,7 @@ const { title, keywords, description, headerProps, language = 'zh-hans', bgPath 
 const baseKeywords = "性教育,KnowSex,生理知识,性科普";
 const finalKeywords = baseKeywords + "," + (keywords ? keywords.join(",") : '');
 
-const realTitle = title.replace(" - KnowSex", "");
+const realTitle = title.replace(" - KnowSex 性学词典", "").replace(" - KnowSex", "");
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 
