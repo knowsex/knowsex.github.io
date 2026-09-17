@@ -2,6 +2,7 @@
 import Layout from "@/layouts/Index.astro";
 import End from "@/components/ArticleEnd.astro";
 import { getCollection } from "astro:content";
+import Notice from "@/components/Notice.astro";
 
 const title = "文章";
 const enTitle = "Article";
@@ -54,7 +55,11 @@ const allArticles = await getCollection("article");
       color: gray;
     }
   </style>
-
+  <Notice
+    ><p>
+      除正文的专题板块外，我们补充更细节内容的文章供有需要的读者阅读。
+    </p></Notice
+  >
   <div class="article-list">
     {
       allArticles.map((article) => (
