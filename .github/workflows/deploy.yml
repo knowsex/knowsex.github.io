@@ -21,7 +21,7 @@ jobs:
       - name: Checkout your repository using git
         uses: actions/checkout@v4
       - name: Install, build, and upload your site
-        uses: withastro/action@v7
+        uses: withastro/action@v6
         with:
           # path: . # 存储库中 Astro 项目的根位置。（可选）
           node-version: 26
